@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="SoHoaDon" />
+    </Key>
+    <Property Name="SoHoaDon" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NgayLap" Type="date" Nullable="false" />
+    <Property Name="SoTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MaSo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaPhong" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOPDONG">
+    <Key>
+      <PropertyRef Name="SoHD" />
+    </Key>
+    <Property Name="SoHD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NgayLap" Type="date" Nullable="false" />
+    <Property Name="MaSV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaPhong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ThoiGianO" Type="int" />
+  </EntityType>
+  <EntityType Name="PHIEUGHIDIENNUOC">
+    <Key>
+      <PropertyRef Name="MaPhieuGhiDienNuoc" />
+    </Key>
+    <Property Name="MaPhieuGhiDienNuoc" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaSo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaPhong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SoDienNuoc" Type="int" Nullable="false" />
+    <Property Name="NgayGhi" Type="date" Nullable="false" />
+    <Property Name="LoaiPhieuGhi" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHIEUTHU">
+    <Key>
+      <PropertyRef Name="SoPT" />
+    </Key>
+    <Property Name="SoPT" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="NgayLap" Type="date" Nullable="false" />
+    <Property Name="SoHD" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TienThu" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHIEUTRANGBI">
+    <Key>
+      <PropertyRef Name="MaTS" />
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaTS" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaPhong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHONG">
+    <Key>
+      <PropertyRef Name="MaPhong" />
+    </Key>
+    <Property Name="MaPhong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenP" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ViTriP" Type="nvarchar" MaxLength="250" />
+    <Property Name="SoNguoiO" Type="int" Nullable="false" />
+    <Property Name="SoNguoiTD" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SINHVIEN">
+    <Key>
+      <PropertyRef Name="MaSV" />
+    </Key>
+    <Property Name="MaSV" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenSV" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NgaySinh" Type="date" Nullable="false" />
+    <Property Name="SoCMND" Type="int" Nullable="false" />
+    <Property Name="SoDT" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="SOGHIDIENNUOC">
+    <Key>
+      <PropertyRef Name="MaSo" />
+    </Key>
+    <Property Name="MaSo" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenSo" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Nam" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAISAN">
+    <Key>
+      <PropertyRef Name="MaTS" />
+    </Key>
+    <Property Name="MaTS" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenTS" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="250" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOPDONG" EntityType="Self.HOPDONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUGHIDIENNUOC" EntityType="Self.PHIEUGHIDIENNUOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUTHU" EntityType="Self.PHIEUTHU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUTRANGBI" EntityType="Self.PHIEUTRANGBI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONG" EntityType="Self.PHONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOGHIDIENNUOC" EntityType="Self.SOGHIDIENNUOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAISAN" EntityType="Self.TAISAN" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

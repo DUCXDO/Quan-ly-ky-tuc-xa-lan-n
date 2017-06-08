@@ -1,0 +1,24 @@
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\DAO.dll.config
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\DAO.dll
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\DAO.pdb
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\EntityFramework.dll
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\EntityFramework.xml
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\obj\Debug\DAO.dll
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\obj\Debug\DAO.pdb
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\DTO.dll
+C:\Users\ducvu\Desktop\Project KTX\ProjectKTX\DAO\bin\Debug\DTO.pdb
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\DAO.dll.config
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\DAO.dll
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\DAO.pdb
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\DTO.dll
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\EntityFramework.dll
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\DTO.pdb
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\EntityFramework.xml
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\obj\Debug\DAO.dll
+C:\Users\ducvu\Desktop\Chuong Trinh Quan Ly Ky Tuc Xa\DAO\obj\Debug\DAO.pdb

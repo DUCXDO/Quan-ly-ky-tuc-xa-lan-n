@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="KTXEntities">
+    <EntitySetMapping Name="HOADONs">
+      <EntityTypeMapping TypeName="Model.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="SoHoaDon" ColumnName="SoHoaDon" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+          <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOPDONGs">
+      <EntityTypeMapping TypeName="Model.HOPDONG">
+        <MappingFragment StoreEntitySet="HOPDONG">
+          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="ThoiGianO" ColumnName="ThoiGianO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUGHIDIENNUOCs">
+      <EntityTypeMapping TypeName="Model.PHIEUGHIDIENNUOC">
+        <MappingFragment StoreEntitySet="PHIEUGHIDIENNUOC">
+          <ScalarProperty Name="MaPhieuGhiDienNuoc" ColumnName="MaPhieuGhiDienNuoc" />
+          <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="SoDienNuoc" ColumnName="SoDienNuoc" />
+          <ScalarProperty Name="NgayGhi" ColumnName="NgayGhi" />
+          <ScalarProperty Name="LoaiPhieuGhi" ColumnName="LoaiPhieuGhi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUTHUs">
+      <EntityTypeMapping TypeName="Model.PHIEUTHU">
+        <MappingFragment StoreEntitySet="PHIEUTHU">
+          <ScalarProperty Name="SoPT" ColumnName="SoPT" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="SoHD" ColumnName="SoHD" />
+          <ScalarProperty Name="TienThu" ColumnName="TienThu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUTRANGBIs">
+      <EntityTypeMapping TypeName="Model.PHIEUTRANGBI">
+        <MappingFragment StoreEntitySet="PHIEUTRANGBI">
+          <ScalarProperty Name="MaTS" ColumnName="MaTS" />
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONGs">
+      <EntityTypeMapping TypeName="Model.PHONG">
+        <MappingFragment StoreEntitySet="PHONG">
+          <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+          <ScalarProperty Name="TenP" ColumnName="TenP" />
+          <ScalarProperty Name="ViTriP" ColumnName="ViTriP" />
+          <ScalarProperty Name="SoNguoiO" ColumnName="SoNguoiO" />
+          <ScalarProperty Name="SoNguoiTD" ColumnName="SoNguoiTD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINHVIENs">
+      <EntityTypeMapping TypeName="Model.SINHVIEN">
+        <MappingFragment StoreEntitySet="SINHVIEN">
+          <ScalarProperty Name="MaSV" ColumnName="MaSV" />
+          <ScalarProperty Name="TenSV" ColumnName="TenSV" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SoCMND" ColumnName="SoCMND" />
+          <ScalarProperty Name="SoDT" ColumnName="SoDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOGHIDIENNUOCs">
+      <EntityTypeMapping TypeName="Model.SOGHIDIENNUOC">
+        <MappingFragment StoreEntitySet="SOGHIDIENNUOC">
+          <ScalarProperty Name="MaSo" ColumnName="MaSo" />
+          <ScalarProperty Name="TenSo" ColumnName="TenSo" />
+          <ScalarProperty Name="Nam" ColumnName="Nam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAISANs">
+      <EntityTypeMapping TypeName="Model.TAISAN">
+        <MappingFragment StoreEntitySet="TAISAN">
+          <ScalarProperty Name="MaTS" ColumnName="MaTS" />
+          <ScalarProperty Name="TenTS" ColumnName="TenTS" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
