@@ -532,5 +532,25 @@ namespace ProjectKTX
                     ClearAllText(c);
             }
         }
+
+        private void iTalk_Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
