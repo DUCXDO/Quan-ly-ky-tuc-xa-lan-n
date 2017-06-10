@@ -552,5 +552,300 @@ namespace ProjectKTX
         {
 
         }
+
+        private void iTalk_Label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_HeaderLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_NotificationBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_ControlBox_Bright1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_HeaderLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_tk_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_tk_sua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_timkiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_them_xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_them_sua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_phong_them_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_HeaderLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label20_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small11_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_HeaderLabel9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_NotificationBox3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small13_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small12_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label21_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label22_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void iTalk_Label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_TextBox_Small14_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_11_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iTalk_Button_13_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
