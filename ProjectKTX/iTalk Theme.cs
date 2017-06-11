@@ -4885,6 +4885,114 @@ namespace iTalk
     }
 
     #endregion
+    #region CheckBox
+
+    [DefaultEvent("CheckedChanged")]
+    class iTalk_CheckBox_Custom : Control
+    {
+
+        #region Variables
+
+        private GraphicsPath Shape;
+        private LinearGradientBrush GB;
+        private Rectangle R1;
+        private Rectangle R2;
+        private bool _Checked;
+        public event CheckedChangedEventHandler CheckedChanged;
+        public delegate void CheckedChangedEventHandler(object sender);
+
+        #endregion
+        #region Properties
+
+        public bool Checked
+        {
+            get { return _Checked; }
+            set
+            {
+                _Checked = value;
+                if (CheckedChanged != null)
+                {
+                    CheckedChanged(this);
+                }
+                Invalidate();
+            }
+        }
+
+        #endregion
+
+        public iTalk_CheckBox_Custom()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor | ControlStyles.UserPaint, true);
+
+            BackColor = Color.Transparent;
+            DoubleBuffered = true;
+            Font = new Font("Segoe UI", 12);
+            Size = new Size(120, 40);
+        }
+
+        protected override void OnClick(EventArgs e)
+        {
+            _Checked = !_Checked;
+            if (CheckedChanged != null)
+            {
+                CheckedChanged(this);
+            }
+            Invalidate();
+            base.OnClick(e);
+        }
+
+        protected override void OnTextChanged(System.EventArgs e)
+        {
+            Invalidate();
+            base.OnTextChanged(e);
+        }
+
+        protected override void OnResize(System.EventArgs e)
+        {
+            if (Width > 0 && Height > 0)
+            {
+                Shape = new GraphicsPath();
+
+                R1 = new Rectangle(17, 0, Width, Height + 1);
+                R2 = new Rectangle(0, 0, Width, Height);
+                GB = new LinearGradientBrush(new Rectangle(0, 0, 25, 25), Color.FromArgb(255, 255, 255), Color.FromArgb(255, 255, 255), 90);
+
+                var _Shape = Shape;
+                _Shape.AddArc(0, 0, 7, 7, 180, 90);
+                _Shape.AddArc(7, 0, 7, 7, -90, 90);
+                _Shape.AddArc(7, 7, 7, 7, 0, 90);
+                _Shape.AddArc(0, 7, 7, 7, 90, 90);
+                _Shape.CloseAllFigures();
+                Height = 15;
+            }
+
+            Invalidate();
+            base.OnResize(e);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            var _G = e.Graphics;
+            _G.Clear(Color.FromArgb(231, 247, 247));
+            _G.SmoothingMode = SmoothingMode.AntiAlias;
+            // Fill the body of the CheckBox
+            _G.FillPath(GB, Shape);
+            // Draw the border
+            _G.DrawPath(new Pen(Color.FromArgb(160, 160, 160)), Shape);
+            // Draw the string
+            _G.DrawString(Text, Font, new SolidBrush(Color.FromArgb(116, 125, 132)), R1, new StringFormat { LineAlignment = StringAlignment.Center });
+
+            if (Checked)
+            {
+                _G.DrawString("ü", new Font("Wingdings", 14), new SolidBrush(Color.FromArgb(142, 142, 142)), new Rectangle(-2, 1, Width, Height), new StringFormat { LineAlignment = StringAlignment.Center });
+            }
+            e.Dispose();
+        }
+    }
+
+    #endregion
 
     #region TrackBar
 

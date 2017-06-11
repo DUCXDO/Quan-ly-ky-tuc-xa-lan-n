@@ -53,7 +53,7 @@ namespace BUS
         public String ThemHD(HOADONDTO hd)
         {
             // Kiểm tra mã Hóa đơn đã tồn tại chưa ?
-            HOADON kiemTraHDTonTai = _hd.TimHDTheoMaHD(hd.SoHoaDon);
+            HOADON kiemTraHDTonTai = _hd.TimHDTheoSoHD(hd.SoHoaDon);
             // Nếu mã chưa tồn tại
             if (kiemTraHDTonTai == null)
             {
@@ -89,7 +89,7 @@ namespace BUS
         public String XoaHD(String maHD)
         {
             // Kiểm tra hóa đơn có tồn tại không ?
-            HOADON check = _hd.TimHDTheoMaHD(maHD);
+            HOADON check = _hd.TimHDTheoSoHD(maHD);
             // Không tồn tại
             if (check == null)
             {
@@ -111,15 +111,18 @@ namespace BUS
                 }
             }
         }
+
         public IEnumerable<HOADON> TimTatCaHD()
         {
             return _hd.TimTatCaHD();
         }
+
         public SINHVIEN TimHDTheoSinhVien(String maSV)
         {
             SINHVIEN sinhvien = _sv.TimSVTheoMaSV(maSV);
             return sinhvien;            
         }
+
         //Tìm hóa đơn theo các điều kiện! 
         public IEnumerable<HOADON> TimHD(HOADONDTO hd)
         {

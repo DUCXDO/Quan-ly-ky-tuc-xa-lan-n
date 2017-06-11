@@ -14,6 +14,7 @@ namespace DAO
         IEnumerable<PHIEUTHU> TimTatCaPT();
         IEnumerable<PHIEUTHU> TimPT(PHIEUTHUDTO pt);
         PHIEUTHU TimPTTheoSoPT(String soPT);
+        IEnumerable<PHIEUTHU> TimPTTheoNgayLap(DateTime NgayLap);
     }
 
 
@@ -91,6 +92,13 @@ namespace DAO
         {
             KTXEntities KTXe = new KTXEntities();
             PHIEUTHU findPT = KTXe.PHIEUTHUs.SingleOrDefault(x => x.SoHD == soHD);
+            return findPT;
+        }
+
+        public IEnumerable<PHIEUTHU> TimPTTheoNgayLap(DateTime NgayLap)
+        {
+            KTXEntities KTXe = new KTXEntities();
+            IEnumerable<PHIEUTHU> findPT = KTXe.PHIEUTHUs.AsQueryable().Where(x => x.NgayLap == NgayLap);
             return findPT;
         }
     }

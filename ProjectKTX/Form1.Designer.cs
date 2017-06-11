@@ -134,7 +134,7 @@
             this.iTalk_Label14 = new iTalk.iTalk_Label();
             this.iTalk_Label13 = new iTalk.iTalk_Label();
             this.Father_TabPage3_HopDong = new System.Windows.Forms.TabPage();
-            this.iTalk_TabControl_Children1 = new iTalk.iTalk_TabControl_Children();
+            this.TabControl_Child_HopDong = new iTalk.iTalk_TabControl_Children();
             this.TabPage_Child_HopDong_TimKiem = new System.Windows.Forms.TabPage();
             this.TextBox_HopDong_TimKiem_MaPhong = new iTalk.iTalk_TextBox_Small();
             this.monoFlat_Label13 = new MonoFlat.MonoFlat_Label();
@@ -196,7 +196,6 @@
             this.monoFlat_Label27 = new MonoFlat.MonoFlat_Label();
             this.Button_HopDong_TimPT_Xoa = new MonoFlat.MonoFlat_Button_Green();
             this.Button_HopDong_TimPT_TimKiem = new MonoFlat.MonoFlat_Button_Green();
-            this.Button_HopDong_TimPT_Sua = new MonoFlat.MonoFlat_Button_Green();
             this.iTalk_Label6 = new iTalk.iTalk_Label();
             this.TabPage_Child_HopDong_LapPT = new System.Windows.Forms.TabPage();
             this.NotificationBox_HopDong_LapPT = new MonoFlat.MonoFlat_NotificationBox();
@@ -258,7 +257,114 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
             this.Father_TabPage5_DienNuoc = new System.Windows.Forms.TabPage();
-            this.Button_SinhVien_TimKiem_DangXuat = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_TabControl_Children2 = new iTalk.iTalk_TabControl_Children();
+            this.TabPage_Child_DienNuoc_ThemSGDN = new System.Windows.Forms.TabPage();
+            this.monoFlat_Label44 = new MonoFlat.MonoFlat_Label();
+            this.NotificationBox_DienNuoc_ThemSGDN = new MonoFlat.MonoFlat_NotificationBox();
+            this.iTalk_HeaderLabel15 = new iTalk.iTalk_HeaderLabel();
+            this.dataGridView_DienNuoc_ThemSGDN = new System.Windows.Forms.DataGridView();
+            this.ThemSGDN_MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TextBox_DienNuoc_ThemSGDN_TenSo = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_ThemSGDN_MaSo = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label46 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label48 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_ThemSGDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_ThemSGDN_Sua = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_ThemSGDN_ThemMoi = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Label33 = new iTalk.iTalk_Label();
+            this.TabPage_Child_DienNuoc_TimPGDN = new System.Windows.Forms.TabPage();
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong = new MonoFlat.MonoFlat_Button_Green();
+            this.ComboBox_DienNuoc_TimPGDN_Phong = new iTalk.iTalk_ComboBox_Custom();
+            this.monoFlat_Label37 = new MonoFlat.MonoFlat_Label();
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc = new iTalk.iTalk_CheckBox_Custom();
+            this.CheckBox_DienNuoc_TimPGDN_Dien = new iTalk.iTalk_CheckBox_Custom();
+            this.monoFlat_Label40 = new MonoFlat.MonoFlat_Label();
+            this.TextBox_DienNuoc_TimPGDN_MaP = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label36 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_TimPGDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Separator_Blue5 = new iTalk.iTalk_Separator_Blue();
+            this.NotificationBox_DienNuoc_TimPGDN = new MonoFlat.MonoFlat_NotificationBox();
+            this.iTalk_HeaderLabel13 = new iTalk.iTalk_HeaderLabel();
+            this.dataGridView_DienNuoc_TimPGDN = new System.Windows.Forms.DataGridView();
+            this.MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_TimPGDN_MaPG = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label38 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label39 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_TimPGDN_LapHD = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_TimPGDN_TimKiem = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Label31 = new iTalk.iTalk_Label();
+            this.TabPage_Child_DienNuoc_LapPGDN = new System.Windows.Forms.TabPage();
+            this.dataGridView_DienNuoc_LapPGDN = new System.Windows.Forms.DataGridView();
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc = new iTalk.iTalk_CheckBox_Custom();
+            this.CheckBox_DienNuoc_LapPGDN_Dien = new iTalk.iTalk_CheckBox_Custom();
+            this.monoFlat_Label17 = new MonoFlat.MonoFlat_Label();
+            this.ComboBox_DienNuoc_LapPGDN_Phong = new iTalk.iTalk_ComboBox_Custom();
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN = new iTalk.iTalk_ComboBox_Custom();
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi = new System.Windows.Forms.DateTimePicker();
+            this.monoFlat_Label26 = new MonoFlat.MonoFlat_Label();
+            this.NotificationBox_DienNuoc_LapPGDN = new MonoFlat.MonoFlat_NotificationBox();
+            this.iTalk_HeaderLabel11 = new iTalk.iTalk_HeaderLabel();
+            this.TextBox_DienNuoc_LapPGDN_SoDN = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_LapPGDN_MaPG = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label28 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label29 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label30 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label31 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_LapPGDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_LapPGDN_ThemMoi = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_LapPGDN_Sua = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Label29 = new iTalk.iTalk_Label();
+            this.TabPage_Child_DienNuoc_TimHDDN = new System.Windows.Forms.TabPage();
+            this.iTalk_Separator_Blue4 = new iTalk.iTalk_Separator_Blue();
+            this.monoFlat_NotificationBox5 = new MonoFlat.MonoFlat_NotificationBox();
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong = new MonoFlat.MonoFlat_Button_Green();
+            this.ComboBox_DienNuoc_TìmHDDN_Phong = new iTalk.iTalk_ComboBox_Custom();
+            this.monoFlat_Label33 = new MonoFlat.MonoFlat_Label();
+            this.iTalk_HeaderLabel12 = new iTalk.iTalk_HeaderLabel();
+            this.dataGridView_DienNuoc_TìmHDDN = new System.Windows.Forms.DataGridView();
+            this.SoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimHĐN_MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapPGDN_TienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapHDDN_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TextBox_DienNuoc_TìmHDDN_MaPG = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_TìmHDDN_SoHD = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label34 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label35 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_TìmHDDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_TìmHDDN_TimKiem = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Label30 = new iTalk.iTalk_Label();
+            this.TabPage_Child_DienNuoc_LapHDDN = new System.Windows.Forms.TabPage();
+            this.dataGridView_DienNuoc_LapHDDN = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotificationBox_DienNuoc_LapHDDN = new MonoFlat.MonoFlat_NotificationBox();
+            this.iTalk_HeaderLabel14 = new iTalk.iTalk_HeaderLabel();
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_LapHDDN_MaPG = new iTalk.iTalk_TextBox_Small();
+            this.TextBox_DienNuoc_LapHDDN_SoHD = new iTalk.iTalk_TextBox_Small();
+            this.monoFlat_Label41 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label42 = new MonoFlat.MonoFlat_Label();
+            this.monoFlat_Label43 = new MonoFlat.MonoFlat_Label();
+            this.Button_DienNuoc_LapHDDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_LapHDDN_ThemMoi = new MonoFlat.MonoFlat_Button_Green();
+            this.iTalk_Label32 = new iTalk.iTalk_Label();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapPGDN_LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monoFlat_ThemeContainer_Bright1.SuspendLayout();
             this.TabControl_Father.SuspendLayout();
             this.Father_TabPage1_SinhVien.SuspendLayout();
@@ -274,7 +380,7 @@
             this.TabPage_Child_Phong_ThemSua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.Father_TabPage3_HopDong.SuspendLayout();
-            this.iTalk_TabControl_Children1.SuspendLayout();
+            this.TabControl_Child_HopDong.SuspendLayout();
             this.TabPage_Child_HopDong_TimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HopDong_TimKiem)).BeginInit();
             this.TabPage_Child_HopDong_LapHD.SuspendLayout();
@@ -289,6 +395,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.TabPage_Child_Taisan_ThemSua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.Father_TabPage5_DienNuoc.SuspendLayout();
+            this.iTalk_TabControl_Children2.SuspendLayout();
+            this.TabPage_Child_DienNuoc_ThemSGDN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_ThemSGDN)).BeginInit();
+            this.TabPage_Child_DienNuoc_TimPGDN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_TimPGDN)).BeginInit();
+            this.TabPage_Child_DienNuoc_LapPGDN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_LapPGDN)).BeginInit();
+            this.TabPage_Child_DienNuoc_TimHDDN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_TìmHDDN)).BeginInit();
+            this.TabPage_Child_DienNuoc_LapHDDN.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_LapHDDN)).BeginInit();
             this.SuspendLayout();
             // 
             // monoFlat_ThemeContainer_Bright1
@@ -296,7 +414,6 @@
             this.monoFlat_ThemeContainer_Bright1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
             this.monoFlat_ThemeContainer_Bright1.Controls.Add(this.monoFlat_ControlBox_Bright1);
             this.monoFlat_ThemeContainer_Bright1.Controls.Add(this.TabControl_Father);
-            this.monoFlat_ThemeContainer_Bright1.Controls.Add(this.Button_SinhVien_TimKiem_DangXuat);
             this.monoFlat_ThemeContainer_Bright1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.monoFlat_ThemeContainer_Bright1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.monoFlat_ThemeContainer_Bright1.Location = new System.Drawing.Point(0, 0);
@@ -337,7 +454,7 @@
             this.TabControl_Father.Multiline = true;
             this.TabControl_Father.Name = "TabControl_Father";
             this.TabControl_Father.SelectedIndex = 0;
-            this.TabControl_Father.Size = new System.Drawing.Size(1018, 519);
+            this.TabControl_Father.Size = new System.Drawing.Size(1018, 512);
             this.TabControl_Father.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabControl_Father.TabIndex = 0;
             // 
@@ -348,7 +465,7 @@
             this.Father_TabPage1_SinhVien.Location = new System.Drawing.Point(154, 4);
             this.Father_TabPage1_SinhVien.Name = "Father_TabPage1_SinhVien";
             this.Father_TabPage1_SinhVien.Padding = new System.Windows.Forms.Padding(3);
-            this.Father_TabPage1_SinhVien.Size = new System.Drawing.Size(860, 511);
+            this.Father_TabPage1_SinhVien.Size = new System.Drawing.Size(860, 504);
             this.Father_TabPage1_SinhVien.TabIndex = 0;
             this.Father_TabPage1_SinhVien.Text = "Sinh viên";
             // 
@@ -493,7 +610,7 @@
             this.SoDT,
             this.DiaChi});
             this.dataGridView_SinhVien_TimKiem.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView_SinhVien_TimKiem.Location = new System.Drawing.Point(10, 201);
+            this.dataGridView_SinhVien_TimKiem.Location = new System.Drawing.Point(6, 218);
             this.dataGridView_SinhVien_TimKiem.MultiSelect = false;
             this.dataGridView_SinhVien_TimKiem.Name = "dataGridView_SinhVien_TimKiem";
             this.dataGridView_SinhVien_TimKiem.Size = new System.Drawing.Size(566, 264);
@@ -677,7 +794,7 @@
             this.Button_SinhVien_TimKiem_Sua.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_SinhVien_TimKiem_Sua.Image = null;
             this.Button_SinhVien_TimKiem_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_SinhVien_TimKiem_Sua.Location = new System.Drawing.Point(578, 262);
+            this.Button_SinhVien_TimKiem_Sua.Location = new System.Drawing.Point(578, 270);
             this.Button_SinhVien_TimKiem_Sua.Name = "Button_SinhVien_TimKiem_Sua";
             this.Button_SinhVien_TimKiem_Sua.Size = new System.Drawing.Size(106, 41);
             this.Button_SinhVien_TimKiem_Sua.TabIndex = 2;
@@ -1028,7 +1145,7 @@
             this.Father_TabPage2_Phong.Location = new System.Drawing.Point(154, 4);
             this.Father_TabPage2_Phong.Name = "Father_TabPage2_Phong";
             this.Father_TabPage2_Phong.Padding = new System.Windows.Forms.Padding(3);
-            this.Father_TabPage2_Phong.Size = new System.Drawing.Size(860, 511);
+            this.Father_TabPage2_Phong.Size = new System.Drawing.Size(860, 504);
             this.Father_TabPage2_Phong.TabIndex = 1;
             this.Father_TabPage2_Phong.Text = "Phòng";
             // 
@@ -1615,30 +1732,30 @@
             // Father_TabPage3_HopDong
             // 
             this.Father_TabPage3_HopDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.Father_TabPage3_HopDong.Controls.Add(this.iTalk_TabControl_Children1);
+            this.Father_TabPage3_HopDong.Controls.Add(this.TabControl_Child_HopDong);
             this.Father_TabPage3_HopDong.Location = new System.Drawing.Point(154, 4);
             this.Father_TabPage3_HopDong.Name = "Father_TabPage3_HopDong";
             this.Father_TabPage3_HopDong.Padding = new System.Windows.Forms.Padding(3);
-            this.Father_TabPage3_HopDong.Size = new System.Drawing.Size(860, 511);
+            this.Father_TabPage3_HopDong.Size = new System.Drawing.Size(860, 504);
             this.Father_TabPage3_HopDong.TabIndex = 2;
             this.Father_TabPage3_HopDong.Text = "Hợp đồng";
             // 
-            // iTalk_TabControl_Children1
+            // TabControl_Child_HopDong
             // 
-            this.iTalk_TabControl_Children1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.iTalk_TabControl_Children1.Controls.Add(this.TabPage_Child_HopDong_TimKiem);
-            this.iTalk_TabControl_Children1.Controls.Add(this.TabPage_Child_HopDong_LapHD);
-            this.iTalk_TabControl_Children1.Controls.Add(this.TabPage_Child_HopDong_TimPT);
-            this.iTalk_TabControl_Children1.Controls.Add(this.TabPage_Child_HopDong_LapPT);
-            this.iTalk_TabControl_Children1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.iTalk_TabControl_Children1.ItemSize = new System.Drawing.Size(100, 150);
-            this.iTalk_TabControl_Children1.Location = new System.Drawing.Point(0, 0);
-            this.iTalk_TabControl_Children1.Multiline = true;
-            this.iTalk_TabControl_Children1.Name = "iTalk_TabControl_Children1";
-            this.iTalk_TabControl_Children1.SelectedIndex = 0;
-            this.iTalk_TabControl_Children1.Size = new System.Drawing.Size(853, 500);
-            this.iTalk_TabControl_Children1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.iTalk_TabControl_Children1.TabIndex = 0;
+            this.TabControl_Child_HopDong.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.TabControl_Child_HopDong.Controls.Add(this.TabPage_Child_HopDong_TimKiem);
+            this.TabControl_Child_HopDong.Controls.Add(this.TabPage_Child_HopDong_LapHD);
+            this.TabControl_Child_HopDong.Controls.Add(this.TabPage_Child_HopDong_TimPT);
+            this.TabControl_Child_HopDong.Controls.Add(this.TabPage_Child_HopDong_LapPT);
+            this.TabControl_Child_HopDong.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.TabControl_Child_HopDong.ItemSize = new System.Drawing.Size(100, 150);
+            this.TabControl_Child_HopDong.Location = new System.Drawing.Point(0, 0);
+            this.TabControl_Child_HopDong.Multiline = true;
+            this.TabControl_Child_HopDong.Name = "TabControl_Child_HopDong";
+            this.TabControl_Child_HopDong.SelectedIndex = 0;
+            this.TabControl_Child_HopDong.Size = new System.Drawing.Size(853, 500);
+            this.TabControl_Child_HopDong.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.TabControl_Child_HopDong.TabIndex = 0;
             // 
             // TabPage_Child_HopDong_TimKiem
             // 
@@ -1888,7 +2005,7 @@
             this.monoFlat_Label16.BackColor = System.Drawing.Color.Transparent;
             this.monoFlat_Label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monoFlat_Label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
-            this.monoFlat_Label16.Location = new System.Drawing.Point(13, 114);
+            this.monoFlat_Label16.Location = new System.Drawing.Point(13, 113);
             this.monoFlat_Label16.Name = "monoFlat_Label16";
             this.monoFlat_Label16.Size = new System.Drawing.Size(98, 21);
             this.monoFlat_Label16.TabIndex = 26;
@@ -1906,6 +2023,7 @@
             this.Button_HopDong_TimKiem_LapPhieuThu.TabIndex = 25;
             this.Button_HopDong_TimKiem_LapPhieuThu.Text = "Lập phiếu thu";
             this.Button_HopDong_TimKiem_LapPhieuThu.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_TimKiem_LapPhieuThu.Click += new System.EventHandler(this.Button_HopDong_TimKiem_LapPhieuThu_Click);
             // 
             // Button_HopDong_TimKiem_TimKiem
             // 
@@ -2100,7 +2218,7 @@
             this.monoFlat_Label18.BackColor = System.Drawing.Color.Transparent;
             this.monoFlat_Label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monoFlat_Label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
-            this.monoFlat_Label18.Location = new System.Drawing.Point(285, 114);
+            this.monoFlat_Label18.Location = new System.Drawing.Point(285, 113);
             this.monoFlat_Label18.Name = "monoFlat_Label18";
             this.monoFlat_Label18.Size = new System.Drawing.Size(98, 21);
             this.monoFlat_Label18.TabIndex = 51;
@@ -2198,7 +2316,6 @@
             this.TabPage_Child_HopDong_TimPT.Controls.Add(this.monoFlat_Label27);
             this.TabPage_Child_HopDong_TimPT.Controls.Add(this.Button_HopDong_TimPT_Xoa);
             this.TabPage_Child_HopDong_TimPT.Controls.Add(this.Button_HopDong_TimPT_TimKiem);
-            this.TabPage_Child_HopDong_TimPT.Controls.Add(this.Button_HopDong_TimPT_Sua);
             this.TabPage_Child_HopDong_TimPT.Controls.Add(this.iTalk_Label6);
             this.TabPage_Child_HopDong_TimPT.Location = new System.Drawing.Point(154, 4);
             this.TabPage_Child_HopDong_TimPT.Name = "TabPage_Child_HopDong_TimPT";
@@ -2206,6 +2323,7 @@
             this.TabPage_Child_HopDong_TimPT.Size = new System.Drawing.Size(695, 492);
             this.TabPage_Child_HopDong_TimPT.TabIndex = 2;
             this.TabPage_Child_HopDong_TimPT.Text = "Tìm PT";
+            this.TabPage_Child_HopDong_TimPT.Leave += new System.EventHandler(this.TabPage_Child_HopDong_TimPT_Leave);
             // 
             // dataGridView_HopDong_TimPT
             // 
@@ -2294,6 +2412,7 @@
             this.Button_HopDong_TimPT_TimTheoNgayLap.TabIndex = 38;
             this.Button_HopDong_TimPT_TimTheoNgayLap.Text = "Tìm theo ngày lập";
             this.Button_HopDong_TimPT_TimTheoNgayLap.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_TimPT_TimTheoNgayLap.Click += new System.EventHandler(this.Button_HopDong_TimPT_TimTheoNgayLap_Click);
             // 
             // monoFlat_Label15
             // 
@@ -2379,12 +2498,13 @@
             this.Button_HopDong_TimPT_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_HopDong_TimPT_Xoa.Image = null;
             this.Button_HopDong_TimPT_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_HopDong_TimPT_Xoa.Location = new System.Drawing.Point(578, 384);
+            this.Button_HopDong_TimPT_Xoa.Location = new System.Drawing.Point(578, 270);
             this.Button_HopDong_TimPT_Xoa.Name = "Button_HopDong_TimPT_Xoa";
             this.Button_HopDong_TimPT_Xoa.Size = new System.Drawing.Size(106, 41);
             this.Button_HopDong_TimPT_Xoa.TabIndex = 25;
             this.Button_HopDong_TimPT_Xoa.Text = "Xóa";
             this.Button_HopDong_TimPT_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_TimPT_Xoa.Click += new System.EventHandler(this.Button_HopDong_TimPT_Xoa_Click);
             // 
             // Button_HopDong_TimPT_TimKiem
             // 
@@ -2398,19 +2518,7 @@
             this.Button_HopDong_TimPT_TimKiem.TabIndex = 24;
             this.Button_HopDong_TimPT_TimKiem.Text = "Tìm kiếm";
             this.Button_HopDong_TimPT_TimKiem.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Button_HopDong_TimPT_Sua
-            // 
-            this.Button_HopDong_TimPT_Sua.BackColor = System.Drawing.Color.Transparent;
-            this.Button_HopDong_TimPT_Sua.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_HopDong_TimPT_Sua.Image = null;
-            this.Button_HopDong_TimPT_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_HopDong_TimPT_Sua.Location = new System.Drawing.Point(578, 270);
-            this.Button_HopDong_TimPT_Sua.Name = "Button_HopDong_TimPT_Sua";
-            this.Button_HopDong_TimPT_Sua.Size = new System.Drawing.Size(106, 41);
-            this.Button_HopDong_TimPT_Sua.TabIndex = 23;
-            this.Button_HopDong_TimPT_Sua.Text = "Sửa";
-            this.Button_HopDong_TimPT_Sua.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_TimPT_TimKiem.Click += new System.EventHandler(this.Button_HopDong_TimPT_TimKiem_Click);
             // 
             // iTalk_Label6
             // 
@@ -2445,6 +2553,7 @@
             this.TabPage_Child_HopDong_LapPT.Size = new System.Drawing.Size(695, 492);
             this.TabPage_Child_HopDong_LapPT.TabIndex = 3;
             this.TabPage_Child_HopDong_LapPT.Text = "Lập PT";
+            this.TabPage_Child_HopDong_LapPT.Leave += new System.EventHandler(this.TabPage_Child_HopDong_LapPT_Leave);
             // 
             // NotificationBox_HopDong_LapPT
             // 
@@ -2608,6 +2717,7 @@
             this.Button_HopDong_LapPT_Xoa.TabIndex = 47;
             this.Button_HopDong_LapPT_Xoa.Text = "Xóa";
             this.Button_HopDong_LapPT_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_LapPT_Xoa.Click += new System.EventHandler(this.Button_HopDong_LapPT_Xoa_Click);
             // 
             // Button_HopDong_LapPT_ThemMoi
             // 
@@ -2621,6 +2731,7 @@
             this.Button_HopDong_LapPT_ThemMoi.TabIndex = 46;
             this.Button_HopDong_LapPT_ThemMoi.Text = "Thêm mới";
             this.Button_HopDong_LapPT_ThemMoi.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_HopDong_LapPT_ThemMoi.Click += new System.EventHandler(this.Button_HopDong_LapPT_ThemMoi_Click);
             // 
             // iTalk_Label5
             // 
@@ -2641,7 +2752,7 @@
             this.Father_TabPage4_TaiSan.Location = new System.Drawing.Point(154, 4);
             this.Father_TabPage4_TaiSan.Name = "Father_TabPage4_TaiSan";
             this.Father_TabPage4_TaiSan.Padding = new System.Windows.Forms.Padding(3);
-            this.Father_TabPage4_TaiSan.Size = new System.Drawing.Size(860, 511);
+            this.Father_TabPage4_TaiSan.Size = new System.Drawing.Size(860, 504);
             this.Father_TabPage4_TaiSan.TabIndex = 3;
             this.Father_TabPage4_TaiSan.Text = "Tài sản";
             // 
@@ -2684,7 +2795,7 @@
             this.TabPage_Child_Taisan_Timkiem.Padding = new System.Windows.Forms.Padding(3);
             this.TabPage_Child_Taisan_Timkiem.Size = new System.Drawing.Size(695, 490);
             this.TabPage_Child_Taisan_Timkiem.TabIndex = 0;
-            this.TabPage_Child_Taisan_Timkiem.Text = "tabPage1";
+            this.TabPage_Child_Taisan_Timkiem.Text = "Tìm kiếm";
             this.TabPage_Child_Taisan_Timkiem.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btntaisan_timkiem_xoa
@@ -2946,7 +3057,7 @@
             this.TabPage_Child_Taisan_ThemSua.Padding = new System.Windows.Forms.Padding(3);
             this.TabPage_Child_Taisan_ThemSua.Size = new System.Drawing.Size(695, 490);
             this.TabPage_Child_Taisan_ThemSua.TabIndex = 1;
-            this.TabPage_Child_Taisan_ThemSua.Text = "tabPage2";
+            this.TabPage_Child_Taisan_ThemSua.Text = "Thêm/Sửa";
             // 
             // btntaisan_them_xoa
             // 
@@ -3172,25 +3283,1351 @@
             // Father_TabPage5_DienNuoc
             // 
             this.Father_TabPage5_DienNuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.Father_TabPage5_DienNuoc.Controls.Add(this.iTalk_TabControl_Children2);
             this.Father_TabPage5_DienNuoc.Location = new System.Drawing.Point(154, 4);
             this.Father_TabPage5_DienNuoc.Name = "Father_TabPage5_DienNuoc";
             this.Father_TabPage5_DienNuoc.Padding = new System.Windows.Forms.Padding(3);
-            this.Father_TabPage5_DienNuoc.Size = new System.Drawing.Size(860, 511);
+            this.Father_TabPage5_DienNuoc.Size = new System.Drawing.Size(860, 504);
             this.Father_TabPage5_DienNuoc.TabIndex = 4;
             this.Father_TabPage5_DienNuoc.Text = "Điện nước";
             // 
-            // Button_SinhVien_TimKiem_DangXuat
+            // iTalk_TabControl_Children2
             // 
-            this.Button_SinhVien_TimKiem_DangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.Button_SinhVien_TimKiem_DangXuat.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_SinhVien_TimKiem_DangXuat.Image = null;
-            this.Button_SinhVien_TimKiem_DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_SinhVien_TimKiem_DangXuat.Location = new System.Drawing.Point(781, 15);
-            this.Button_SinhVien_TimKiem_DangXuat.Name = "Button_SinhVien_TimKiem_DangXuat";
-            this.Button_SinhVien_TimKiem_DangXuat.Size = new System.Drawing.Size(103, 31);
-            this.Button_SinhVien_TimKiem_DangXuat.TabIndex = 1;
-            this.Button_SinhVien_TimKiem_DangXuat.Text = "Đăng xuất";
-            this.Button_SinhVien_TimKiem_DangXuat.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.iTalk_TabControl_Children2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.iTalk_TabControl_Children2.Controls.Add(this.TabPage_Child_DienNuoc_ThemSGDN);
+            this.iTalk_TabControl_Children2.Controls.Add(this.TabPage_Child_DienNuoc_TimPGDN);
+            this.iTalk_TabControl_Children2.Controls.Add(this.TabPage_Child_DienNuoc_LapPGDN);
+            this.iTalk_TabControl_Children2.Controls.Add(this.TabPage_Child_DienNuoc_TimHDDN);
+            this.iTalk_TabControl_Children2.Controls.Add(this.TabPage_Child_DienNuoc_LapHDDN);
+            this.iTalk_TabControl_Children2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.iTalk_TabControl_Children2.ItemSize = new System.Drawing.Size(100, 150);
+            this.iTalk_TabControl_Children2.Location = new System.Drawing.Point(0, 0);
+            this.iTalk_TabControl_Children2.Multiline = true;
+            this.iTalk_TabControl_Children2.Name = "iTalk_TabControl_Children2";
+            this.iTalk_TabControl_Children2.SelectedIndex = 0;
+            this.iTalk_TabControl_Children2.Size = new System.Drawing.Size(857, 508);
+            this.iTalk_TabControl_Children2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.iTalk_TabControl_Children2.TabIndex = 0;
+            // 
+            // TabPage_Child_DienNuoc_ThemSGDN
+            // 
+            this.TabPage_Child_DienNuoc_ThemSGDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.monoFlat_Label44);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.NotificationBox_DienNuoc_ThemSGDN);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.iTalk_HeaderLabel15);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.dataGridView_DienNuoc_ThemSGDN);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.TextBox_DienNuoc_ThemSGDN_TenSo);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.TextBox_DienNuoc_ThemSGDN_NamGhi);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.TextBox_DienNuoc_ThemSGDN_MaSo);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.monoFlat_Label46);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.monoFlat_Label48);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_Xoa);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_Sua);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_ThemMoi);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.iTalk_Label33);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Location = new System.Drawing.Point(154, 4);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Name = "TabPage_Child_DienNuoc_ThemSGDN";
+            this.TabPage_Child_DienNuoc_ThemSGDN.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Size = new System.Drawing.Size(699, 500);
+            this.TabPage_Child_DienNuoc_ThemSGDN.TabIndex = 0;
+            this.TabPage_Child_DienNuoc_ThemSGDN.Text = "Thêm SGDN";
+            // 
+            // monoFlat_Label44
+            // 
+            this.monoFlat_Label44.AutoSize = true;
+            this.monoFlat_Label44.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label44.Location = new System.Drawing.Point(13, 164);
+            this.monoFlat_Label44.Name = "monoFlat_Label44";
+            this.monoFlat_Label44.Size = new System.Drawing.Size(70, 21);
+            this.monoFlat_Label44.TabIndex = 59;
+            this.monoFlat_Label44.Text = "Năm ghi";
+            // 
+            // NotificationBox_DienNuoc_ThemSGDN
+            // 
+            this.NotificationBox_DienNuoc_ThemSGDN.BorderCurve = 8;
+            this.NotificationBox_DienNuoc_ThemSGDN.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.NotificationBox_DienNuoc_ThemSGDN.Image = null;
+            this.NotificationBox_DienNuoc_ThemSGDN.Location = new System.Drawing.Point(289, 10);
+            this.NotificationBox_DienNuoc_ThemSGDN.MinimumSize = new System.Drawing.Size(100, 40);
+            this.NotificationBox_DienNuoc_ThemSGDN.Name = "NotificationBox_DienNuoc_ThemSGDN";
+            this.NotificationBox_DienNuoc_ThemSGDN.NotificationType = MonoFlat.MonoFlat_NotificationBox.Type.Notice;
+            this.NotificationBox_DienNuoc_ThemSGDN.RoundCorners = false;
+            this.NotificationBox_DienNuoc_ThemSGDN.ShowCloseButton = true;
+            this.NotificationBox_DienNuoc_ThemSGDN.Size = new System.Drawing.Size(395, 40);
+            this.NotificationBox_DienNuoc_ThemSGDN.TabIndex = 58;
+            this.NotificationBox_DienNuoc_ThemSGDN.Text = "NotificationBox_DienNuoc_ThemSGDN";
+            this.NotificationBox_DienNuoc_ThemSGDN.Visible = false;
+            // 
+            // iTalk_HeaderLabel15
+            // 
+            this.iTalk_HeaderLabel15.AutoSize = true;
+            this.iTalk_HeaderLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_HeaderLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.iTalk_HeaderLabel15.Location = new System.Drawing.Point(9, 20);
+            this.iTalk_HeaderLabel15.Name = "iTalk_HeaderLabel15";
+            this.iTalk_HeaderLabel15.Size = new System.Drawing.Size(209, 32);
+            this.iTalk_HeaderLabel15.TabIndex = 57;
+            this.iTalk_HeaderLabel15.Text = "Thêm sổ ghi Đ/N";
+            // 
+            // dataGridView_DienNuoc_ThemSGDN
+            // 
+            this.dataGridView_DienNuoc_ThemSGDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DienNuoc_ThemSGDN.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DienNuoc_ThemSGDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DienNuoc_ThemSGDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ThemSGDN_MaSo,
+            this.TenSo,
+            this.Nam});
+            this.dataGridView_DienNuoc_ThemSGDN.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView_DienNuoc_ThemSGDN.Location = new System.Drawing.Point(6, 218);
+            this.dataGridView_DienNuoc_ThemSGDN.MultiSelect = false;
+            this.dataGridView_DienNuoc_ThemSGDN.Name = "dataGridView_DienNuoc_ThemSGDN";
+            this.dataGridView_DienNuoc_ThemSGDN.Size = new System.Drawing.Size(566, 264);
+            this.dataGridView_DienNuoc_ThemSGDN.TabIndex = 56;
+            // 
+            // ThemSGDN_MaSo
+            // 
+            this.ThemSGDN_MaSo.HeaderText = "Mã sổ";
+            this.ThemSGDN_MaSo.Name = "ThemSGDN_MaSo";
+            // 
+            // TenSo
+            // 
+            this.TenSo.HeaderText = "Tên sổ";
+            this.TenSo.Name = "TenSo";
+            // 
+            // Nam
+            // 
+            this.Nam.HeaderText = "Năm ghi";
+            this.Nam.Name = "Nam";
+            // 
+            // TextBox_DienNuoc_ThemSGDN_TenSo
+            // 
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.Location = new System.Drawing.Point(118, 110);
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.MaxLength = 32767;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.Multiline = false;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.Name = "TextBox_DienNuoc_ThemSGDN_TenSo";
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.ReadOnly = false;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.TabIndex = 54;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_ThemSGDN_TenSo.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_ThemSGDN_NamGhi
+            // 
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.Location = new System.Drawing.Point(118, 161);
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.MaxLength = 32767;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.Multiline = false;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.Name = "TextBox_DienNuoc_ThemSGDN_NamGhi";
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.ReadOnly = false;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.TabIndex = 53;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_ThemSGDN_NamGhi.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_ThemSGDN_MaSo
+            // 
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.Location = new System.Drawing.Point(118, 63);
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.MaxLength = 32767;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.Multiline = false;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.Name = "TextBox_DienNuoc_ThemSGDN_MaSo";
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.ReadOnly = false;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.TabIndex = 52;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_ThemSGDN_MaSo.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label46
+            // 
+            this.monoFlat_Label46.AutoSize = true;
+            this.monoFlat_Label46.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label46.Location = new System.Drawing.Point(13, 67);
+            this.monoFlat_Label46.Name = "monoFlat_Label46";
+            this.monoFlat_Label46.Size = new System.Drawing.Size(52, 21);
+            this.monoFlat_Label46.TabIndex = 50;
+            this.monoFlat_Label46.Text = "Mã sổ";
+            // 
+            // monoFlat_Label48
+            // 
+            this.monoFlat_Label48.AutoSize = true;
+            this.monoFlat_Label48.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label48.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label48.Location = new System.Drawing.Point(13, 114);
+            this.monoFlat_Label48.Name = "monoFlat_Label48";
+            this.monoFlat_Label48.Size = new System.Drawing.Size(53, 21);
+            this.monoFlat_Label48.TabIndex = 48;
+            this.monoFlat_Label48.Text = "Tên sổ";
+            // 
+            // Button_DienNuoc_ThemSGDN_Xoa
+            // 
+            this.Button_DienNuoc_ThemSGDN_Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_ThemSGDN_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_ThemSGDN_Xoa.Image = null;
+            this.Button_DienNuoc_ThemSGDN_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_ThemSGDN_Xoa.Location = new System.Drawing.Point(578, 270);
+            this.Button_DienNuoc_ThemSGDN_Xoa.Name = "Button_DienNuoc_ThemSGDN_Xoa";
+            this.Button_DienNuoc_ThemSGDN_Xoa.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_ThemSGDN_Xoa.TabIndex = 47;
+            this.Button_DienNuoc_ThemSGDN_Xoa.Text = "Xóa";
+            this.Button_DienNuoc_ThemSGDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Button_DienNuoc_ThemSGDN_Sua
+            // 
+            this.Button_DienNuoc_ThemSGDN_Sua.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_ThemSGDN_Sua.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_ThemSGDN_Sua.Image = null;
+            this.Button_DienNuoc_ThemSGDN_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_ThemSGDN_Sua.Location = new System.Drawing.Point(389, 144);
+            this.Button_DienNuoc_ThemSGDN_Sua.Name = "Button_DienNuoc_ThemSGDN_Sua";
+            this.Button_DienNuoc_ThemSGDN_Sua.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_ThemSGDN_Sua.TabIndex = 46;
+            this.Button_DienNuoc_ThemSGDN_Sua.Text = "Sửa";
+            this.Button_DienNuoc_ThemSGDN_Sua.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Button_DienNuoc_ThemSGDN_ThemMoi
+            // 
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Image = null;
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Location = new System.Drawing.Point(389, 67);
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Name = "Button_DienNuoc_ThemSGDN_ThemMoi";
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.TabIndex = 45;
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Text = "Thêm mới";
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // iTalk_Label33
+            // 
+            this.iTalk_Label33.AutoSize = true;
+            this.iTalk_Label33.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label33.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label33.Location = new System.Drawing.Point(7, 3);
+            this.iTalk_Label33.Name = "iTalk_Label33";
+            this.iTalk_Label33.Size = new System.Drawing.Size(218, 17);
+            this.iTalk_Label33.TabIndex = 44;
+            this.iTalk_Label33.Text = "Điện nước > Thêm sổ ghi điện nước";
+            // 
+            // TabPage_Child_DienNuoc_TimPGDN
+            // 
+            this.TabPage_Child_DienNuoc_TimPGDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.Button_DienNuoc_TimPGDN_TimTheoPhong);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.ComboBox_DienNuoc_TimPGDN_Phong);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.monoFlat_Label37);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.CheckBox_DienNuoc_TimPGDN_Nuoc);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.CheckBox_DienNuoc_TimPGDN_Dien);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.monoFlat_Label40);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.TextBox_DienNuoc_TimPGDN_MaP);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.monoFlat_Label36);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.Button_DienNuoc_TimPGDN_Xoa);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.iTalk_Separator_Blue5);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.NotificationBox_DienNuoc_TimPGDN);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.iTalk_HeaderLabel13);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.dataGridView_DienNuoc_TimPGDN);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.TextBox_DienNuoc_TimPGDN_MaSGDN);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.TextBox_DienNuoc_TimPGDN_MaPG);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.monoFlat_Label38);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.monoFlat_Label39);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.Button_DienNuoc_TimPGDN_LapHD);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.Button_DienNuoc_TimPGDN_TimKiem);
+            this.TabPage_Child_DienNuoc_TimPGDN.Controls.Add(this.iTalk_Label31);
+            this.TabPage_Child_DienNuoc_TimPGDN.Location = new System.Drawing.Point(154, 4);
+            this.TabPage_Child_DienNuoc_TimPGDN.Name = "TabPage_Child_DienNuoc_TimPGDN";
+            this.TabPage_Child_DienNuoc_TimPGDN.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Child_DienNuoc_TimPGDN.Size = new System.Drawing.Size(699, 500);
+            this.TabPage_Child_DienNuoc_TimPGDN.TabIndex = 1;
+            this.TabPage_Child_DienNuoc_TimPGDN.Text = "Tìm PGDN";
+            // 
+            // Button_DienNuoc_TimPGDN_TimTheoPhong
+            // 
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Image = null;
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Location = new System.Drawing.Point(389, 165);
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Name = "Button_DienNuoc_TimPGDN_TimTheoPhong";
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.TabIndex = 78;
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.Text = "Tìm theo phòng";
+            this.Button_DienNuoc_TimPGDN_TimTheoPhong.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // ComboBox_DienNuoc_TimPGDN_Phong
+            // 
+            this.ComboBox_DienNuoc_TimPGDN_Phong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TimPGDN_Phong.DisplayMember = "MaPhong";
+            this.ComboBox_DienNuoc_TimPGDN_Phong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.DropDownHeight = 100;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_DienNuoc_TimPGDN_Phong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TimPGDN_Phong.FormattingEnabled = true;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TimPGDN_Phong.IntegralHeight = false;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.ItemHeight = 20;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.Location = new System.Drawing.Point(118, 170);
+            this.ComboBox_DienNuoc_TimPGDN_Phong.Name = "ComboBox_DienNuoc_TimPGDN_Phong";
+            this.ComboBox_DienNuoc_TimPGDN_Phong.Size = new System.Drawing.Size(149, 26);
+            this.ComboBox_DienNuoc_TimPGDN_Phong.StartIndex = 0;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.TabIndex = 77;
+            this.ComboBox_DienNuoc_TimPGDN_Phong.ValueMember = "MaPhong";
+            // 
+            // monoFlat_Label37
+            // 
+            this.monoFlat_Label37.AutoSize = true;
+            this.monoFlat_Label37.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label37.Location = new System.Drawing.Point(13, 170);
+            this.monoFlat_Label37.Name = "monoFlat_Label37";
+            this.monoFlat_Label37.Size = new System.Drawing.Size(55, 21);
+            this.monoFlat_Label37.TabIndex = 76;
+            this.monoFlat_Label37.Text = "Phòng";
+            // 
+            // CheckBox_DienNuoc_TimPGDN_Nuoc
+            // 
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.BackColor = System.Drawing.Color.Transparent;
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Checked = false;
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Location = new System.Drawing.Point(472, 117);
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Name = "CheckBox_DienNuoc_TimPGDN_Nuoc";
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Size = new System.Drawing.Size(66, 15);
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.TabIndex = 72;
+            this.CheckBox_DienNuoc_TimPGDN_Nuoc.Text = "Nước";
+            // 
+            // CheckBox_DienNuoc_TimPGDN_Dien
+            // 
+            this.CheckBox_DienNuoc_TimPGDN_Dien.BackColor = System.Drawing.Color.Transparent;
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Checked = false;
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Location = new System.Drawing.Point(408, 117);
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Name = "CheckBox_DienNuoc_TimPGDN_Dien";
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Size = new System.Drawing.Size(56, 15);
+            this.CheckBox_DienNuoc_TimPGDN_Dien.TabIndex = 71;
+            this.CheckBox_DienNuoc_TimPGDN_Dien.Text = "Điện";
+            // 
+            // monoFlat_Label40
+            // 
+            this.monoFlat_Label40.AutoSize = true;
+            this.monoFlat_Label40.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label40.Location = new System.Drawing.Point(285, 113);
+            this.monoFlat_Label40.Name = "monoFlat_Label40";
+            this.monoFlat_Label40.Size = new System.Drawing.Size(108, 21);
+            this.monoFlat_Label40.TabIndex = 70;
+            this.monoFlat_Label40.Text = "Loại phiếu ghi";
+            // 
+            // TextBox_DienNuoc_TimPGDN_MaP
+            // 
+            this.TextBox_DienNuoc_TimPGDN_MaP.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_TimPGDN_MaP.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_TimPGDN_MaP.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_TimPGDN_MaP.Location = new System.Drawing.Point(390, 63);
+            this.TextBox_DienNuoc_TimPGDN_MaP.MaxLength = 32767;
+            this.TextBox_DienNuoc_TimPGDN_MaP.Multiline = false;
+            this.TextBox_DienNuoc_TimPGDN_MaP.Name = "TextBox_DienNuoc_TimPGDN_MaP";
+            this.TextBox_DienNuoc_TimPGDN_MaP.ReadOnly = false;
+            this.TextBox_DienNuoc_TimPGDN_MaP.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_TimPGDN_MaP.TabIndex = 60;
+            this.TextBox_DienNuoc_TimPGDN_MaP.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_TimPGDN_MaP.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label36
+            // 
+            this.monoFlat_Label36.AutoSize = true;
+            this.monoFlat_Label36.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label36.Location = new System.Drawing.Point(285, 67);
+            this.monoFlat_Label36.Name = "monoFlat_Label36";
+            this.monoFlat_Label36.Size = new System.Drawing.Size(81, 21);
+            this.monoFlat_Label36.TabIndex = 59;
+            this.monoFlat_Label36.Text = "Mã phòng";
+            // 
+            // Button_DienNuoc_TimPGDN_Xoa
+            // 
+            this.Button_DienNuoc_TimPGDN_Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TimPGDN_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TimPGDN_Xoa.Image = null;
+            this.Button_DienNuoc_TimPGDN_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TimPGDN_Xoa.Location = new System.Drawing.Point(578, 384);
+            this.Button_DienNuoc_TimPGDN_Xoa.Name = "Button_DienNuoc_TimPGDN_Xoa";
+            this.Button_DienNuoc_TimPGDN_Xoa.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_TimPGDN_Xoa.TabIndex = 58;
+            this.Button_DienNuoc_TimPGDN_Xoa.Text = "Xóa";
+            this.Button_DienNuoc_TimPGDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // iTalk_Separator_Blue5
+            // 
+            this.iTalk_Separator_Blue5.Location = new System.Drawing.Point(13, 146);
+            this.iTalk_Separator_Blue5.Name = "iTalk_Separator_Blue5";
+            this.iTalk_Separator_Blue5.Size = new System.Drawing.Size(671, 10);
+            this.iTalk_Separator_Blue5.TabIndex = 57;
+            this.iTalk_Separator_Blue5.Text = "iTalk_Separator_Blue5";
+            // 
+            // NotificationBox_DienNuoc_TimPGDN
+            // 
+            this.NotificationBox_DienNuoc_TimPGDN.BorderCurve = 8;
+            this.NotificationBox_DienNuoc_TimPGDN.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.NotificationBox_DienNuoc_TimPGDN.Image = null;
+            this.NotificationBox_DienNuoc_TimPGDN.Location = new System.Drawing.Point(289, 10);
+            this.NotificationBox_DienNuoc_TimPGDN.MinimumSize = new System.Drawing.Size(100, 40);
+            this.NotificationBox_DienNuoc_TimPGDN.Name = "NotificationBox_DienNuoc_TimPGDN";
+            this.NotificationBox_DienNuoc_TimPGDN.NotificationType = MonoFlat.MonoFlat_NotificationBox.Type.Notice;
+            this.NotificationBox_DienNuoc_TimPGDN.RoundCorners = false;
+            this.NotificationBox_DienNuoc_TimPGDN.ShowCloseButton = true;
+            this.NotificationBox_DienNuoc_TimPGDN.Size = new System.Drawing.Size(395, 40);
+            this.NotificationBox_DienNuoc_TimPGDN.TabIndex = 56;
+            this.NotificationBox_DienNuoc_TimPGDN.Text = "NotificationBox_HopDong_TimHD";
+            this.NotificationBox_DienNuoc_TimPGDN.Visible = false;
+            // 
+            // iTalk_HeaderLabel13
+            // 
+            this.iTalk_HeaderLabel13.AutoSize = true;
+            this.iTalk_HeaderLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_HeaderLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.iTalk_HeaderLabel13.Location = new System.Drawing.Point(9, 20);
+            this.iTalk_HeaderLabel13.Name = "iTalk_HeaderLabel13";
+            this.iTalk_HeaderLabel13.Size = new System.Drawing.Size(227, 32);
+            this.iTalk_HeaderLabel13.TabIndex = 52;
+            this.iTalk_HeaderLabel13.Text = "Tìm phiếu ghi Đ/N";
+            // 
+            // dataGridView_DienNuoc_TimPGDN
+            // 
+            this.dataGridView_DienNuoc_TimPGDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DienNuoc_TimPGDN.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DienNuoc_TimPGDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DienNuoc_TimPGDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaPGDN,
+            this.MaSo,
+            this.MaPhong,
+            this.SoDN,
+            this.NgayGhi,
+            this.LoaiPhieuGhi});
+            this.dataGridView_DienNuoc_TimPGDN.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView_DienNuoc_TimPGDN.Location = new System.Drawing.Point(6, 218);
+            this.dataGridView_DienNuoc_TimPGDN.MultiSelect = false;
+            this.dataGridView_DienNuoc_TimPGDN.Name = "dataGridView_DienNuoc_TimPGDN";
+            this.dataGridView_DienNuoc_TimPGDN.Size = new System.Drawing.Size(566, 264);
+            this.dataGridView_DienNuoc_TimPGDN.TabIndex = 51;
+            // 
+            // MaPGDN
+            // 
+            this.MaPGDN.HeaderText = "Mã phiếu ghi";
+            this.MaPGDN.Name = "MaPGDN";
+            // 
+            // MaSo
+            // 
+            this.MaSo.HeaderText = "Mã sổ ghi";
+            this.MaSo.Name = "MaSo";
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.Name = "MaPhong";
+            // 
+            // SoDN
+            // 
+            this.SoDN.HeaderText = "Số điện/nước";
+            this.SoDN.Name = "SoDN";
+            // 
+            // NgayGhi
+            // 
+            this.NgayGhi.HeaderText = "Ngày ghi";
+            this.NgayGhi.Name = "NgayGhi";
+            // 
+            // LoaiPhieuGhi
+            // 
+            this.LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
+            this.LoaiPhieuGhi.Name = "LoaiPhieuGhi";
+            // 
+            // TextBox_DienNuoc_TimPGDN_MaSGDN
+            // 
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.Location = new System.Drawing.Point(118, 110);
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.MaxLength = 32767;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.Multiline = false;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.Name = "TextBox_DienNuoc_TimPGDN_MaSGDN";
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.ReadOnly = false;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.TabIndex = 50;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_TimPGDN_MaSGDN.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_TimPGDN_MaPG
+            // 
+            this.TextBox_DienNuoc_TimPGDN_MaPG.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_TimPGDN_MaPG.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.Location = new System.Drawing.Point(118, 63);
+            this.TextBox_DienNuoc_TimPGDN_MaPG.MaxLength = 32767;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.Multiline = false;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.Name = "TextBox_DienNuoc_TimPGDN_MaPG";
+            this.TextBox_DienNuoc_TimPGDN_MaPG.ReadOnly = false;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_TimPGDN_MaPG.TabIndex = 49;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_TimPGDN_MaPG.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label38
+            // 
+            this.monoFlat_Label38.AutoSize = true;
+            this.monoFlat_Label38.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label38.Location = new System.Drawing.Point(13, 67);
+            this.monoFlat_Label38.Name = "monoFlat_Label38";
+            this.monoFlat_Label38.Size = new System.Drawing.Size(101, 21);
+            this.monoFlat_Label38.TabIndex = 48;
+            this.monoFlat_Label38.Text = "Mã phiếu ghi";
+            // 
+            // monoFlat_Label39
+            // 
+            this.monoFlat_Label39.AutoSize = true;
+            this.monoFlat_Label39.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label39.Location = new System.Drawing.Point(13, 113);
+            this.monoFlat_Label39.Name = "monoFlat_Label39";
+            this.monoFlat_Label39.Size = new System.Drawing.Size(82, 21);
+            this.monoFlat_Label39.TabIndex = 47;
+            this.monoFlat_Label39.Text = "Mã sổ ghi ";
+            // 
+            // Button_DienNuoc_TimPGDN_LapHD
+            // 
+            this.Button_DienNuoc_TimPGDN_LapHD.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TimPGDN_LapHD.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TimPGDN_LapHD.Image = null;
+            this.Button_DienNuoc_TimPGDN_LapHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TimPGDN_LapHD.Location = new System.Drawing.Point(578, 270);
+            this.Button_DienNuoc_TimPGDN_LapHD.Name = "Button_DienNuoc_TimPGDN_LapHD";
+            this.Button_DienNuoc_TimPGDN_LapHD.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_TimPGDN_LapHD.TabIndex = 46;
+            this.Button_DienNuoc_TimPGDN_LapHD.Text = "Lập hóa đơn";
+            this.Button_DienNuoc_TimPGDN_LapHD.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Button_DienNuoc_TimPGDN_TimKiem
+            // 
+            this.Button_DienNuoc_TimPGDN_TimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TimPGDN_TimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TimPGDN_TimKiem.Image = null;
+            this.Button_DienNuoc_TimPGDN_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TimPGDN_TimKiem.Location = new System.Drawing.Point(578, 94);
+            this.Button_DienNuoc_TimPGDN_TimKiem.Name = "Button_DienNuoc_TimPGDN_TimKiem";
+            this.Button_DienNuoc_TimPGDN_TimKiem.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_TimPGDN_TimKiem.TabIndex = 45;
+            this.Button_DienNuoc_TimPGDN_TimKiem.Text = "Tìm kiếm";
+            this.Button_DienNuoc_TimPGDN_TimKiem.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // iTalk_Label31
+            // 
+            this.iTalk_Label31.AutoSize = true;
+            this.iTalk_Label31.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label31.Location = new System.Drawing.Point(7, 3);
+            this.iTalk_Label31.Name = "iTalk_Label31";
+            this.iTalk_Label31.Size = new System.Drawing.Size(225, 17);
+            this.iTalk_Label31.TabIndex = 44;
+            this.iTalk_Label31.Text = "Điện nước > Tìm phiếu ghi điện nước";
+            // 
+            // TabPage_Child_DienNuoc_LapPGDN
+            // 
+            this.TabPage_Child_DienNuoc_LapPGDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.dataGridView_DienNuoc_LapPGDN);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.CheckBox_DienNuoc_LapPGDN_Nuoc);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.CheckBox_DienNuoc_LapPGDN_Dien);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label17);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.ComboBox_DienNuoc_LapPGDN_Phong);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.ComboBox_DienNuoc_LapPGDN_SoSGDN);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label26);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.NotificationBox_DienNuoc_LapPGDN);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.iTalk_HeaderLabel11);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.TextBox_DienNuoc_LapPGDN_SoDN);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.TextBox_DienNuoc_LapPGDN_MaPG);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label28);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label29);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label30);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.monoFlat_Label31);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.Button_DienNuoc_LapPGDN_Xoa);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.Button_DienNuoc_LapPGDN_ThemMoi);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.Button_DienNuoc_LapPGDN_Sua);
+            this.TabPage_Child_DienNuoc_LapPGDN.Controls.Add(this.iTalk_Label29);
+            this.TabPage_Child_DienNuoc_LapPGDN.Location = new System.Drawing.Point(154, 4);
+            this.TabPage_Child_DienNuoc_LapPGDN.Name = "TabPage_Child_DienNuoc_LapPGDN";
+            this.TabPage_Child_DienNuoc_LapPGDN.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Child_DienNuoc_LapPGDN.Size = new System.Drawing.Size(699, 500);
+            this.TabPage_Child_DienNuoc_LapPGDN.TabIndex = 2;
+            this.TabPage_Child_DienNuoc_LapPGDN.Text = "Lập PGDN";
+            // 
+            // dataGridView_DienNuoc_LapPGDN
+            // 
+            this.dataGridView_DienNuoc_LapPGDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DienNuoc_LapPGDN.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DienNuoc_LapPGDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DienNuoc_LapPGDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.LapPGDN_LoaiPhieuGhi});
+            this.dataGridView_DienNuoc_LapPGDN.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView_DienNuoc_LapPGDN.Location = new System.Drawing.Point(6, 218);
+            this.dataGridView_DienNuoc_LapPGDN.MultiSelect = false;
+            this.dataGridView_DienNuoc_LapPGDN.Name = "dataGridView_DienNuoc_LapPGDN";
+            this.dataGridView_DienNuoc_LapPGDN.Size = new System.Drawing.Size(566, 264);
+            this.dataGridView_DienNuoc_LapPGDN.TabIndex = 70;
+            this.dataGridView_DienNuoc_LapPGDN.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_DienNuoc_LapPGDN_CellFormatting);
+            // 
+            // CheckBox_DienNuoc_LapPGDN_Nuoc
+            // 
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.BackColor = System.Drawing.Color.Transparent;
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Checked = false;
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Location = new System.Drawing.Point(473, 167);
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Name = "CheckBox_DienNuoc_LapPGDN_Nuoc";
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Size = new System.Drawing.Size(66, 15);
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.TabIndex = 69;
+            this.CheckBox_DienNuoc_LapPGDN_Nuoc.Text = "Nước";
+            // 
+            // CheckBox_DienNuoc_LapPGDN_Dien
+            // 
+            this.CheckBox_DienNuoc_LapPGDN_Dien.BackColor = System.Drawing.Color.Transparent;
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Checked = false;
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Location = new System.Drawing.Point(409, 167);
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Name = "CheckBox_DienNuoc_LapPGDN_Dien";
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Size = new System.Drawing.Size(56, 15);
+            this.CheckBox_DienNuoc_LapPGDN_Dien.TabIndex = 68;
+            this.CheckBox_DienNuoc_LapPGDN_Dien.Text = "Điện";
+            // 
+            // monoFlat_Label17
+            // 
+            this.monoFlat_Label17.AutoSize = true;
+            this.monoFlat_Label17.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label17.Location = new System.Drawing.Point(285, 164);
+            this.monoFlat_Label17.Name = "monoFlat_Label17";
+            this.monoFlat_Label17.Size = new System.Drawing.Size(108, 21);
+            this.monoFlat_Label17.TabIndex = 67;
+            this.monoFlat_Label17.Text = "Loại phiếu ghi";
+            // 
+            // ComboBox_DienNuoc_LapPGDN_Phong
+            // 
+            this.ComboBox_DienNuoc_LapPGDN_Phong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_Phong.DisplayMember = "MaPhong";
+            this.ComboBox_DienNuoc_LapPGDN_Phong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.DropDownHeight = 100;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_DienNuoc_LapPGDN_Phong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_Phong.FormattingEnabled = true;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_Phong.IntegralHeight = false;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.ItemHeight = 20;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.Location = new System.Drawing.Point(118, 111);
+            this.ComboBox_DienNuoc_LapPGDN_Phong.Name = "ComboBox_DienNuoc_LapPGDN_Phong";
+            this.ComboBox_DienNuoc_LapPGDN_Phong.Size = new System.Drawing.Size(149, 26);
+            this.ComboBox_DienNuoc_LapPGDN_Phong.StartIndex = 0;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.TabIndex = 64;
+            this.ComboBox_DienNuoc_LapPGDN_Phong.ValueMember = "MaPhong";
+            // 
+            // ComboBox_DienNuoc_LapPGDN_SoSGDN
+            // 
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.DisplayMember = "MaPhong";
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.DropDownHeight = 100;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.FormattingEnabled = true;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.IntegralHeight = false;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.ItemHeight = 20;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.Location = new System.Drawing.Point(390, 65);
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.Name = "ComboBox_DienNuoc_LapPGDN_SoSGDN";
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.Size = new System.Drawing.Size(149, 26);
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.StartIndex = 0;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.TabIndex = 63;
+            this.ComboBox_DienNuoc_LapPGDN_SoSGDN.ValueMember = "MaPhong";
+            // 
+            // dateTimePicker_DienNuoc_LapPGDN_NgayGhi
+            // 
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.Location = new System.Drawing.Point(118, 161);
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.Name = "dateTimePicker_DienNuoc_LapPGDN_NgayGhi";
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.Size = new System.Drawing.Size(149, 26);
+            this.dateTimePicker_DienNuoc_LapPGDN_NgayGhi.TabIndex = 62;
+            // 
+            // monoFlat_Label26
+            // 
+            this.monoFlat_Label26.AutoSize = true;
+            this.monoFlat_Label26.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label26.Location = new System.Drawing.Point(13, 164);
+            this.monoFlat_Label26.Name = "monoFlat_Label26";
+            this.monoFlat_Label26.Size = new System.Drawing.Size(73, 21);
+            this.monoFlat_Label26.TabIndex = 59;
+            this.monoFlat_Label26.Text = "Ngày ghi";
+            // 
+            // NotificationBox_DienNuoc_LapPGDN
+            // 
+            this.NotificationBox_DienNuoc_LapPGDN.BorderCurve = 8;
+            this.NotificationBox_DienNuoc_LapPGDN.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.NotificationBox_DienNuoc_LapPGDN.Image = null;
+            this.NotificationBox_DienNuoc_LapPGDN.Location = new System.Drawing.Point(289, 10);
+            this.NotificationBox_DienNuoc_LapPGDN.MinimumSize = new System.Drawing.Size(100, 40);
+            this.NotificationBox_DienNuoc_LapPGDN.Name = "NotificationBox_DienNuoc_LapPGDN";
+            this.NotificationBox_DienNuoc_LapPGDN.NotificationType = MonoFlat.MonoFlat_NotificationBox.Type.Notice;
+            this.NotificationBox_DienNuoc_LapPGDN.RoundCorners = false;
+            this.NotificationBox_DienNuoc_LapPGDN.ShowCloseButton = true;
+            this.NotificationBox_DienNuoc_LapPGDN.Size = new System.Drawing.Size(395, 40);
+            this.NotificationBox_DienNuoc_LapPGDN.TabIndex = 58;
+            this.NotificationBox_DienNuoc_LapPGDN.Text = "NotificationBox_DienNuoc_LapPGDN";
+            this.NotificationBox_DienNuoc_LapPGDN.Visible = false;
+            // 
+            // iTalk_HeaderLabel11
+            // 
+            this.iTalk_HeaderLabel11.AutoSize = true;
+            this.iTalk_HeaderLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_HeaderLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.iTalk_HeaderLabel11.Location = new System.Drawing.Point(9, 20);
+            this.iTalk_HeaderLabel11.Name = "iTalk_HeaderLabel11";
+            this.iTalk_HeaderLabel11.Size = new System.Drawing.Size(224, 32);
+            this.iTalk_HeaderLabel11.TabIndex = 57;
+            this.iTalk_HeaderLabel11.Text = "Lập phiếu ghi Đ/N";
+            this.iTalk_HeaderLabel11.Click += new System.EventHandler(this.iTalk_HeaderLabel11_Click);
+            // 
+            // TextBox_DienNuoc_LapPGDN_SoDN
+            // 
+            this.TextBox_DienNuoc_LapPGDN_SoDN.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_LapPGDN_SoDN.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.Location = new System.Drawing.Point(390, 110);
+            this.TextBox_DienNuoc_LapPGDN_SoDN.MaxLength = 32767;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.Multiline = false;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.Name = "TextBox_DienNuoc_LapPGDN_SoDN";
+            this.TextBox_DienNuoc_LapPGDN_SoDN.ReadOnly = false;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_LapPGDN_SoDN.TabIndex = 55;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_LapPGDN_SoDN.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_LapPGDN_MaPG
+            // 
+            this.TextBox_DienNuoc_LapPGDN_MaPG.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_LapPGDN_MaPG.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.Location = new System.Drawing.Point(118, 63);
+            this.TextBox_DienNuoc_LapPGDN_MaPG.MaxLength = 32767;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.Multiline = false;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.Name = "TextBox_DienNuoc_LapPGDN_MaPG";
+            this.TextBox_DienNuoc_LapPGDN_MaPG.ReadOnly = false;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_LapPGDN_MaPG.TabIndex = 52;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_LapPGDN_MaPG.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label28
+            // 
+            this.monoFlat_Label28.AutoSize = true;
+            this.monoFlat_Label28.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label28.Location = new System.Drawing.Point(285, 114);
+            this.monoFlat_Label28.Name = "monoFlat_Label28";
+            this.monoFlat_Label28.Size = new System.Drawing.Size(103, 21);
+            this.monoFlat_Label28.TabIndex = 51;
+            this.monoFlat_Label28.Text = "Số điện/nước";
+            // 
+            // monoFlat_Label29
+            // 
+            this.monoFlat_Label29.AutoSize = true;
+            this.monoFlat_Label29.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label29.Location = new System.Drawing.Point(13, 67);
+            this.monoFlat_Label29.Name = "monoFlat_Label29";
+            this.monoFlat_Label29.Size = new System.Drawing.Size(101, 21);
+            this.monoFlat_Label29.TabIndex = 50;
+            this.monoFlat_Label29.Text = "Mã phiếu ghi";
+            // 
+            // monoFlat_Label30
+            // 
+            this.monoFlat_Label30.AutoSize = true;
+            this.monoFlat_Label30.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label30.Location = new System.Drawing.Point(285, 67);
+            this.monoFlat_Label30.Name = "monoFlat_Label30";
+            this.monoFlat_Label30.Size = new System.Drawing.Size(87, 21);
+            this.monoFlat_Label30.TabIndex = 49;
+            this.monoFlat_Label30.Text = "Sổ ghi Đ/N";
+            // 
+            // monoFlat_Label31
+            // 
+            this.monoFlat_Label31.AutoSize = true;
+            this.monoFlat_Label31.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label31.Location = new System.Drawing.Point(13, 114);
+            this.monoFlat_Label31.Name = "monoFlat_Label31";
+            this.monoFlat_Label31.Size = new System.Drawing.Size(55, 21);
+            this.monoFlat_Label31.TabIndex = 48;
+            this.monoFlat_Label31.Text = "Phòng";
+            // 
+            // Button_DienNuoc_LapPGDN_Xoa
+            // 
+            this.Button_DienNuoc_LapPGDN_Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_LapPGDN_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_LapPGDN_Xoa.Image = null;
+            this.Button_DienNuoc_LapPGDN_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_LapPGDN_Xoa.Location = new System.Drawing.Point(578, 270);
+            this.Button_DienNuoc_LapPGDN_Xoa.Name = "Button_DienNuoc_LapPGDN_Xoa";
+            this.Button_DienNuoc_LapPGDN_Xoa.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_LapPGDN_Xoa.TabIndex = 47;
+            this.Button_DienNuoc_LapPGDN_Xoa.Text = "Xóa";
+            this.Button_DienNuoc_LapPGDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_LapPGDN_Xoa.Click += new System.EventHandler(this.Button_DienNuoc_LapPGDN_Xoa_Click);
+            // 
+            // Button_DienNuoc_LapPGDN_ThemMoi
+            // 
+            this.Button_DienNuoc_LapPGDN_ThemMoi.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Image = null;
+            this.Button_DienNuoc_LapPGDN_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Location = new System.Drawing.Point(578, 67);
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Name = "Button_DienNuoc_LapPGDN_ThemMoi";
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_LapPGDN_ThemMoi.TabIndex = 46;
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Text = "Thêm mới";
+            this.Button_DienNuoc_LapPGDN_ThemMoi.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_LapPGDN_ThemMoi.Click += new System.EventHandler(this.Button_DienNuoc_LapPGDN_ThemMoi_Click);
+            // 
+            // Button_DienNuoc_LapPGDN_Sua
+            // 
+            this.Button_DienNuoc_LapPGDN_Sua.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_LapPGDN_Sua.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_LapPGDN_Sua.Image = null;
+            this.Button_DienNuoc_LapPGDN_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_LapPGDN_Sua.Location = new System.Drawing.Point(578, 144);
+            this.Button_DienNuoc_LapPGDN_Sua.Name = "Button_DienNuoc_LapPGDN_Sua";
+            this.Button_DienNuoc_LapPGDN_Sua.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_LapPGDN_Sua.TabIndex = 45;
+            this.Button_DienNuoc_LapPGDN_Sua.Text = "Sửa";
+            this.Button_DienNuoc_LapPGDN_Sua.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_LapPGDN_Sua.Click += new System.EventHandler(this.Button_DienNuoc_LapPGDN_Sua_Click);
+            // 
+            // iTalk_Label29
+            // 
+            this.iTalk_Label29.AutoSize = true;
+            this.iTalk_Label29.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label29.Location = new System.Drawing.Point(7, 3);
+            this.iTalk_Label29.Name = "iTalk_Label29";
+            this.iTalk_Label29.Size = new System.Drawing.Size(225, 17);
+            this.iTalk_Label29.TabIndex = 44;
+            this.iTalk_Label29.Text = "Điện nước > Lập phiếu ghi điện nước";
+            // 
+            // TabPage_Child_DienNuoc_TimHDDN
+            // 
+            this.TabPage_Child_DienNuoc_TimHDDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.iTalk_Separator_Blue4);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.monoFlat_NotificationBox5);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.Button_DienNuoc_TìmHDDN_TimTheoPhong);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.ComboBox_DienNuoc_TìmHDDN_Phong);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.monoFlat_Label33);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.iTalk_HeaderLabel12);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.dataGridView_DienNuoc_TìmHDDN);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.TextBox_DienNuoc_TìmHDDN_MaPG);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.TextBox_DienNuoc_TìmHDDN_SoHD);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.monoFlat_Label34);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.monoFlat_Label35);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.Button_DienNuoc_TìmHDDN_Xoa);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.Button_DienNuoc_TìmHDDN_TimKiem);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.iTalk_Label30);
+            this.TabPage_Child_DienNuoc_TimHDDN.Location = new System.Drawing.Point(154, 4);
+            this.TabPage_Child_DienNuoc_TimHDDN.Name = "TabPage_Child_DienNuoc_TimHDDN";
+            this.TabPage_Child_DienNuoc_TimHDDN.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Child_DienNuoc_TimHDDN.Size = new System.Drawing.Size(699, 500);
+            this.TabPage_Child_DienNuoc_TimHDDN.TabIndex = 3;
+            this.TabPage_Child_DienNuoc_TimHDDN.Text = "Tìm HDDN";
+            // 
+            // iTalk_Separator_Blue4
+            // 
+            this.iTalk_Separator_Blue4.Location = new System.Drawing.Point(13, 146);
+            this.iTalk_Separator_Blue4.Name = "iTalk_Separator_Blue4";
+            this.iTalk_Separator_Blue4.Size = new System.Drawing.Size(671, 10);
+            this.iTalk_Separator_Blue4.TabIndex = 57;
+            this.iTalk_Separator_Blue4.Text = "iTalk_Separator_Blue4";
+            // 
+            // monoFlat_NotificationBox5
+            // 
+            this.monoFlat_NotificationBox5.BorderCurve = 8;
+            this.monoFlat_NotificationBox5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.monoFlat_NotificationBox5.Image = null;
+            this.monoFlat_NotificationBox5.Location = new System.Drawing.Point(289, 10);
+            this.monoFlat_NotificationBox5.MinimumSize = new System.Drawing.Size(100, 40);
+            this.monoFlat_NotificationBox5.Name = "monoFlat_NotificationBox5";
+            this.monoFlat_NotificationBox5.NotificationType = MonoFlat.MonoFlat_NotificationBox.Type.Notice;
+            this.monoFlat_NotificationBox5.RoundCorners = false;
+            this.monoFlat_NotificationBox5.ShowCloseButton = true;
+            this.monoFlat_NotificationBox5.Size = new System.Drawing.Size(395, 40);
+            this.monoFlat_NotificationBox5.TabIndex = 56;
+            this.monoFlat_NotificationBox5.Text = "NotificationBox_DienNuoc_TìmHDDN";
+            this.monoFlat_NotificationBox5.Visible = false;
+            // 
+            // Button_DienNuoc_TìmHDDN_TimTheoPhong
+            // 
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Image = null;
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Location = new System.Drawing.Point(389, 163);
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Name = "Button_DienNuoc_TìmHDDN_TimTheoPhong";
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.TabIndex = 55;
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Text = "Tìm theo phòng";
+            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // ComboBox_DienNuoc_TìmHDDN_Phong
+            // 
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.DisplayMember = "MaPhong";
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.DropDownHeight = 100;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.FormattingEnabled = true;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.IntegralHeight = false;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.ItemHeight = 20;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.Location = new System.Drawing.Point(118, 168);
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.Name = "ComboBox_DienNuoc_TìmHDDN_Phong";
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.Size = new System.Drawing.Size(149, 26);
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.StartIndex = 0;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.TabIndex = 54;
+            this.ComboBox_DienNuoc_TìmHDDN_Phong.ValueMember = "MaPhong";
+            // 
+            // monoFlat_Label33
+            // 
+            this.monoFlat_Label33.AutoSize = true;
+            this.monoFlat_Label33.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label33.Location = new System.Drawing.Point(13, 168);
+            this.monoFlat_Label33.Name = "monoFlat_Label33";
+            this.monoFlat_Label33.Size = new System.Drawing.Size(55, 21);
+            this.monoFlat_Label33.TabIndex = 53;
+            this.monoFlat_Label33.Text = "Phòng";
+            // 
+            // iTalk_HeaderLabel12
+            // 
+            this.iTalk_HeaderLabel12.AutoSize = true;
+            this.iTalk_HeaderLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_HeaderLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.iTalk_HeaderLabel12.Location = new System.Drawing.Point(9, 20);
+            this.iTalk_HeaderLabel12.Name = "iTalk_HeaderLabel12";
+            this.iTalk_HeaderLabel12.Size = new System.Drawing.Size(214, 32);
+            this.iTalk_HeaderLabel12.TabIndex = 52;
+            this.iTalk_HeaderLabel12.Text = "Tìm hóa đơn Đ/N";
+            // 
+            // dataGridView_DienNuoc_TìmHDDN
+            // 
+            this.dataGridView_DienNuoc_TìmHDDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DienNuoc_TìmHDDN.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DienNuoc_TìmHDDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DienNuoc_TìmHDDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SoHD,
+            this.TimHĐN_MaPGDN,
+            this.LapPGDN_TienThu,
+            this.LapHDDN_NgayLap});
+            this.dataGridView_DienNuoc_TìmHDDN.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView_DienNuoc_TìmHDDN.Location = new System.Drawing.Point(6, 218);
+            this.dataGridView_DienNuoc_TìmHDDN.MultiSelect = false;
+            this.dataGridView_DienNuoc_TìmHDDN.Name = "dataGridView_DienNuoc_TìmHDDN";
+            this.dataGridView_DienNuoc_TìmHDDN.Size = new System.Drawing.Size(566, 264);
+            this.dataGridView_DienNuoc_TìmHDDN.TabIndex = 51;
+            // 
+            // SoHD
+            // 
+            this.SoHD.HeaderText = "Số hóa đơn";
+            this.SoHD.Name = "SoHD";
+            // 
+            // TimHĐN_MaPGDN
+            // 
+            this.TimHĐN_MaPGDN.HeaderText = "Mã phiếu ghi";
+            this.TimHĐN_MaPGDN.Name = "TimHĐN_MaPGDN";
+            // 
+            // LapPGDN_TienThu
+            // 
+            this.LapPGDN_TienThu.HeaderText = "Số tiền thu";
+            this.LapPGDN_TienThu.Name = "LapPGDN_TienThu";
+            // 
+            // LapHDDN_NgayLap
+            // 
+            this.LapHDDN_NgayLap.HeaderText = "Ngày lập";
+            this.LapHDDN_NgayLap.Name = "LapHDDN_NgayLap";
+            // 
+            // TextBox_DienNuoc_TìmHDDN_MaPG
+            // 
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.Location = new System.Drawing.Point(118, 110);
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.MaxLength = 32767;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.Multiline = false;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.Name = "TextBox_DienNuoc_TìmHDDN_MaPG";
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.ReadOnly = false;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.TabIndex = 50;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_TìmHDDN_MaPG.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_TìmHDDN_SoHD
+            // 
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.Location = new System.Drawing.Point(118, 63);
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.MaxLength = 32767;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.Multiline = false;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.Name = "TextBox_DienNuoc_TìmHDDN_SoHD";
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.ReadOnly = false;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.TabIndex = 49;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_TìmHDDN_SoHD.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label34
+            // 
+            this.monoFlat_Label34.AutoSize = true;
+            this.monoFlat_Label34.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label34.Location = new System.Drawing.Point(13, 67);
+            this.monoFlat_Label34.Name = "monoFlat_Label34";
+            this.monoFlat_Label34.Size = new System.Drawing.Size(90, 21);
+            this.monoFlat_Label34.TabIndex = 48;
+            this.monoFlat_Label34.Text = "Số hóa đơn";
+            // 
+            // monoFlat_Label35
+            // 
+            this.monoFlat_Label35.AutoSize = true;
+            this.monoFlat_Label35.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label35.Location = new System.Drawing.Point(13, 113);
+            this.monoFlat_Label35.Name = "monoFlat_Label35";
+            this.monoFlat_Label35.Size = new System.Drawing.Size(101, 21);
+            this.monoFlat_Label35.TabIndex = 47;
+            this.monoFlat_Label35.Text = "Mã phiếu ghi";
+            // 
+            // Button_DienNuoc_TìmHDDN_Xoa
+            // 
+            this.Button_DienNuoc_TìmHDDN_Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TìmHDDN_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TìmHDDN_Xoa.Image = null;
+            this.Button_DienNuoc_TìmHDDN_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TìmHDDN_Xoa.Location = new System.Drawing.Point(578, 270);
+            this.Button_DienNuoc_TìmHDDN_Xoa.Name = "Button_DienNuoc_TìmHDDN_Xoa";
+            this.Button_DienNuoc_TìmHDDN_Xoa.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_TìmHDDN_Xoa.TabIndex = 46;
+            this.Button_DienNuoc_TìmHDDN_Xoa.Text = "Xóa";
+            this.Button_DienNuoc_TìmHDDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // Button_DienNuoc_TìmHDDN_TimKiem
+            // 
+            this.Button_DienNuoc_TìmHDDN_TimKiem.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Image = null;
+            this.Button_DienNuoc_TìmHDDN_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Location = new System.Drawing.Point(389, 93);
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Name = "Button_DienNuoc_TìmHDDN_TimKiem";
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_TìmHDDN_TimKiem.TabIndex = 45;
+            this.Button_DienNuoc_TìmHDDN_TimKiem.Text = "Tìm kiếm";
+            this.Button_DienNuoc_TìmHDDN_TimKiem.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // iTalk_Label30
+            // 
+            this.iTalk_Label30.AutoSize = true;
+            this.iTalk_Label30.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label30.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label30.Location = new System.Drawing.Point(7, 3);
+            this.iTalk_Label30.Name = "iTalk_Label30";
+            this.iTalk_Label30.Size = new System.Drawing.Size(221, 17);
+            this.iTalk_Label30.TabIndex = 44;
+            this.iTalk_Label30.Text = "Điện nước > Tìm hóa đơn điện/nước";
+            // 
+            // TabPage_Child_DienNuoc_LapHDDN
+            // 
+            this.TabPage_Child_DienNuoc_LapHDDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.dataGridView_DienNuoc_LapHDDN);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.NotificationBox_DienNuoc_LapHDDN);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.iTalk_HeaderLabel14);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.TextBox_DienNuoc_LapHDDN_SoTienThu);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.TextBox_DienNuoc_LapHDDN_MaPG);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.TextBox_DienNuoc_LapHDDN_SoHD);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.monoFlat_Label41);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.monoFlat_Label42);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.monoFlat_Label43);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.Button_DienNuoc_LapHDDN_Xoa);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.Button_DienNuoc_LapHDDN_ThemMoi);
+            this.TabPage_Child_DienNuoc_LapHDDN.Controls.Add(this.iTalk_Label32);
+            this.TabPage_Child_DienNuoc_LapHDDN.Location = new System.Drawing.Point(154, 4);
+            this.TabPage_Child_DienNuoc_LapHDDN.Name = "TabPage_Child_DienNuoc_LapHDDN";
+            this.TabPage_Child_DienNuoc_LapHDDN.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Child_DienNuoc_LapHDDN.Size = new System.Drawing.Size(699, 500);
+            this.TabPage_Child_DienNuoc_LapHDDN.TabIndex = 4;
+            this.TabPage_Child_DienNuoc_LapHDDN.Text = "Lập HDDN";
+            this.TabPage_Child_DienNuoc_LapHDDN.Leave += new System.EventHandler(this.TabPage_Child_DienNuoc_LapHDDN_Leave);
+            // 
+            // dataGridView_DienNuoc_LapHDDN
+            // 
+            this.dataGridView_DienNuoc_LapHDDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_DienNuoc_LapHDDN.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_DienNuoc_LapHDDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_DienNuoc_LapHDDN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27});
+            this.dataGridView_DienNuoc_LapHDDN.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView_DienNuoc_LapHDDN.Location = new System.Drawing.Point(6, 218);
+            this.dataGridView_DienNuoc_LapHDDN.MultiSelect = false;
+            this.dataGridView_DienNuoc_LapHDDN.Name = "dataGridView_DienNuoc_LapHDDN";
+            this.dataGridView_DienNuoc_LapHDDN.Size = new System.Drawing.Size(566, 264);
+            this.dataGridView_DienNuoc_LapHDDN.TabIndex = 71;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.HeaderText = "Số hóa đơn";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.HeaderText = "Mã phiếu ghi";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.HeaderText = "Số tiền thu";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.HeaderText = "Ngày lập";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // NotificationBox_DienNuoc_LapHDDN
+            // 
+            this.NotificationBox_DienNuoc_LapHDDN.BorderCurve = 8;
+            this.NotificationBox_DienNuoc_LapHDDN.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.NotificationBox_DienNuoc_LapHDDN.Image = null;
+            this.NotificationBox_DienNuoc_LapHDDN.Location = new System.Drawing.Point(289, 10);
+            this.NotificationBox_DienNuoc_LapHDDN.MinimumSize = new System.Drawing.Size(100, 40);
+            this.NotificationBox_DienNuoc_LapHDDN.Name = "NotificationBox_DienNuoc_LapHDDN";
+            this.NotificationBox_DienNuoc_LapHDDN.NotificationType = MonoFlat.MonoFlat_NotificationBox.Type.Notice;
+            this.NotificationBox_DienNuoc_LapHDDN.RoundCorners = false;
+            this.NotificationBox_DienNuoc_LapHDDN.ShowCloseButton = true;
+            this.NotificationBox_DienNuoc_LapHDDN.Size = new System.Drawing.Size(395, 40);
+            this.NotificationBox_DienNuoc_LapHDDN.TabIndex = 70;
+            this.NotificationBox_DienNuoc_LapHDDN.Text = "monoFlat_NotificationBox6";
+            this.NotificationBox_DienNuoc_LapHDDN.Visible = false;
+            // 
+            // iTalk_HeaderLabel14
+            // 
+            this.iTalk_HeaderLabel14.AutoSize = true;
+            this.iTalk_HeaderLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_HeaderLabel14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_HeaderLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.iTalk_HeaderLabel14.Location = new System.Drawing.Point(9, 20);
+            this.iTalk_HeaderLabel14.Name = "iTalk_HeaderLabel14";
+            this.iTalk_HeaderLabel14.Size = new System.Drawing.Size(211, 32);
+            this.iTalk_HeaderLabel14.TabIndex = 69;
+            this.iTalk_HeaderLabel14.Text = "Lập hóa đơn Đ/N";
+            // 
+            // TextBox_DienNuoc_LapHDDN_SoTienThu
+            // 
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.Location = new System.Drawing.Point(118, 110);
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.MaxLength = 32767;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.Multiline = false;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.Name = "TextBox_DienNuoc_LapHDDN_SoTienThu";
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.ReadOnly = false;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.TabIndex = 67;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_LapHDDN_SoTienThu.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_LapHDDN_MaPG
+            // 
+            this.TextBox_DienNuoc_LapHDDN_MaPG.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_LapHDDN_MaPG.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.Location = new System.Drawing.Point(390, 63);
+            this.TextBox_DienNuoc_LapHDDN_MaPG.MaxLength = 32767;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.Multiline = false;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.Name = "TextBox_DienNuoc_LapHDDN_MaPG";
+            this.TextBox_DienNuoc_LapHDDN_MaPG.ReadOnly = false;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_LapHDDN_MaPG.TabIndex = 66;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_LapHDDN_MaPG.UseSystemPasswordChar = false;
+            // 
+            // TextBox_DienNuoc_LapHDDN_SoHD
+            // 
+            this.TextBox_DienNuoc_LapHDDN_SoHD.BackColor = System.Drawing.Color.Transparent;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.TextBox_DienNuoc_LapHDDN_SoHD.ForeColor = System.Drawing.Color.DimGray;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.Location = new System.Drawing.Point(118, 63);
+            this.TextBox_DienNuoc_LapHDDN_SoHD.MaxLength = 32767;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.Multiline = false;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.Name = "TextBox_DienNuoc_LapHDDN_SoHD";
+            this.TextBox_DienNuoc_LapHDDN_SoHD.ReadOnly = false;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.Size = new System.Drawing.Size(149, 28);
+            this.TextBox_DienNuoc_LapHDDN_SoHD.TabIndex = 65;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DienNuoc_LapHDDN_SoHD.UseSystemPasswordChar = false;
+            // 
+            // monoFlat_Label41
+            // 
+            this.monoFlat_Label41.AutoSize = true;
+            this.monoFlat_Label41.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label41.Location = new System.Drawing.Point(13, 67);
+            this.monoFlat_Label41.Name = "monoFlat_Label41";
+            this.monoFlat_Label41.Size = new System.Drawing.Size(90, 21);
+            this.monoFlat_Label41.TabIndex = 64;
+            this.monoFlat_Label41.Text = "Số hóa đơn";
+            // 
+            // monoFlat_Label42
+            // 
+            this.monoFlat_Label42.AutoSize = true;
+            this.monoFlat_Label42.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label42.Location = new System.Drawing.Point(285, 67);
+            this.monoFlat_Label42.Name = "monoFlat_Label42";
+            this.monoFlat_Label42.Size = new System.Drawing.Size(101, 21);
+            this.monoFlat_Label42.TabIndex = 63;
+            this.monoFlat_Label42.Text = "Mã phiếu ghi";
+            // 
+            // monoFlat_Label43
+            // 
+            this.monoFlat_Label43.AutoSize = true;
+            this.monoFlat_Label43.BackColor = System.Drawing.Color.Transparent;
+            this.monoFlat_Label43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monoFlat_Label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(125)))), ((int)(((byte)(132)))));
+            this.monoFlat_Label43.Location = new System.Drawing.Point(13, 114);
+            this.monoFlat_Label43.Name = "monoFlat_Label43";
+            this.monoFlat_Label43.Size = new System.Drawing.Size(85, 21);
+            this.monoFlat_Label43.TabIndex = 62;
+            this.monoFlat_Label43.Text = "Số tiền thu";
+            // 
+            // Button_DienNuoc_LapHDDN_Xoa
+            // 
+            this.Button_DienNuoc_LapHDDN_Xoa.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_LapHDDN_Xoa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_LapHDDN_Xoa.Image = null;
+            this.Button_DienNuoc_LapHDDN_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_LapHDDN_Xoa.Location = new System.Drawing.Point(578, 270);
+            this.Button_DienNuoc_LapHDDN_Xoa.Name = "Button_DienNuoc_LapHDDN_Xoa";
+            this.Button_DienNuoc_LapHDDN_Xoa.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_LapHDDN_Xoa.TabIndex = 61;
+            this.Button_DienNuoc_LapHDDN_Xoa.Text = "Xóa";
+            this.Button_DienNuoc_LapHDDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_LapHDDN_Xoa.Click += new System.EventHandler(this.Button_DienNuoc_LapHDDN_Xoa_Click);
+            // 
+            // Button_DienNuoc_LapHDDN_ThemMoi
+            // 
+            this.Button_DienNuoc_LapHDDN_ThemMoi.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Image = null;
+            this.Button_DienNuoc_LapHDDN_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Location = new System.Drawing.Point(578, 94);
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Name = "Button_DienNuoc_LapHDDN_ThemMoi";
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Size = new System.Drawing.Size(106, 41);
+            this.Button_DienNuoc_LapHDDN_ThemMoi.TabIndex = 60;
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Text = "Thêm mới";
+            this.Button_DienNuoc_LapHDDN_ThemMoi.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_LapHDDN_ThemMoi.Click += new System.EventHandler(this.Button_DienNuoc_LapHDDN_ThemMoi_Click);
+            // 
+            // iTalk_Label32
+            // 
+            this.iTalk_Label32.AutoSize = true;
+            this.iTalk_Label32.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label32.Location = new System.Drawing.Point(7, 3);
+            this.iTalk_Label32.Name = "iTalk_Label32";
+            this.iTalk_Label32.Size = new System.Drawing.Size(220, 17);
+            this.iTalk_Label32.TabIndex = 59;
+            this.iTalk_Label32.Text = "Điện nước > Lập hóa đơn điện nước";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.HeaderText = "Mã phiếu ghi";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.HeaderText = "Mã sổ ghi";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.HeaderText = "Mã phòng";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.HeaderText = "Số điện/nước";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.HeaderText = "Ngày ghi";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // LapPGDN_LoaiPhieuGhi
+            // 
+            this.LapPGDN_LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
+            this.LapPGDN_LoaiPhieuGhi.Name = "LapPGDN_LoaiPhieuGhi";
             // 
             // Form1
             // 
@@ -3222,7 +4659,7 @@
             this.TabPage_Child_Phong_ThemSua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.Father_TabPage3_HopDong.ResumeLayout(false);
-            this.iTalk_TabControl_Children1.ResumeLayout(false);
+            this.TabControl_Child_HopDong.ResumeLayout(false);
             this.TabPage_Child_HopDong_TimKiem.ResumeLayout(false);
             this.TabPage_Child_HopDong_TimKiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HopDong_TimKiem)).EndInit();
@@ -3243,6 +4680,23 @@
             this.TabPage_Child_Taisan_ThemSua.ResumeLayout(false);
             this.TabPage_Child_Taisan_ThemSua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.Father_TabPage5_DienNuoc.ResumeLayout(false);
+            this.iTalk_TabControl_Children2.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_ThemSGDN.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_ThemSGDN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_ThemSGDN)).EndInit();
+            this.TabPage_Child_DienNuoc_TimPGDN.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_TimPGDN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_TimPGDN)).EndInit();
+            this.TabPage_Child_DienNuoc_LapPGDN.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_LapPGDN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_LapPGDN)).EndInit();
+            this.TabPage_Child_DienNuoc_TimHDDN.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_TimHDDN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_TìmHDDN)).EndInit();
+            this.TabPage_Child_DienNuoc_LapHDDN.ResumeLayout(false);
+            this.TabPage_Child_DienNuoc_LapHDDN.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DienNuoc_LapHDDN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3268,7 +4722,6 @@
         private MonoFlat.MonoFlat_Button_Green Button_SinhVien_TimKiem_Xoa;
         private MonoFlat.MonoFlat_Button_Green Button_SinhVien_TimKiem_TimKiem;
         private MonoFlat.MonoFlat_Button_Green Button_SinhVien_TimKiem_Sua;
-        private MonoFlat.MonoFlat_Button_Green Button_SinhVien_TimKiem_DangXuat;
         private iTalk.iTalk_Label iTalk_Label1;
         private System.Windows.Forms.TabPage TabPage_Child_SinhVien_ThemSua;
         private System.Windows.Forms.TabPage Father_TabPage2_Phong;
@@ -3313,7 +4766,7 @@
         private MonoFlat.MonoFlat_Button_Green Button_SinhVien_ThemSua_Sua;
         private iTalk.iTalk_Label iTalk_Label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_SinhVien_ThemSua_NgaySinh;
-        private iTalk.iTalk_TabControl_Children iTalk_TabControl_Children1;
+        private iTalk.iTalk_TabControl_Children TabControl_Child_HopDong;
         private System.Windows.Forms.TabPage TabPage_Child_HopDong_TimKiem;
         private System.Windows.Forms.TabPage TabPage_Child_HopDong_LapHD;
         private iTalk.iTalk_Separator_Blue iTalk_Separator_Blue1;
@@ -3387,7 +4840,6 @@
         private MonoFlat.MonoFlat_Label monoFlat_Label27;
         private MonoFlat.MonoFlat_Button_Green Button_HopDong_TimPT_Xoa;
         private MonoFlat.MonoFlat_Button_Green Button_HopDong_TimPT_TimKiem;
-        private MonoFlat.MonoFlat_Button_Green Button_HopDong_TimPT_Sua;
         private iTalk.iTalk_Label iTalk_Label6;
         private System.Windows.Forms.DataGridView dataGridView_HopDong_TimPT;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
@@ -3480,6 +4932,114 @@
         private iTalk.iTalk_Label iTalk_Label25;
         private iTalk.iTalk_Label iTalk_Label26;
         private iTalk.iTalk_Label iTalk_Label27;
+        private iTalk.iTalk_TabControl_Children iTalk_TabControl_Children2;
+        private System.Windows.Forms.TabPage TabPage_Child_DienNuoc_ThemSGDN;
+        private System.Windows.Forms.TabPage TabPage_Child_DienNuoc_TimHDDN;
+        private System.Windows.Forms.TabPage TabPage_Child_DienNuoc_LapHDDN;
+        private System.Windows.Forms.TabPage TabPage_Child_DienNuoc_LapPGDN;
+        private iTalk.iTalk_ComboBox_Custom ComboBox_DienNuoc_LapPGDN_Phong;
+        private iTalk.iTalk_ComboBox_Custom ComboBox_DienNuoc_LapPGDN_SoSGDN;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DienNuoc_LapPGDN_NgayGhi;
+        private MonoFlat.MonoFlat_Label monoFlat_Label26;
+        private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_LapPGDN;
+        private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel11;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_LapPGDN_SoDN;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_LapPGDN_MaPG;
+        private MonoFlat.MonoFlat_Label monoFlat_Label28;
+        private MonoFlat.MonoFlat_Label monoFlat_Label29;
+        private MonoFlat.MonoFlat_Label monoFlat_Label30;
+        private MonoFlat.MonoFlat_Label monoFlat_Label31;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapPGDN_Xoa;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapPGDN_ThemMoi;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapPGDN_Sua;
+        private iTalk.iTalk_Label iTalk_Label29;
+        private MonoFlat.MonoFlat_Label monoFlat_Label17;
+        private iTalk.iTalk_CheckBox_Custom CheckBox_DienNuoc_LapPGDN_Nuoc;
+        private iTalk.iTalk_CheckBox_Custom CheckBox_DienNuoc_LapPGDN_Dien;
+        private iTalk.iTalk_Separator_Blue iTalk_Separator_Blue4;
+        private MonoFlat.MonoFlat_NotificationBox monoFlat_NotificationBox5;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TìmHDDN_TimTheoPhong;
+        private iTalk.iTalk_ComboBox_Custom ComboBox_DienNuoc_TìmHDDN_Phong;
+        private MonoFlat.MonoFlat_Label monoFlat_Label33;
+        private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel12;
+        private System.Windows.Forms.DataGridView dataGridView_DienNuoc_TìmHDDN;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TìmHDDN_MaPG;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TìmHDDN_SoHD;
+        private MonoFlat.MonoFlat_Label monoFlat_Label34;
+        private MonoFlat.MonoFlat_Label monoFlat_Label35;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TìmHDDN_Xoa;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TìmHDDN_TimKiem;
+        private iTalk.iTalk_Label iTalk_Label30;
+        private System.Windows.Forms.DataGridView dataGridView_DienNuoc_LapPGDN;
+        private System.Windows.Forms.TabPage TabPage_Child_DienNuoc_TimPGDN;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TimPGDN_TimTheoPhong;
+        private iTalk.iTalk_ComboBox_Custom ComboBox_DienNuoc_TimPGDN_Phong;
+        private MonoFlat.MonoFlat_Label monoFlat_Label37;
+        private iTalk.iTalk_CheckBox_Custom CheckBox_DienNuoc_TimPGDN_Nuoc;
+        private iTalk.iTalk_CheckBox_Custom CheckBox_DienNuoc_TimPGDN_Dien;
+        private MonoFlat.MonoFlat_Label monoFlat_Label40;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TimPGDN_MaP;
+        private MonoFlat.MonoFlat_Label monoFlat_Label36;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TimPGDN_Xoa;
+        private iTalk.iTalk_Separator_Blue iTalk_Separator_Blue5;
+        private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_TimPGDN;
+        private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel13;
+        private System.Windows.Forms.DataGridView dataGridView_DienNuoc_TimPGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGhi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPhieuGhi;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TimPGDN_MaSGDN;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TimPGDN_MaPG;
+        private MonoFlat.MonoFlat_Label monoFlat_Label38;
+        private MonoFlat.MonoFlat_Label monoFlat_Label39;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TimPGDN_LapHD;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TimPGDN_TimKiem;
+        private iTalk.iTalk_Label iTalk_Label31;
+        private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_LapHDDN;
+        private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel14;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_LapHDDN_SoTienThu;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_LapHDDN_MaPG;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_LapHDDN_SoHD;
+        private MonoFlat.MonoFlat_Label monoFlat_Label41;
+        private MonoFlat.MonoFlat_Label monoFlat_Label42;
+        private MonoFlat.MonoFlat_Label monoFlat_Label43;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapHDDN_Xoa;
+        private iTalk.iTalk_Label iTalk_Label32;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapHDDN_ThemMoi;
+        private System.Windows.Forms.DataGridView dataGridView_DienNuoc_LapHDDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimHĐN_MaPGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_TienThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapHDDN_NgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private MonoFlat.MonoFlat_Label monoFlat_Label44;
+        private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_ThemSGDN;
+        private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel15;
+        private System.Windows.Forms.DataGridView dataGridView_DienNuoc_ThemSGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThemSGDN_MaSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_TenSo;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_NamGhi;
+        private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_MaSo;
+        private MonoFlat.MonoFlat_Label monoFlat_Label46;
+        private MonoFlat.MonoFlat_Label monoFlat_Label48;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_Xoa;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_Sua;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_ThemMoi;
+        private iTalk.iTalk_Label iTalk_Label33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_LoaiPhieuGhi;
     }
 }
 

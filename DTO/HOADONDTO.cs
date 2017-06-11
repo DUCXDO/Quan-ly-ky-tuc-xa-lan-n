@@ -21,8 +21,8 @@ namespace DTO
         [Required(ErrorMessage = "Số tiền đóng không được để trống!")]
         public decimal SoTien { get; set; }
 
-
-        public string MaSo { get; set; }
-        public string MaPhong { get; set; }
+        [Required(ErrorMessage = "Mã phiếu ghi điện nước không được để trống!")]
+        [StringLength(10, ErrorMessage = "Mã phiếu ghi điện nước quá dài, chỉ nhập tối đa 10 kí tự.")]
+        public string MaPhieuGhiDienNuoc { get; set; }
     }
 }

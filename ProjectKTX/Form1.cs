@@ -316,8 +316,6 @@ namespace ProjectKTX
 
         #endregion
 
-
-        
         #region Hợp đồng - Tìm kiếm
 
         // Load combo box khi vào tabpage
@@ -420,6 +418,31 @@ namespace ProjectKTX
             }
         }
 
+        //Nút lập phiếu thu được bấm
+        private void Button_HopDong_TimKiem_LapPhieuThu_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_HopDong_TimKiem.SelectedRows.Count == 0)
+            {
+                NotificationBox_HopDong_TimKiem.Text = "Chưa có hợp đồng nào được chọn để lập phiếu thu!";
+                NotificationBox_HopDong_TimKiem.Visible = true;
+            }
+            else
+            {
+                HOPDONG selected = dataGridView_HopDong_TimKiem.SelectedRows[0].DataBoundItem as HOPDONG;
+                // code để chuyển dữ liệu sang tabpage thêm 
+                TextBox_HopDong_LapPT_SoHD.Text = selected.SoHD;
+
+                // Hiện tất cả phiếu thu khi chuyển sang tabpage LapPT
+                BindingList<PHIEUTHU> dataSource = new BindingList<PHIEUTHU>();
+                foreach (var item in PhieuThuBUS.TimTatCaPT())
+                {
+                    dataSource.Add(item);
+                }
+                dataGridView_HopDong_LapPT.DataSource = dataSource;
+                TabControl_Child_HopDong.SelectedTab = TabPage_Child_HopDong_LapPT;
+            }
+        }
+
         // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
         private void TabPage_Child_HopDong_TimKiem_Leave(object sender, EventArgs e)
         {
@@ -516,6 +539,408 @@ namespace ProjectKTX
 
         #endregion
 
+        #region Hợp đồng - Tìm phiếu thu
+
+        // Nút tìm kiếm được bấm
+        private void Button_HopDong_TimPT_TimKiem_Click(object sender, EventArgs e)
+        {
+            // Tạo đối tượng sinh viên mới
+            PHIEUTHUDTO pt = new PHIEUTHUDTO();
+
+            // Lấy số hợp đồng từ textbox
+            pt.SoHD = TextBox_HopDong_TimPT_SoHD.Text;
+            // Lấy số phiếu thu textbox
+            pt.SoPT = TextBox_HopDong_TimPT_SoPT.Text;
+
+            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
+            BindingList<PHIEUTHU> dataSource = new BindingList<PHIEUTHU>();
+
+            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
+            foreach (var item in PhieuThuBUS.TimPT(pt))
+            {
+                dataSource.Add(item);
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_HopDong_TimPT.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_HopDong_TimPT.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dataGridView_HopDong_TimPT.DataSource = dataSource;
+            }
+        }
+
+        // Nút tìm theo ngày lập được bấm
+        private void Button_HopDong_TimPT_TimTheoNgayLap_Click(object sender, EventArgs e)
+        {
+            BindingList<PHIEUTHU> dataSource = new BindingList<PHIEUTHU>();
+            foreach (var item in PhieuThuBUS.TimPTTheoNgayLap(dateTimePicker_HopDong_TimPT_NgayLap.Value))
+            {
+                dataSource.Add(item);
+            }
+
+            if (dataSource.Count == 0)
+            {
+                NotificationBox_HopDong_TimPT.Text = "Hiện không có sinh viên nào ở phòng này!";
+                NotificationBox_HopDong_TimPT.Visible = true;
+            }
+            else
+            {
+                dataGridView_HopDong_TimPT.DataSource = dataSource;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_HopDong_TimPT_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_HopDong_TimPT.SelectedRows.Count == 0)
+            {
+                NotificationBox_HopDong_TimPT.Text = "Chưa có phiếu thu nào được chọn để xóa!";
+                NotificationBox_HopDong_TimPT.Visible = true;
+            }
+            else
+            {
+                PHIEUTHU selected = dataGridView_HopDong_TimPT.SelectedRows[0].DataBoundItem as PHIEUTHU;
+                String result = PhieuThuBUS.XoaPT(selected.SoPT);
+                if (result == null)
+                {
+                    NotificationBox_HopDong_TimPT.Text = "Xóa phiếu thu thành công!";
+                    NotificationBox_HopDong_TimPT.Visible = true;
+                    dataGridView_HopDong_TimPT.DataSource = new BindingList<PHIEUTHU>();
+
+                }
+                else
+                {
+                    NotificationBox_HopDong_TimPT.Text = result;
+                    NotificationBox_HopDong_TimPT.Visible = true;
+                }
+            }
+        }
+
+        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
+        private void TabPage_Child_HopDong_TimPT_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_HopDong_TimPT.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dataGridView_HopDong_TimPT.DataSource = new BindingList<SINHVIEN>();
+
+            Control ctrl = TabPage_Child_HopDong_TimPT;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+
+        #endregion
+
+        #region Hợp đồng - Thêm phiếu thu
+
+        // Nút thêm mới được ấn
+        private void Button_HopDong_LapPT_ThemMoi_Click(object sender, EventArgs e)
+        {
+            Decimal a;
+            if (Decimal.TryParse(TextBox_HopDong_LapPT_TienThu.Text, out a) == true)
+            {
+                PHIEUTHUDTO pt = new PHIEUTHUDTO();
+                pt.SoPT = TextBox_HopDong_LapPT_SoPT.Text;
+                pt.TienThu = Decimal.Parse(TextBox_HopDong_LapPT_TienThu.Text);
+                pt.SoHD = TextBox_HopDong_LapPT_SoHD.Text;
+                pt.NgayLap = DateTime.Now;
+
+                String result = PhieuThuBUS.ThemPT(pt);
+                if (result == null)
+                {
+                    NotificationBox_HopDong_LapPT.Text = "Thêm phiếu thu thành công!";
+                    NotificationBox_HopDong_LapPT.Visible = true;
+
+                    BindingList<PHIEUTHU> dataSource = new BindingList<PHIEUTHU>();
+                    foreach (var item in PhieuThuBUS.TimPT(pt))
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_HopDong_LapPT.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_HopDong_LapPT.Text = result;
+                    NotificationBox_HopDong_LapPT.Visible = true;
+                }
+            }
+            else
+            {
+                NotificationBox_HopDong_LapPT.Text = "Số tiền thu không đúng định dạng!";
+                NotificationBox_HopDong_LapPT.Visible = true;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_HopDong_LapPT_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_HopDong_LapPT.SelectedRows.Count == 0)
+            {
+                NotificationBox_HopDong_LapPT.Text = "Chưa có phiếu thu nào được chọn để xóa!";
+                NotificationBox_HopDong_LapPT.Visible = true;
+            }
+            else
+            {
+                PHIEUTHU selected = dataGridView_HopDong_LapPT.SelectedRows[0].DataBoundItem as PHIEUTHU;
+                String result = PhieuThuBUS.XoaPT(selected.SoPT);
+                if (result == null)
+                {
+                    NotificationBox_HopDong_LapPT.Text = "Xóa phiếu thu thành công!";
+                    NotificationBox_HopDong_LapPT.Visible = true;
+                    dataGridView_HopDong_LapPT.DataSource = new BindingList<PHIEUTHU>();
+                }
+                else
+                {
+                    NotificationBox_HopDong_LapPT.Text = result;
+                    NotificationBox_HopDong_LapPT.Visible = true;
+                }
+            }
+        }
+
+        // Làm trắng textbox và datagrid khi chuyển tab
+        private void TabPage_Child_HopDong_LapPT_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_HopDong_LapPT.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dataGridView_HopDong_LapPT.DataSource = new BindingList<SINHVIEN>();
+
+            Control ctrl = TabPage_Child_HopDong_LapPT;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+
+        #endregion
+
+        #region Điện nước - Lập hóa đơn
+
+        // Nút tìm kiếm được bấm
+        private void Button_DienNuoc_LapHDDN_ThemMoi_Click(object sender, EventArgs e)
+        {
+            Decimal a;
+            if (Decimal.TryParse(TextBox_DienNuoc_LapHDDN_SoTienThu.Text, out a) == true)
+            {
+                HOADONDTO hd = new HOADONDTO();
+                hd.SoHoaDon = TextBox_DienNuoc_LapHDDN_SoHD.Text;
+                hd.SoTien = Decimal.Parse(TextBox_DienNuoc_LapHDDN_SoTienThu.Text);
+                hd.MaPhieuGhiDienNuoc = TextBox_DienNuoc_LapHDDN_MaPG.Text;
+
+                String result = HoaDonBUS.ThemHD(hd);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_LapHDDN.Text = "Thêm hóa đơn thành công!";
+                    NotificationBox_DienNuoc_LapHDDN.Visible = true;
+
+                    BindingList<HOADON> dataSource = new BindingList<HOADON>();
+                    foreach (var item in HoaDonBUS.TimHD(hd))
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_DienNuoc_LapHDDN.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapHDDN.Text = result;
+                    NotificationBox_DienNuoc_LapHDDN.Visible = true;
+                }
+            }
+            else
+            {
+                NotificationBox_DienNuoc_LapHDDN.Text = "Số tiền thu không đúng định dạng!";
+                NotificationBox_DienNuoc_LapHDDN.Visible = true;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_DienNuoc_LapHDDN_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_SinhVien_ThemSua.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_LapHDDN.Text = "Chưa có hóa đơn nào được chọn để xóa!";
+                NotificationBox_DienNuoc_LapHDDN.Visible = true;
+            }
+            else
+            {
+                HOADON selected = dataGridView_DienNuoc_LapHDDN.SelectedRows[0].DataBoundItem as HOADON;
+                String result = HoaDonBUS.XoaHD(selected.SoHoaDon);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_LapHDDN.Text = "Xóa hóa đơn thành công!";
+                    NotificationBox_DienNuoc_LapHDDN.Visible = true;
+                    dataGridView_DienNuoc_LapHDDN.DataSource = new BindingList<HOADON>();
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapHDDN.Text = result;
+                    NotificationBox_DienNuoc_LapHDDN.Visible = true;
+                }
+            }
+        }
+
+        //Làm trắng textbox và datagrid khi chuyển tab
+        private void TabPage_Child_DienNuoc_LapHDDN_Leave(object sender, EventArgs e)
+        {
+            NotificationBox_DienNuoc_LapHDDN.Visible = false;
+
+            dataGridView_DienNuoc_LapHDDN.DataSource = new BindingList<HOADON>();
+
+            Control ctrl = TabPage_Child_DienNuoc_LapHDDN;
+
+            ClearAllText(ctrl);
+        }
+
+        #endregion
+
+        #region Điện nước - Lập phiếu ghi điện nước
+
+        // Nút thêm mới được ấn
+        private void Button_DienNuoc_LapPGDN_ThemMoi_Click(object sender, EventArgs e)
+        {
+            int a;
+            if (Int32.TryParse(TextBox_DienNuoc_LapPGDN_SoDN.Text, out a) == true)
+            {
+                PHIEUGHIDIENNUOCDTO pg = new PHIEUGHIDIENNUOCDTO();
+                pg.MaPhieuGhiDienNuoc = TextBox_DienNuoc_LapPGDN_MaPG.Text;
+                pg.SoDienNuoc = Int32.Parse(TextBox_DienNuoc_LapPGDN_SoDN.Text);
+                pg.MaPhong = ComboBox_DienNuoc_LapPGDN_Phong.SelectedValue.ToString();
+                pg.MaSo = ComboBox_DienNuoc_LapPGDN_SoSGDN.SelectedValue.ToString();
+                pg.NgayGhi = DateTime.Now;
+                if (CheckBox_DienNuoc_LapPGDN_Dien.Checked)
+                    pg.LoaiPhieuGhi = true;
+                if (CheckBox_DienNuoc_LapPGDN_Nuoc.Checked)
+                    pg.LoaiPhieuGhi = false;
+
+                String result = PhieuGhiDienNuocBUS.ThemPG(pg);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = "Thêm phiếu ghi điện nước thành công!";
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+
+                    BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
+                    foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_DienNuoc_LapPGDN.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = result;
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                }
+            }
+            else
+            {
+                NotificationBox_DienNuoc_LapPGDN.Text = "Số điện/nước không đúng định dạng!";
+                NotificationBox_DienNuoc_LapPGDN.Visible = true;
+            }
+        }
+
+        // Nút sửa được bấm
+        private void Button_DienNuoc_LapPGDN_Sua_Click(object sender, EventArgs e)
+        {
+            int a;
+            if (Int32.TryParse(TextBox_DienNuoc_LapPGDN_SoDN.Text, out a) == true)
+            {
+                PHIEUGHIDIENNUOCDTO pg = new PHIEUGHIDIENNUOCDTO();
+                pg.MaPhieuGhiDienNuoc = TextBox_DienNuoc_LapPGDN_MaPG.Text;
+                pg.SoDienNuoc = Int32.Parse(TextBox_DienNuoc_LapPGDN_SoDN.Text);
+                pg.MaPhong = ComboBox_DienNuoc_LapPGDN_Phong.SelectedValue.ToString();
+                pg.MaSo = ComboBox_DienNuoc_LapPGDN_SoSGDN.SelectedValue.ToString();
+                pg.NgayGhi = DateTime.Now;
+                if (CheckBox_DienNuoc_LapPGDN_Dien.Checked)
+                    pg.LoaiPhieuGhi = true;
+                if (CheckBox_DienNuoc_LapPGDN_Nuoc.Checked)
+                    pg.LoaiPhieuGhi = false;
+
+                String result = PhieuGhiDienNuocBUS.SuaPG(pg);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = "Sửa phiếu ghi thành công thành công!";
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+
+                    BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
+                    foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_DienNuoc_LapPGDN.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = result;
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                }
+            }
+            else
+            {
+                NotificationBox_DienNuoc_LapPGDN.Text = "Số điện/nước không đúng định dạng!";
+                NotificationBox_DienNuoc_LapPGDN.Visible = true;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_DienNuoc_LapPGDN_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_DienNuoc_LapPGDN.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_LapPGDN.Text = "Chưa có phiếu ghi nào được chọn để xóa!";
+                NotificationBox_DienNuoc_LapPGDN.Visible = true;
+            }
+            else
+            {
+                PHIEUGHIDIENNUOC selected = dataGridView_DienNuoc_LapPGDN.SelectedRows[0].DataBoundItem as PHIEUGHIDIENNUOC;
+                String result = PhieuGhiDienNuocBUS.XoaPG(selected.MaPhieuGhiDienNuoc);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = "Xóa phiếu ghi thành công!";
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                    dataGridView_DienNuoc_LapPGDN.DataSource = new BindingList<PHIEUGHIDIENNUOC>();
+
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = result;
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                }
+            }
+        }
+
+        // Format cột loại phiếu ghi để hiện thị 
+        private void dataGridView_DienNuoc_LapPGDN_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex].Name == "LapPGDN_LoaiPhieuGhi" &&
+                e.RowIndex >= 0 &&
+                dgv["LapPGDN_LoaiPhieuGhi", e.RowIndex].Value is bool)
+            {
+                switch ((bool)dgv["TargetColumnName", e.RowIndex].Value)
+                {
+                    case true:
+                        e.Value = "Điện";
+                        e.FormattingApplied = true;
+                        break;
+                    case false:
+                        e.Value = "Nước";
+                        e.FormattingApplied = true;
+                        break;
+                }
+            }
+        }
+
+        #endregion
+
+
+
+        #region Các hàm phụ
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -532,6 +957,10 @@ namespace ProjectKTX
                     ClearAllText(c);
             }
         }
+
+        #endregion
+
+        #region Các hàm của Lợi
 
         private void iTalk_Label8_Click(object sender, EventArgs e)
         {
@@ -847,5 +1276,19 @@ namespace ProjectKTX
         {
 
         }
+
+        private void iTalk_HeaderLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+        #endregion
+
     }
 }

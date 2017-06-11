@@ -119,5 +119,17 @@ namespace BUS
             IEnumerable<PHIEUTHU> result = _pt.TimPT(pt);
             return result;
         }
+
+        public IEnumerable<PHIEUTHU> TimPTTheoNgayLap(DateTime NgayLap)
+        {
+            IEnumerable<PHIEUTHU> result = _pt.TimPTTheoNgayLap(NgayLap);
+            return result;
+        }
+
+        public IEnumerable<PHIEUTHU> TimTatCaPT()
+        {
+            IEnumerable<PHIEUTHU> result = _pt.TimTatCaPT();
+            return result;
+        }
     }
 }

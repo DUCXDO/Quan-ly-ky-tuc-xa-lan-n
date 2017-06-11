@@ -11,10 +11,9 @@ namespace DAO
         HOADON ThemHD(HOADONDTO hd);
         HOADON XoaHD(String MaHD);
         IEnumerable<HOADON> TimTatCaHD();
-        HOADON TimHDTheoMaHD(String MaHD);
+        HOADON TimHDTheoSoHD(String MaHD);
         IEnumerable<HOADON> TimHD(HOADONDTO hd);
-        HOADON TimHDTheoMaP(String maP);
-        HOADON TimHDTheoMaS(String maS);
+        HOADON TimHDTheoMaPGDN(String maPGDN);
     }
     public class HoaDonDAO : IHoaDonDAO
     {
@@ -25,8 +24,7 @@ namespace DAO
                 //Khai báo và khởi tạo đối tượng kết nối database
                 KTXEntities KTXe = new KTXEntities();
                 HOADON addHD = new HOADON();
-                addHD.MaPhong = hd.MaPhong;
-                addHD.MaSo = hd.MaSo;
+                addHD.MaPhieuGhiDienNuoc = hd.MaPhieuGhiDienNuoc;
                 addHD.NgayLap = hd.NgayLap;
                 addHD.SoHoaDon = hd.SoHoaDon;
                 addHD.SoTien = hd.SoTien;
@@ -53,7 +51,7 @@ namespace DAO
                 HOADON result = KTXe.HOADONs.Remove(delHD);
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
                 return null;
             }
@@ -64,7 +62,7 @@ namespace DAO
             IEnumerable<HOADON> result = KTXe.HOADONs.AsEnumerable();
             return result;
         }
-        public HOADON TimHDTheoMaHD(String MaHD)
+        public HOADON TimHDTheoSoHD(String MaHD)
         {
             KTXEntities KTXe = new KTXEntities();
             HOADON findHD = KTXe.HOADONs.SingleOrDefault(x => x.SoHoaDon == MaHD);
@@ -73,19 +71,14 @@ namespace DAO
         public IEnumerable<HOADON> TimHD(HOADONDTO hd)
         {
             KTXEntities KTXe = new KTXEntities();
-            IEnumerable<HOADON> findHD = KTXe.HOADONs.AsQueryable().Where(x => (hd.MaPhong == "" || x.MaPhong == hd.MaPhong) & (hd.MaSo == "" || x.MaSo == hd.MaSo) & (hd.NgayLap == null || x.NgayLap == hd.NgayLap) && (hd.SoHoaDon == "" || x.SoHoaDon == hd.SoHoaDon) && (hd.SoTien == 0 || x.SoTien == hd.SoTien));
+            IEnumerable<HOADON> findHD = KTXe.HOADONs.AsQueryable().Where(x => (hd.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == hd.MaPhieuGhiDienNuoc) && (hd.NgayLap == null || x.NgayLap == hd.NgayLap) && (hd.SoHoaDon == "" || x.SoHoaDon == hd.SoHoaDon) && (hd.SoTien == 0 || x.SoTien == hd.SoTien));
             return findHD;
         }
-        public HOADON TimHDTheoMaP(String maP)
+
+        public HOADON TimHDTheoMaPGDN(String maPGDN)
         {
             KTXEntities KTXe = new KTXEntities();
-            HOADON findHD = KTXe.HOADONs.SingleOrDefault(x => x.MaPhong == maP);
-            return findHD;
-        }
-        public HOADON TimHDTheoMaS(String maS)
-        {
-            KTXEntities KTXe = new KTXEntities();
-            HOADON findHD = KTXe.HOADONs.SingleOrDefault(x => x.MaSo == maS);
+            HOADON findHD = KTXe.HOADONs.SingleOrDefault(x => x.MaPhieuGhiDienNuoc == maPGDN);
             return findHD;
         }
     }
