@@ -157,5 +157,11 @@ namespace BUS
             IEnumerable<PHONG> result = _p.TimP(p);
             return result;
         }
+        //Tìm tất cả phòng
+        public IEnumerable<PHONG> TimTatCaP()
+        {
+            IEnumerable<PHONG> result = _p.TimTatCaP();
+            return result;
+        }
     }
 }
