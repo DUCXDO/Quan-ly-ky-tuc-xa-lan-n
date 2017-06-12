@@ -71,7 +71,7 @@ namespace DAO
         public IEnumerable<HOADON> TimHD(HOADONDTO hd)
         {
             KTXEntities KTXe = new KTXEntities();
-            IEnumerable<HOADON> findHD = KTXe.HOADONs.AsQueryable().Where(x => (hd.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == hd.MaPhieuGhiDienNuoc) && (hd.NgayLap == null || x.NgayLap == hd.NgayLap) && (hd.SoHoaDon == "" || x.SoHoaDon == hd.SoHoaDon) && (hd.SoTien == 0 || x.SoTien == hd.SoTien));
+            IEnumerable<HOADON> findHD = KTXe.HOADONs.AsQueryable().Where(x => (hd.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == hd.MaPhieuGhiDienNuoc) && (hd.SoHoaDon == "" || x.SoHoaDon == hd.SoHoaDon) && (hd.SoTien == 0 || x.SoTien == hd.SoTien));
             return findHD;
         }
 

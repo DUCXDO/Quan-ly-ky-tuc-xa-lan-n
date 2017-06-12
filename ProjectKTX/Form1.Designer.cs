@@ -299,16 +299,12 @@
             this.NotificationBox_DienNuoc_ThemSGDN = new MonoFlat.MonoFlat_NotificationBox();
             this.iTalk_HeaderLabel15 = new iTalk.iTalk_HeaderLabel();
             this.dataGridView_DienNuoc_ThemSGDN = new System.Windows.Forms.DataGridView();
-            this.ThemSGDN_MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBox_DienNuoc_ThemSGDN_TenSo = new iTalk.iTalk_TextBox_Small();
             this.TextBox_DienNuoc_ThemSGDN_NamGhi = new iTalk.iTalk_TextBox_Small();
             this.TextBox_DienNuoc_ThemSGDN_MaSo = new iTalk.iTalk_TextBox_Small();
             this.monoFlat_Label46 = new MonoFlat.MonoFlat_Label();
             this.monoFlat_Label48 = new MonoFlat.MonoFlat_Label();
             this.Button_DienNuoc_ThemSGDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
-            this.Button_DienNuoc_ThemSGDN_Sua = new MonoFlat.MonoFlat_Button_Green();
             this.Button_DienNuoc_ThemSGDN_ThemMoi = new MonoFlat.MonoFlat_Button_Green();
             this.iTalk_Label33 = new iTalk.iTalk_Label();
             this.TabPage_Child_DienNuoc_TimPGDN = new System.Windows.Forms.TabPage();
@@ -325,12 +321,6 @@
             this.NotificationBox_DienNuoc_TimPGDN = new MonoFlat.MonoFlat_NotificationBox();
             this.iTalk_HeaderLabel13 = new iTalk.iTalk_HeaderLabel();
             this.dataGridView_DienNuoc_TimPGDN = new System.Windows.Forms.DataGridView();
-            this.MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBox_DienNuoc_TimPGDN_MaSGDN = new iTalk.iTalk_TextBox_Small();
             this.TextBox_DienNuoc_TimPGDN_MaPG = new iTalk.iTalk_TextBox_Small();
             this.monoFlat_Label38 = new MonoFlat.MonoFlat_Label();
@@ -340,12 +330,6 @@
             this.iTalk_Label31 = new iTalk.iTalk_Label();
             this.TabPage_Child_DienNuoc_LapPGDN = new System.Windows.Forms.TabPage();
             this.dataGridView_DienNuoc_LapPGDN = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LapPGDN_LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CheckBox_DienNuoc_LapPGDN_Nuoc = new iTalk.iTalk_CheckBox_Custom();
             this.CheckBox_DienNuoc_LapPGDN_Dien = new iTalk.iTalk_CheckBox_Custom();
             this.monoFlat_Label17 = new MonoFlat.MonoFlat_Label();
@@ -368,15 +352,11 @@
             this.TabPage_Child_DienNuoc_TimHDDN = new System.Windows.Forms.TabPage();
             this.iTalk_Separator_Blue4 = new iTalk.iTalk_Separator_Blue();
             this.NotificationBox_DienNuoc_TimHDDN = new MonoFlat.MonoFlat_NotificationBox();
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong = new MonoFlat.MonoFlat_Button_Green();
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong = new MonoFlat.MonoFlat_Button_Green();
             this.ComboBox_DienNuoc_TimHDDN_Phong = new iTalk.iTalk_ComboBox_Custom();
             this.monoFlat_Label33 = new MonoFlat.MonoFlat_Label();
             this.iTalk_HeaderLabel12 = new iTalk.iTalk_HeaderLabel();
             this.dataGridView_DienNuoc_TimHDDN = new System.Windows.Forms.DataGridView();
-            this.SoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimHĐN_MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LapPGDN_TienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LapHDDN_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextBox_DienNuoc_TimHDDN_MaPG = new iTalk.iTalk_TextBox_Small();
             this.TextBox_DienNuoc_TimHDDN_SoHD = new iTalk.iTalk_TextBox_Small();
             this.monoFlat_Label34 = new MonoFlat.MonoFlat_Label();
@@ -386,10 +366,6 @@
             this.iTalk_Label30 = new iTalk.iTalk_Label();
             this.TabPage_Child_DienNuoc_LapHDDN = new System.Windows.Forms.TabPage();
             this.dataGridView_DienNuoc_LapHDDN = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NotificationBox_DienNuoc_LapHDDN = new MonoFlat.MonoFlat_NotificationBox();
             this.iTalk_HeaderLabel14 = new iTalk.iTalk_HeaderLabel();
             this.TextBox_DienNuoc_LapHDDN_SoTienThu = new iTalk.iTalk_TextBox_Small();
@@ -401,6 +377,29 @@
             this.Button_DienNuoc_LapHDDN_Xoa = new MonoFlat.MonoFlat_Button_Green();
             this.Button_DienNuoc_LapHDDN_ThemMoi = new MonoFlat.MonoFlat_Button_Green();
             this.iTalk_Label32 = new iTalk.iTalk_Label();
+            this.ThemSGDN_MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapPGDN_LoaiPhieuGhi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimHĐN_MaPGDN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapPGDN_TienThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LapHDDN_NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.monoFlat_ThemeContainer_Bright1.SuspendLayout();
             this.TabControl_Father.SuspendLayout();
             this.Father_TabPage1_SinhVien.SuspendLayout();
@@ -466,6 +465,7 @@
             this.monoFlat_ThemeContainer_Bright1.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.monoFlat_ThemeContainer_Bright1.TabIndex = 0;
             this.monoFlat_ThemeContainer_Bright1.Text = "Phần mềm Quản lý ký túc xá - ĐH Công nghiệp Hà Nội";
+            this.monoFlat_ThemeContainer_Bright1.Click += new System.EventHandler(this.monoFlat_ThemeContainer_Bright1_Click);
             // 
             // monoFlat_ControlBox_Bright1
             // 
@@ -3839,7 +3839,6 @@
             this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.monoFlat_Label46);
             this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.monoFlat_Label48);
             this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_Xoa);
-            this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_Sua);
             this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.Button_DienNuoc_ThemSGDN_ThemMoi);
             this.TabPage_Child_DienNuoc_ThemSGDN.Controls.Add(this.iTalk_Label33);
             this.TabPage_Child_DienNuoc_ThemSGDN.Location = new System.Drawing.Point(154, 4);
@@ -3848,6 +3847,8 @@
             this.TabPage_Child_DienNuoc_ThemSGDN.Size = new System.Drawing.Size(699, 500);
             this.TabPage_Child_DienNuoc_ThemSGDN.TabIndex = 0;
             this.TabPage_Child_DienNuoc_ThemSGDN.Text = "Thêm SGDN";
+            this.TabPage_Child_DienNuoc_ThemSGDN.Enter += new System.EventHandler(this.TabPage_Child_DienNuoc_ThemSGDN_Enter);
+            this.TabPage_Child_DienNuoc_ThemSGDN.Leave += new System.EventHandler(this.TabPage_Child_DienNuoc_ThemSGDN_Leave);
             // 
             // monoFlat_Label44
             // 
@@ -3904,21 +3905,6 @@
             this.dataGridView_DienNuoc_ThemSGDN.Name = "dataGridView_DienNuoc_ThemSGDN";
             this.dataGridView_DienNuoc_ThemSGDN.Size = new System.Drawing.Size(566, 264);
             this.dataGridView_DienNuoc_ThemSGDN.TabIndex = 56;
-            // 
-            // ThemSGDN_MaSo
-            // 
-            this.ThemSGDN_MaSo.HeaderText = "Mã sổ";
-            this.ThemSGDN_MaSo.Name = "ThemSGDN_MaSo";
-            // 
-            // TenSo
-            // 
-            this.TenSo.HeaderText = "Tên sổ";
-            this.TenSo.Name = "TenSo";
-            // 
-            // Nam
-            // 
-            this.Nam.HeaderText = "Năm ghi";
-            this.Nam.Name = "Nam";
             // 
             // TextBox_DienNuoc_ThemSGDN_TenSo
             // 
@@ -4001,19 +3987,7 @@
             this.Button_DienNuoc_ThemSGDN_Xoa.TabIndex = 47;
             this.Button_DienNuoc_ThemSGDN_Xoa.Text = "Xóa";
             this.Button_DienNuoc_ThemSGDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // Button_DienNuoc_ThemSGDN_Sua
-            // 
-            this.Button_DienNuoc_ThemSGDN_Sua.BackColor = System.Drawing.Color.Transparent;
-            this.Button_DienNuoc_ThemSGDN_Sua.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_DienNuoc_ThemSGDN_Sua.Image = null;
-            this.Button_DienNuoc_ThemSGDN_Sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_DienNuoc_ThemSGDN_Sua.Location = new System.Drawing.Point(389, 144);
-            this.Button_DienNuoc_ThemSGDN_Sua.Name = "Button_DienNuoc_ThemSGDN_Sua";
-            this.Button_DienNuoc_ThemSGDN_Sua.Size = new System.Drawing.Size(149, 41);
-            this.Button_DienNuoc_ThemSGDN_Sua.TabIndex = 46;
-            this.Button_DienNuoc_ThemSGDN_Sua.Text = "Sửa";
-            this.Button_DienNuoc_ThemSGDN_Sua.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_ThemSGDN_Xoa.Click += new System.EventHandler(this.Button_DienNuoc_ThemSGDN_Xoa_Click);
             // 
             // Button_DienNuoc_ThemSGDN_ThemMoi
             // 
@@ -4021,12 +3995,13 @@
             this.Button_DienNuoc_ThemSGDN_ThemMoi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_DienNuoc_ThemSGDN_ThemMoi.Image = null;
             this.Button_DienNuoc_ThemSGDN_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_DienNuoc_ThemSGDN_ThemMoi.Location = new System.Drawing.Point(389, 67);
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Location = new System.Drawing.Point(389, 144);
             this.Button_DienNuoc_ThemSGDN_ThemMoi.Name = "Button_DienNuoc_ThemSGDN_ThemMoi";
             this.Button_DienNuoc_ThemSGDN_ThemMoi.Size = new System.Drawing.Size(149, 41);
             this.Button_DienNuoc_ThemSGDN_ThemMoi.TabIndex = 45;
             this.Button_DienNuoc_ThemSGDN_ThemMoi.Text = "Thêm mới";
             this.Button_DienNuoc_ThemSGDN_ThemMoi.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_ThemSGDN_ThemMoi.Click += new System.EventHandler(this.Button_DienNuoc_ThemSGDN_ThemMoi_Click_1);
             // 
             // iTalk_Label33
             // 
@@ -4248,36 +4223,6 @@
             this.dataGridView_DienNuoc_TimPGDN.Size = new System.Drawing.Size(566, 264);
             this.dataGridView_DienNuoc_TimPGDN.TabIndex = 51;
             // 
-            // MaPGDN
-            // 
-            this.MaPGDN.HeaderText = "Mã phiếu ghi";
-            this.MaPGDN.Name = "MaPGDN";
-            // 
-            // MaSo
-            // 
-            this.MaSo.HeaderText = "Mã sổ ghi";
-            this.MaSo.Name = "MaSo";
-            // 
-            // MaPhong
-            // 
-            this.MaPhong.HeaderText = "Mã phòng";
-            this.MaPhong.Name = "MaPhong";
-            // 
-            // SoDN
-            // 
-            this.SoDN.HeaderText = "Số điện/nước";
-            this.SoDN.Name = "SoDN";
-            // 
-            // NgayGhi
-            // 
-            this.NgayGhi.HeaderText = "Ngày ghi";
-            this.NgayGhi.Name = "NgayGhi";
-            // 
-            // LoaiPhieuGhi
-            // 
-            this.LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
-            this.LoaiPhieuGhi.Name = "LoaiPhieuGhi";
-            // 
             // TextBox_DienNuoc_TimPGDN_MaSGDN
             // 
             this.TextBox_DienNuoc_TimPGDN_MaSGDN.BackColor = System.Drawing.Color.Transparent;
@@ -4423,36 +4368,6 @@
             this.dataGridView_DienNuoc_LapPGDN.Size = new System.Drawing.Size(566, 264);
             this.dataGridView_DienNuoc_LapPGDN.TabIndex = 70;
             this.dataGridView_DienNuoc_LapPGDN.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_DienNuoc_LapPGDN_CellFormatting);
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.HeaderText = "Mã phiếu ghi";
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.HeaderText = "Mã sổ ghi";
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.HeaderText = "Mã phòng";
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.HeaderText = "Số điện/nước";
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.HeaderText = "Ngày ghi";
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // LapPGDN_LoaiPhieuGhi
-            // 
-            this.LapPGDN_LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
-            this.LapPGDN_LoaiPhieuGhi.Name = "LapPGDN_LoaiPhieuGhi";
             // 
             // CheckBox_DienNuoc_LapPGDN_Nuoc
             // 
@@ -4716,7 +4631,7 @@
             this.TabPage_Child_DienNuoc_TimHDDN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.iTalk_Separator_Blue4);
             this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.NotificationBox_DienNuoc_TimHDDN);
-            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.Button_DienNuoc_TìmHDDN_TimTheoPhong);
+            this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.Button_DienNuoc_TimHDDN_TimTheoPhong);
             this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.ComboBox_DienNuoc_TimHDDN_Phong);
             this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.monoFlat_Label33);
             this.TabPage_Child_DienNuoc_TimHDDN.Controls.Add(this.iTalk_HeaderLabel12);
@@ -4734,6 +4649,8 @@
             this.TabPage_Child_DienNuoc_TimHDDN.Size = new System.Drawing.Size(699, 500);
             this.TabPage_Child_DienNuoc_TimHDDN.TabIndex = 3;
             this.TabPage_Child_DienNuoc_TimHDDN.Text = "Tìm HDDN";
+            this.TabPage_Child_DienNuoc_TimHDDN.Enter += new System.EventHandler(this.TabPage_Child_DienNuoc_TimHDDN_Enter);
+            this.TabPage_Child_DienNuoc_TimHDDN.Leave += new System.EventHandler(this.TabPage_Child_DienNuoc_TimHDDN_Leave);
             // 
             // iTalk_Separator_Blue4
             // 
@@ -4759,18 +4676,19 @@
             this.NotificationBox_DienNuoc_TimHDDN.Text = "NotificationBox_DienNuoc_TìmHDDN";
             this.NotificationBox_DienNuoc_TimHDDN.Visible = false;
             // 
-            // Button_DienNuoc_TìmHDDN_TimTheoPhong
+            // Button_DienNuoc_TimHDDN_TimTheoPhong
             // 
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.BackColor = System.Drawing.Color.Transparent;
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Image = null;
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Location = new System.Drawing.Point(389, 163);
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Name = "Button_DienNuoc_TìmHDDN_TimTheoPhong";
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Size = new System.Drawing.Size(149, 41);
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.TabIndex = 55;
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.Text = "Tìm theo phòng";
-            this.Button_DienNuoc_TìmHDDN_TimTheoPhong.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.BackColor = System.Drawing.Color.Transparent;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Image = null;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Location = new System.Drawing.Point(389, 163);
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Name = "Button_DienNuoc_TimHDDN_TimTheoPhong";
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Size = new System.Drawing.Size(149, 41);
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.TabIndex = 55;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Text = "Tìm theo phòng";
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_TimHDDN_TimTheoPhong.Click += new System.EventHandler(this.Button_DienNuoc_TimHDDN_TimTheoPhong_Click);
             // 
             // ComboBox_DienNuoc_TimHDDN_Phong
             // 
@@ -4832,26 +4750,6 @@
             this.dataGridView_DienNuoc_TimHDDN.Name = "dataGridView_DienNuoc_TimHDDN";
             this.dataGridView_DienNuoc_TimHDDN.Size = new System.Drawing.Size(566, 264);
             this.dataGridView_DienNuoc_TimHDDN.TabIndex = 51;
-            // 
-            // SoHD
-            // 
-            this.SoHD.HeaderText = "Số hóa đơn";
-            this.SoHD.Name = "SoHD";
-            // 
-            // TimHĐN_MaPGDN
-            // 
-            this.TimHĐN_MaPGDN.HeaderText = "Mã phiếu ghi";
-            this.TimHĐN_MaPGDN.Name = "TimHĐN_MaPGDN";
-            // 
-            // LapPGDN_TienThu
-            // 
-            this.LapPGDN_TienThu.HeaderText = "Số tiền thu";
-            this.LapPGDN_TienThu.Name = "LapPGDN_TienThu";
-            // 
-            // LapHDDN_NgayLap
-            // 
-            this.LapHDDN_NgayLap.HeaderText = "Ngày lập";
-            this.LapHDDN_NgayLap.Name = "LapHDDN_NgayLap";
             // 
             // TextBox_DienNuoc_TimHDDN_MaPG
             // 
@@ -4919,6 +4817,7 @@
             this.Button_DienNuoc_TimHDDN_Xoa.TabIndex = 46;
             this.Button_DienNuoc_TimHDDN_Xoa.Text = "Xóa";
             this.Button_DienNuoc_TimHDDN_Xoa.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Button_DienNuoc_TimHDDN_Xoa.Click += new System.EventHandler(this.Button_DienNuoc_TimHDDN_Xoa_Click);
             // 
             // Button_DienNuoc_TimHDDN_TimKiem
             // 
@@ -4985,26 +4884,6 @@
             this.dataGridView_DienNuoc_LapHDDN.Name = "dataGridView_DienNuoc_LapHDDN";
             this.dataGridView_DienNuoc_LapHDDN.Size = new System.Drawing.Size(566, 264);
             this.dataGridView_DienNuoc_LapHDDN.TabIndex = 71;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.HeaderText = "Số hóa đơn";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.HeaderText = "Mã phiếu ghi";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.HeaderText = "Số tiền thu";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.HeaderText = "Ngày lập";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             // 
             // NotificationBox_DienNuoc_LapHDDN
             // 
@@ -5154,6 +5033,144 @@
             this.iTalk_Label32.Size = new System.Drawing.Size(220, 17);
             this.iTalk_Label32.TabIndex = 59;
             this.iTalk_Label32.Text = "Điện nước > Lập hóa đơn điện nước";
+            // 
+            // ThemSGDN_MaSo
+            // 
+            this.ThemSGDN_MaSo.DataPropertyName = "MaSo";
+            this.ThemSGDN_MaSo.HeaderText = "Mã sổ";
+            this.ThemSGDN_MaSo.Name = "ThemSGDN_MaSo";
+            // 
+            // TenSo
+            // 
+            this.TenSo.DataPropertyName = "TenSo";
+            this.TenSo.HeaderText = "Tên sổ";
+            this.TenSo.Name = "TenSo";
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "Nam";
+            this.Nam.HeaderText = "Năm ghi";
+            this.Nam.Name = "Nam";
+            // 
+            // MaPGDN
+            // 
+            this.MaPGDN.DataPropertyName = "MaPhieuGhiDienNuoc";
+            this.MaPGDN.HeaderText = "Mã phiếu ghi";
+            this.MaPGDN.Name = "MaPGDN";
+            // 
+            // MaSo
+            // 
+            this.MaSo.DataPropertyName = "MaSo";
+            this.MaSo.HeaderText = "Mã sổ ghi";
+            this.MaSo.Name = "MaSo";
+            // 
+            // MaPhong
+            // 
+            this.MaPhong.DataPropertyName = "MaPhong";
+            this.MaPhong.HeaderText = "Mã phòng";
+            this.MaPhong.Name = "MaPhong";
+            // 
+            // SoDN
+            // 
+            this.SoDN.DataPropertyName = "SoDienNuoc";
+            this.SoDN.HeaderText = "Số điện/nước";
+            this.SoDN.Name = "SoDN";
+            // 
+            // NgayGhi
+            // 
+            this.NgayGhi.DataPropertyName = "NgayGhi";
+            this.NgayGhi.HeaderText = "Ngày ghi";
+            this.NgayGhi.Name = "NgayGhi";
+            // 
+            // LoaiPhieuGhi
+            // 
+            this.LoaiPhieuGhi.DataPropertyName = "LoaiPhieuGhi";
+            this.LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
+            this.LoaiPhieuGhi.Name = "LoaiPhieuGhi";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "MaPhieuGhiDienNuoc";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Mã phiếu ghi";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "MaSo";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Mã sổ ghi";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "MaPhong";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Mã phòng";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "SoDienNuoc";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Số điện/nước";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "NgayGhi";
+            this.dataGridViewTextBoxColumn35.HeaderText = "Ngày ghi";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            // 
+            // LapPGDN_LoaiPhieuGhi
+            // 
+            this.LapPGDN_LoaiPhieuGhi.DataPropertyName = "LoaiPhieuGhi";
+            this.LapPGDN_LoaiPhieuGhi.HeaderText = "Loại phiếu ghi";
+            this.LapPGDN_LoaiPhieuGhi.Name = "LapPGDN_LoaiPhieuGhi";
+            // 
+            // SoHD
+            // 
+            this.SoHD.DataPropertyName = "SoHoaDon";
+            this.SoHD.HeaderText = "Số hóa đơn";
+            this.SoHD.Name = "SoHD";
+            // 
+            // TimHĐN_MaPGDN
+            // 
+            this.TimHĐN_MaPGDN.DataPropertyName = "MaPhieuGhiDienNuoc";
+            this.TimHĐN_MaPGDN.HeaderText = "Mã phiếu ghi";
+            this.TimHĐN_MaPGDN.Name = "TimHĐN_MaPGDN";
+            // 
+            // LapPGDN_TienThu
+            // 
+            this.LapPGDN_TienThu.DataPropertyName = "SoTien";
+            this.LapPGDN_TienThu.HeaderText = "Số tiền thu";
+            this.LapPGDN_TienThu.Name = "LapPGDN_TienThu";
+            // 
+            // LapHDDN_NgayLap
+            // 
+            this.LapHDDN_NgayLap.DataPropertyName = "NgayLap";
+            this.LapHDDN_NgayLap.HeaderText = "Ngày lập";
+            this.LapHDDN_NgayLap.Name = "LapHDDN_NgayLap";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "SoHoaDon";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Số hóa đơn";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "MaPhieuGhiDienNuoc";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Mã phiếu ghi";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "SoTien";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Số tiền thu";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "NgayLap";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Ngày lập";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             // 
             // Form1
             // 
@@ -5490,7 +5507,7 @@
         private iTalk.iTalk_CheckBox_Custom CheckBox_DienNuoc_LapPGDN_Dien;
         private iTalk.iTalk_Separator_Blue iTalk_Separator_Blue4;
         private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_TimHDDN;
-        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TìmHDDN_TimTheoPhong;
+        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_TimHDDN_TimTheoPhong;
         private iTalk.iTalk_ComboBox_Custom ComboBox_DienNuoc_TimHDDN_Phong;
         private MonoFlat.MonoFlat_Label monoFlat_Label33;
         private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel12;
@@ -5517,12 +5534,6 @@
         private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_TimPGDN;
         private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel13;
         private System.Windows.Forms.DataGridView dataGridView_DienNuoc_TimPGDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPGDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGhi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPhieuGhi;
         private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TimPGDN_MaSGDN;
         private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_TimPGDN_MaPG;
         private MonoFlat.MonoFlat_Label monoFlat_Label38;
@@ -5542,36 +5553,18 @@
         private iTalk.iTalk_Label iTalk_Label32;
         private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_LapHDDN_ThemMoi;
         private System.Windows.Forms.DataGridView dataGridView_DienNuoc_LapHDDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TimHĐN_MaPGDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_TienThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LapHDDN_NgayLap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private MonoFlat.MonoFlat_Label monoFlat_Label44;
         private MonoFlat.MonoFlat_NotificationBox NotificationBox_DienNuoc_ThemSGDN;
         private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel15;
         private System.Windows.Forms.DataGridView dataGridView_DienNuoc_ThemSGDN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThemSGDN_MaSo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
         private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_TenSo;
         private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_NamGhi;
         private iTalk.iTalk_TextBox_Small TextBox_DienNuoc_ThemSGDN_MaSo;
         private MonoFlat.MonoFlat_Label monoFlat_Label46;
         private MonoFlat.MonoFlat_Label monoFlat_Label48;
         private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_Xoa;
-        private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_Sua;
         private MonoFlat.MonoFlat_Button_Green Button_DienNuoc_ThemSGDN_ThemMoi;
         private iTalk.iTalk_Label iTalk_Label33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_LoaiPhieuGhi;
         private System.Windows.Forms.TabPage tabPage1;
         private MonoFlat.MonoFlat_NotificationBox NotificationBox_Taisan_lapPTB;
         private iTalk.iTalk_HeaderLabel iTalk_HeaderLabel16;
@@ -5608,6 +5601,29 @@
         private MonoFlat.MonoFlat_Label monoFlat_Label52;
         private MonoFlat.MonoFlat_Button_Green btn_TimPTB_Timkiem;
         private iTalk.iTalk_Label iTalk_Label35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThemSGDN_MaSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayGhi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiPhieuGhi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_LoaiPhieuGhi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimHĐN_MaPGDN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapPGDN_TienThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LapHDDN_NgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
     }
 }
 

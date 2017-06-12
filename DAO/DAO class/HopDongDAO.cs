@@ -77,8 +77,7 @@ namespace DAO
             IEnumerable<HOPDONG> result = KTXe.HOPDONGs.AsQueryable().Where(x =>
             (hd.MaSV == "" || x.MaSV == hd.MaSV) &&
             (hd.SoHD == "" || x.SoHD == hd.SoHD) &&
-            (hd.MaPhong == "") || (x.MaPhong == hd.MaPhong) &&
-            (hd.NgayLap == null) || (x.NgayLap == hd.NgayLap));
+            (hd.MaPhong == "") || (x.MaPhong == hd.MaPhong));
             return result;
 
         }

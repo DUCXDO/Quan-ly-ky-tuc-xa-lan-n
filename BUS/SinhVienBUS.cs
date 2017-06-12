@@ -180,29 +180,5 @@ namespace BUS
         {
             return _p.TimTatCaP();
         }
-
-        public SINHVIENDTO chuyenDoiSVThanhSVDTO(SINHVIEN sv)
-        {
-            SINHVIENDTO result = new SINHVIENDTO();
-            result.DiaChi = sv.DiaChi;
-            result.MaSV = sv.MaSV;
-            result.NgaySinh = sv.NgaySinh;
-            result.SoCMND = sv.SoCMND;
-            result.SoDT = sv.SoDT;
-            result.TenSV = sv.TenSV;
-            return result;
-        }
-
-        public SINHVIEN chuyenDoiSVDTOThanhSV(SINHVIENDTO sv)
-        {
-            SINHVIEN result = new SINHVIEN();
-            result.DiaChi = sv.DiaChi;
-            result.MaSV = sv.MaSV;
-            result.NgaySinh = sv.NgaySinh;
-            result.SoCMND = sv.SoCMND;
-            result.SoDT = sv.SoDT;
-            result.TenSV = sv.TenSV;
-            return result;
-        }
     }
 }

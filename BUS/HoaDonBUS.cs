@@ -14,12 +14,13 @@ namespace BUS
         private readonly IHoaDonDAO _hd;
         private readonly ISoGhiDienNuocDAO _sg;
         private readonly IPhongDAO _p;
-        private readonly ISinhVienDAO _sv;
-        public HoaDonBUS(HoaDonDAO hd, SoGhiDienNuocDAO sg, PhongDAO p)
+        private readonly IPhieuGhiDienNuocDAO _pg;
+        public HoaDonBUS(HoaDonDAO hd, SoGhiDienNuocDAO sg, PhongDAO p, PhieuGhiDienNuocDAO pg)
         {
             _hd = hd;
             _sg = sg;
             _p = p;
+            _pg = pg;
         }
         //Hàm kiểm tra hợp lệ
         public String kiemTraHoaDon(HOADONDTO hd)
@@ -117,12 +118,6 @@ namespace BUS
             return _hd.TimTatCaHD();
         }
 
-        public SINHVIEN TimHDTheoSinhVien(String maSV)
-        {
-            SINHVIEN sinhvien = _sv.TimSVTheoMaSV(maSV);
-            return sinhvien;            
-        }
-
         //Tìm hóa đơn theo các điều kiện! 
         public IEnumerable<HOADON> TimHD(HOADONDTO hd)
         {
@@ -130,5 +125,18 @@ namespace BUS
             IEnumerable<HOADON> result = _hd.TimHD(hd);
             return result;
         }
+
+        //Tìm hóa đơn theo phòng!
+        public IEnumerable<HOADON> TimHDTheoPhong(String maP)
+        {
+            IEnumerable<PHIEUGHIDIENNUOC> phieuGhi = _pg.TimPGDNTheoMaP(maP);
+            List<HOADON> result = new List<HOADON>();
+            foreach (var item in phieuGhi)
+            {
+                result.Add(_hd.TimHDTheoMaPGDN(item.MaPhieuGhiDienNuoc));
+            }
+            return result.AsEnumerable();
+        }
+
     }
 }

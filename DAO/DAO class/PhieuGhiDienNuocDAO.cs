@@ -27,6 +27,7 @@ namespace DAO
                 //Khai báo và khởi tạo đối tượng kết nối database
                 KTXEntities KTXe = new KTXEntities();
                 PHIEUGHIDIENNUOC addPG = new PHIEUGHIDIENNUOC();
+                addPG.MaPhieuGhiDienNuoc = pg.MaPhieuGhiDienNuoc;
                 addPG.LoaiPhieuGhi = pg.LoaiPhieuGhi;
                 addPG.MaPhong = pg.MaPhong;
                 addPG.MaSo = pg.MaSo;
@@ -115,14 +116,14 @@ namespace DAO
         public IEnumerable<PHIEUGHIDIENNUOC> TimPGDN(PHIEUGHIDIENNUOCDTO pg)
         {
             KTXEntities KTXe = new KTXEntities();
-            IEnumerable<PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => (pg.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == pg.MaPhieuGhiDienNuoc) && (x.LoaiPhieuGhi == pg.LoaiPhieuGhi) && (pg.MaPhong == "" || x.MaPhong == pg.MaPhong) && (pg.MaSo == "" || x.MaSo == pg.MaSo) && (pg.NgayGhi == null || x.NgayGhi == pg.NgayGhi) && (pg.SoDienNuoc == 0 || x.SoDienNuoc == pg.SoDienNuoc));
+            IEnumerable<PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => (pg.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == pg.MaPhieuGhiDienNuoc) && (x.LoaiPhieuGhi == pg.LoaiPhieuGhi) && (pg.MaPhong == "" || x.MaPhong == pg.MaPhong) && (pg.MaSo == "" || x.MaSo == pg.MaSo) && (pg.SoDienNuoc == 0 || x.SoDienNuoc == pg.SoDienNuoc));
             return findPG;
         }
 
         public IEnumerable<PHIEUGHIDIENNUOC> TimPGDNKhongTheoLoaiPhieuGhi(PHIEUGHIDIENNUOCDTO pg)
         {
             KTXEntities KTXe = new KTXEntities();
-            IEnumerable<PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => (pg.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == pg.MaPhieuGhiDienNuoc) && (pg.MaPhong == "" || x.MaPhong == pg.MaPhong) && (pg.MaSo == "" || x.MaSo == pg.MaSo) && (pg.NgayGhi == null || x.NgayGhi == pg.NgayGhi) && (pg.SoDienNuoc == 0 || x.SoDienNuoc == pg.SoDienNuoc));
+            IEnumerable<PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => (pg.MaPhieuGhiDienNuoc == "" || x.MaPhieuGhiDienNuoc == pg.MaPhieuGhiDienNuoc) && (pg.MaPhong == "" || x.MaPhong == pg.MaPhong) && (pg.MaSo == "" || x.MaSo == pg.MaSo) && (pg.SoDienNuoc == 0 || x.SoDienNuoc == pg.SoDienNuoc));
             return findPG;
         }
     }

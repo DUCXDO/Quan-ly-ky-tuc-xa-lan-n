@@ -98,7 +98,7 @@ namespace DAO
         public IEnumerable<PHIEUTHU> TimPTTheoNgayLap(DateTime NgayLap)
         {
             KTXEntities KTXe = new KTXEntities();
-            IEnumerable<PHIEUTHU> findPT = KTXe.PHIEUTHUs.AsQueryable().Where(x => x.NgayLap == NgayLap);
+            IEnumerable<PHIEUTHU> findPT = KTXe.PHIEUTHUs.AsQueryable().Where(x => x.NgayLap.Date == NgayLap.Date);
             return findPT;
         }
     }

@@ -33,7 +33,7 @@ namespace ProjectKTX
             SinhVienBUS = new SinhVienBUS(new SinhVienDAO(), new PhongDAO(), new HopDongDAO());
             HopDongBUS = new HopDongBUS(new HopDongDAO(), new PhongDAO());
             PhieuThuBUS = new PhieuThuBUS(new PhieuThuDAO(), new HopDongDAO());
-            HoaDonBUS = new HoaDonBUS(new HoaDonDAO(), new SoGhiDienNuocDAO(), new PhongDAO());
+            HoaDonBUS = new HoaDonBUS(new HoaDonDAO(), new SoGhiDienNuocDAO(), new PhongDAO(), new PhieuGhiDienNuocDAO());
             PhieuGhiDienNuocBUS = new PhieuGhiDienNuocBUS(new PhieuGhiDienNuocDAO(), new PhongDAO(), new SoGhiDienNuocDAO());
             PhieuTrangBiBUS = new PhieuTrangBiBUS(new TaiSanDAO(), new PhongDAO(), new PhieuTrangBiDAO());
             PhongBUS = new PhongBUS(new SinhVienDAO(), new PhongDAO());
@@ -57,6 +57,7 @@ namespace ProjectKTX
             // Đặt giá trị hiện ra và giá trị chọn của combo box
             ComboBox_SinhVien_TimKiem_Phong.DisplayMember = "TenP";
             ComboBox_SinhVien_TimKiem_Phong.ValueMember = "MaPhong";
+
         }
 
         // Nút tìm kiếm được bấm
@@ -328,7 +329,7 @@ namespace ProjectKTX
                 dataSource.Add(item);
             }
             // Đưa danh sách phòng thành datasource của combo box
-            ComboBox_SinhVien_TimKiem_Phong.DataSource = dataSource;
+            ComboBox_HopDong_TimKiem_Phong.DataSource = dataSource;
             // Đặt giá trị hiện ra và giá trị chọn của combo box
             ComboBox_HopDong_TimKiem_Phong.DisplayMember = "TenP";
             ComboBox_HopDong_TimKiem_Phong.ValueMember = "MaPhong";
@@ -587,7 +588,7 @@ namespace ProjectKTX
 
             if (dataSource.Count == 0)
             {
-                NotificationBox_HopDong_TimPT.Text = "Hiện không có sinh viên nào ở phòng này!";
+                NotificationBox_HopDong_TimPT.Text = "Không có phiếu thu nào được lập vào ngày đã chọn!";
                 NotificationBox_HopDong_TimPT.Visible = true;
             }
             else
@@ -814,17 +815,29 @@ namespace ProjectKTX
             // Đặt giá trị hiện ra và giá trị chọn của combo box
             ComboBox_DienNuoc_LapPGDN_Phong.DisplayMember = "TenP";
             ComboBox_DienNuoc_LapPGDN_Phong.ValueMember = "MaPhong";
+
+            BindingList<SOGHIDIENNUOC> dataSource2 = new BindingList<SOGHIDIENNUOC>();
+
+            foreach (var item in SoGhiDienNuocBUS.TimTatCaSGDN())
+            {
+                dataSource2.Add(item);
+            }
+            // Đưa danh sách sổ ghi thành datasource của combo box
+            ComboBox_DienNuoc_LapPGDN_SoSGDN.DataSource = dataSource2;
+            // Đặt giá trị hiện ra và giá trị chọn của combo box
+            ComboBox_DienNuoc_LapPGDN_SoSGDN.DisplayMember = "TenSo";
+            ComboBox_DienNuoc_LapPGDN_SoSGDN.ValueMember = "MaSo";
         }
 
         // Nút thêm mới được ấn
         private void Button_DienNuoc_LapPGDN_ThemMoi_Click(object sender, EventArgs e)
         {
-            if (CheckBox_DienNuoc_TimPGDN_Dien.Checked && CheckBox_DienNuoc_TimPGDN_Nuoc.Checked)
+            if (CheckBox_DienNuoc_LapPGDN_Dien.Checked == true && CheckBox_DienNuoc_LapPGDN_Nuoc.Checked == true)
             {
                 NotificationBox_DienNuoc_LapPGDN.Text = "Không được check cả hai ô điện và nước!";
                 NotificationBox_DienNuoc_LapPGDN.Visible = true;
             }
-            else if (CheckBox_DienNuoc_TimPGDN_Dien.Checked == false && CheckBox_DienNuoc_TimPGDN_Nuoc.Checked == false)
+            else if(CheckBox_DienNuoc_LapPGDN_Dien.Checked == false && CheckBox_DienNuoc_LapPGDN_Nuoc.Checked == false)
             {
                 NotificationBox_DienNuoc_LapPGDN.Text = "Loại phiếu ghi không được bỏ trống! Hãy chọn một trong hai!";
                 NotificationBox_DienNuoc_LapPGDN.Visible = true;
@@ -1145,6 +1158,22 @@ namespace ProjectKTX
 
         #region Điện nước - Tìm hóa đơn điện nước
 
+        // Load combo box khi vào tabpage tìm kiếm
+        private void TabPage_Child_DienNuoc_TimHDDN_Enter(object sender, EventArgs e)
+        {
+            BindingList<PHONG> dataSource = new BindingList<PHONG>();
+
+            foreach (var item in SinhVienBUS.DSTatCaPhong())
+            {
+                dataSource.Add(item);
+            }
+            // Đưa danh sách phòng thành datasource của combo box
+            ComboBox_DienNuoc_TimHDDN_Phong.DataSource = dataSource;
+            // Đặt giá trị hiện ra và giá trị chọn của combo box
+            ComboBox_DienNuoc_TimHDDN_Phong.DisplayMember = "TenP";
+            ComboBox_DienNuoc_TimHDDN_Phong.ValueMember = "MaPhong";
+        }
+
         // Nút tìm kiếm được bấm
         private void Button_DienNuoc_TimHDDN_TimKiem_Click(object sender, EventArgs e)
         {
@@ -1185,6 +1214,161 @@ namespace ProjectKTX
                 // Hiện kết quả trong datagrid 
                 dataGridView_SinhVien_TimKiem.DataSource = dataSource;
             }
+        }
+
+        // Nút tìm theo phòng được bấm
+        private void Button_DienNuoc_TimHDDN_TimTheoPhong_Click(object sender, EventArgs e)
+        {
+            BindingList<HOADON> dataSource = new BindingList<HOADON>();
+            foreach (var item in HoaDonBUS.TimHDTheoPhong(ComboBox_DienNuoc_TimHDDN_Phong.SelectedValue.ToString()))
+            {
+                dataSource.Add(item);
+            }
+
+            if (dataSource.Count == 0)
+            {
+                NotificationBox_DienNuoc_TimHDDN.Text = "Hiện không có hóa đơn nào ghi cho phòng này!";
+                NotificationBox_DienNuoc_TimHDDN.Visible = true;
+            }
+            else
+            {
+                dataGridView_DienNuoc_TimHDDN.DataSource = dataSource;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_DienNuoc_TimHDDN_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_DienNuoc_TimHDDN.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_TimHDDN.Text = "Chưa có hóa đơn nào được chọn để xóa!";
+                NotificationBox_DienNuoc_TimHDDN.Visible = true;
+            }
+            else
+            {
+                HOADON selected = dataGridView_DienNuoc_TimHDDN.SelectedRows[0].DataBoundItem as HOADON;
+                String result = HoaDonBUS.XoaHD(selected.SoHoaDon);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_TimHDDN.Text = "Xóa hóa đơn thành công!";
+                    NotificationBox_DienNuoc_TimHDDN.Visible = true;
+                    dataGridView_DienNuoc_TimHDDN.DataSource = new BindingList<HOADON>();
+
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_TimHDDN.Text = result;
+                    NotificationBox_DienNuoc_TimHDDN.Visible = true;
+                }
+            }
+        }
+
+        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
+        private void TabPage_Child_DienNuoc_TimHDDN_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_DienNuoc_TimHDDN.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dataGridView_DienNuoc_TimHDDN.DataSource = new BindingList<HOADON>();
+
+            Control ctrl = TabPage_Child_DienNuoc_TimHDDN;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+
+        #endregion
+
+        #region Điện nước - Lập sổ ghi điện nước
+
+        // Load dữ liệu khi vào tab
+        private void TabPage_Child_DienNuoc_ThemSGDN_Enter(object sender, EventArgs e)
+        {
+            BindingList<SOGHIDIENNUOC> dataSource = new BindingList<SOGHIDIENNUOC>();
+            foreach (var item in SoGhiDienNuocBUS.TimTatCaSGDN())
+            {
+                dataSource.Add(item);
+            }
+            dataGridView_DienNuoc_ThemSGDN.DataSource = dataSource;
+        }
+
+        // Nút thêm mới được bấm
+        private void Button_DienNuoc_ThemSGDN_ThemMoi_Click_1(object sender, EventArgs e)
+        {
+            int a;
+            if (Int32.TryParse(TextBox_DienNuoc_ThemSGDN_NamGhi.Text, out a) == true)
+            {
+                SOGHIDIENNUOCDTO sg = new SOGHIDIENNUOCDTO();
+                sg.MaSo = TextBox_DienNuoc_ThemSGDN_MaSo.Text;
+                sg.Nam = Int32.Parse(TextBox_DienNuoc_ThemSGDN_NamGhi.Text);
+                sg.TenSo = TextBox_DienNuoc_ThemSGDN_TenSo.Text;
+
+                String result = SoGhiDienNuocBUS.ThemSoGhi(sg);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_ThemSGDN.Text = "Thêm mới sổ ghi thành công!";
+                    NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+
+                    BindingList<SOGHIDIENNUOC> dataSource = new BindingList<SOGHIDIENNUOC>();
+                    foreach (var item in SoGhiDienNuocBUS.TimSG(sg))
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_DienNuoc_ThemSGDN.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_ThemSGDN.Text = result;
+                    NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+                }
+            }
+            else
+            {
+                NotificationBox_DienNuoc_ThemSGDN.Text = "Năm ghi sổ không đúng định dạng!";
+                NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_DienNuoc_ThemSGDN_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_DienNuoc_ThemSGDN.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_ThemSGDN.Text = "Chưa có sổ ghi nào được chọn để xóa!";
+                NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+            }
+            else
+            {
+                SOGHIDIENNUOC selected = dataGridView_DienNuoc_ThemSGDN.SelectedRows[0].DataBoundItem as SOGHIDIENNUOC;
+                String result = SoGhiDienNuocBUS.XoaSG(selected.MaSo);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_ThemSGDN.Text = "Xóa sổ ghi thành công!";
+                    NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+                    BindingList<SOGHIDIENNUOC> dataSource = new BindingList<SOGHIDIENNUOC>();
+                    foreach (var item in SoGhiDienNuocBUS.TimTatCaSGDN())
+                    {
+                        dataSource.Add(item);
+                    }
+                    dataGridView_DienNuoc_ThemSGDN.DataSource = dataSource;
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_ThemSGDN.Text = result;
+                    NotificationBox_DienNuoc_ThemSGDN.Visible = true;
+                }
+            }
+        }
+
+        // Làm trắng textbox và datagrid khi chuyển tab
+        private void TabPage_Child_DienNuoc_ThemSGDN_Leave(object sender, EventArgs e)
+        {
+            NotificationBox_DienNuoc_ThemSGDN.Visible = false;
+
+            dataGridView_DienNuoc_ThemSGDN.DataSource = new BindingList<SOGHIDIENNUOC>();
+
+            Control ctrl = TabPage_Child_DienNuoc_ThemSGDN;
+
+            ClearAllText(ctrl);
         }
 
         #endregion
@@ -1594,6 +1778,11 @@ namespace ProjectKTX
         //Lỡ tay click :v 
         #region Các hàm lỡ tay click
 
+        private void monoFlat_ThemeContainer_Bright1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void iTalk_Label8_Click(object sender, EventArgs e)
         {
 
@@ -1914,8 +2103,17 @@ namespace ProjectKTX
 
 
 
+
+
+
+
+
+
+
+
+
         #endregion
 
-        
+
     }
 }
