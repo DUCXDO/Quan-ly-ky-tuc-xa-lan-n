@@ -800,46 +800,75 @@ namespace ProjectKTX
 
         #region Điện nước - Lập phiếu ghi điện nước
 
+        // Load combo box khi vào tabpage lập phiếu ghi
+        private void TabPage_Child_DienNuoc_LapPGDN_Enter(object sender, EventArgs e)
+        {
+            BindingList<PHONG> dataSource = new BindingList<PHONG>();
+
+            foreach (var item in SinhVienBUS.DSTatCaPhong())
+            {
+                dataSource.Add(item);
+            }
+            // Đưa danh sách phòng thành datasource của combo box
+            ComboBox_DienNuoc_LapPGDN_Phong.DataSource = dataSource;
+            // Đặt giá trị hiện ra và giá trị chọn của combo box
+            ComboBox_DienNuoc_LapPGDN_Phong.DisplayMember = "TenP";
+            ComboBox_DienNuoc_LapPGDN_Phong.ValueMember = "MaPhong";
+        }
+
         // Nút thêm mới được ấn
         private void Button_DienNuoc_LapPGDN_ThemMoi_Click(object sender, EventArgs e)
         {
-            int a;
-            if (Int32.TryParse(TextBox_DienNuoc_LapPGDN_SoDN.Text, out a) == true)
+            if (CheckBox_DienNuoc_TimPGDN_Dien.Checked && CheckBox_DienNuoc_TimPGDN_Nuoc.Checked)
             {
-                PHIEUGHIDIENNUOCDTO pg = new PHIEUGHIDIENNUOCDTO();
-                pg.MaPhieuGhiDienNuoc = TextBox_DienNuoc_LapPGDN_MaPG.Text;
-                pg.SoDienNuoc = Int32.Parse(TextBox_DienNuoc_LapPGDN_SoDN.Text);
-                pg.MaPhong = ComboBox_DienNuoc_LapPGDN_Phong.SelectedValue.ToString();
-                pg.MaSo = ComboBox_DienNuoc_LapPGDN_SoSGDN.SelectedValue.ToString();
-                pg.NgayGhi = DateTime.Now;
-                if (CheckBox_DienNuoc_LapPGDN_Dien.Checked)
-                    pg.LoaiPhieuGhi = true;
-                if (CheckBox_DienNuoc_LapPGDN_Nuoc.Checked)
-                    pg.LoaiPhieuGhi = false;
-
-                String result = PhieuGhiDienNuocBUS.ThemPG(pg);
-                if (result == null)
-                {
-                    NotificationBox_DienNuoc_LapPGDN.Text = "Thêm phiếu ghi điện nước thành công!";
-                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
-
-                    BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
-                    foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
-                    {
-                        dataSource.Add(item);
-                    }
-                    dataGridView_DienNuoc_LapPGDN.DataSource = dataSource;
-                }
-                else
-                {
-                    NotificationBox_DienNuoc_LapPGDN.Text = result;
-                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
-                }
+                NotificationBox_DienNuoc_LapPGDN.Text = "Không được check cả hai ô điện và nước!";
+                NotificationBox_DienNuoc_LapPGDN.Visible = true;
+            }
+            else if (CheckBox_DienNuoc_TimPGDN_Dien.Checked == false && CheckBox_DienNuoc_TimPGDN_Nuoc.Checked == false)
+            {
+                NotificationBox_DienNuoc_LapPGDN.Text = "Loại phiếu ghi không được bỏ trống! Hãy chọn một trong hai!";
+                NotificationBox_DienNuoc_LapPGDN.Visible = true;
             }
             else
             {
-                NotificationBox_DienNuoc_LapPGDN.Text = "Số điện/nước không đúng định dạng!";
-                NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                int a;
+                if (Int32.TryParse(TextBox_DienNuoc_LapPGDN_SoDN.Text, out a) == true)
+                {
+                    PHIEUGHIDIENNUOCDTO pg = new PHIEUGHIDIENNUOCDTO();
+                    pg.MaPhieuGhiDienNuoc = TextBox_DienNuoc_LapPGDN_MaPG.Text;
+                    pg.SoDienNuoc = Int32.Parse(TextBox_DienNuoc_LapPGDN_SoDN.Text);
+                    pg.MaPhong = ComboBox_DienNuoc_LapPGDN_Phong.SelectedValue.ToString();
+                    pg.MaSo = ComboBox_DienNuoc_LapPGDN_SoSGDN.SelectedValue.ToString();
+                    pg.NgayGhi = DateTime.Now;
+                    if (CheckBox_DienNuoc_LapPGDN_Dien.Checked)
+                        pg.LoaiPhieuGhi = true;
+                    if (CheckBox_DienNuoc_LapPGDN_Nuoc.Checked)
+                        pg.LoaiPhieuGhi = false;
+
+                    String result = PhieuGhiDienNuocBUS.ThemPG(pg);
+                    if (result == null)
+                    {
+                        NotificationBox_DienNuoc_LapPGDN.Text = "Thêm phiếu ghi điện nước thành công!";
+                        NotificationBox_DienNuoc_LapPGDN.Visible = true;
+
+                        BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
+                        foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
+                        {
+                            dataSource.Add(item);
+                        }
+                        dataGridView_DienNuoc_LapPGDN.DataSource = dataSource;
+                    }
+                    else
+                    {
+                        NotificationBox_DienNuoc_LapPGDN.Text = result;
+                        NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                    }
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_LapPGDN.Text = "Số điện/nước không đúng định dạng!";
+                    NotificationBox_DienNuoc_LapPGDN.Visible = true;
+                }
             }
         }
 
@@ -935,9 +964,611 @@ namespace ProjectKTX
             }
         }
 
+        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
+        private void TabPage_Child_DienNuoc_LapPGDN_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_DienNuoc_LapPGDN.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dataGridView_DienNuoc_LapPGDN.DataSource = new BindingList<PHIEUGHIDIENNUOC>();
+
+            Control ctrl = TabPage_Child_DienNuoc_LapPGDN;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+
         #endregion
 
+        #region Điện nước - Tìm phiếu ghi điện nước
 
+        // Load combo box khi vào tabpage tìm kiếm
+        private void TabPage_Child_DienNuoc_TimPGDN_Enter(object sender, EventArgs e)
+        {
+            BindingList<PHONG> dataSource = new BindingList<PHONG>();
+
+            foreach (var item in SinhVienBUS.DSTatCaPhong())
+            {
+                dataSource.Add(item);
+            }
+            // Đưa danh sách phòng thành datasource của combo box
+            ComboBox_DienNuoc_TimPGDN_Phong.DataSource = dataSource;
+            // Đặt giá trị hiện ra và giá trị chọn của combo box
+            ComboBox_DienNuoc_TimPGDN_Phong.DisplayMember = "TenP";
+            ComboBox_DienNuoc_TimPGDN_Phong.ValueMember = "MaPhong";
+        }
+
+        // Nút tìm kiếm được bấm
+        private void Button_DienNuoc_TimPGDN_TimKiem_Click(object sender, EventArgs e)
+        {
+            // Tạo phiếu ghi mới
+            PHIEUGHIDIENNUOCDTO pg = new PHIEUGHIDIENNUOCDTO();
+
+            pg.MaPhieuGhiDienNuoc = TextBox_DienNuoc_TimPGDN_MaPG.Text;
+            pg.MaSo = TextBox_DienNuoc_TimPGDN_MaSGDN.Text;
+            pg.MaPhong = TextBox_DienNuoc_TimPGDN_MaP.Text;
+            if (CheckBox_DienNuoc_TimPGDN_Dien.Checked)
+            {
+                pg.LoaiPhieuGhi = true;
+            }
+            if (CheckBox_DienNuoc_TimPGDN_Nuoc.Checked)
+            {
+                pg.LoaiPhieuGhi = false;
+            }
+            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
+            BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
+
+            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
+            // Nếu cả hai ô checkbox đều được check
+            if (CheckBox_DienNuoc_TimPGDN_Dien.Checked && CheckBox_DienNuoc_TimPGDN_Nuoc.Checked)
+            {
+                foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
+                {
+                    dataSource.Add(item);
+                }
+            }
+            else if (CheckBox_DienNuoc_TimPGDN_Dien.Checked || CheckBox_DienNuoc_TimPGDN_Nuoc.Checked)
+            {
+                foreach (var item in PhieuGhiDienNuocBUS.TimPGTheoLoaiPhieuGhi(pg))
+                {
+                    dataSource.Add(item);
+                }
+            }
+            else
+            {
+                foreach (var item in PhieuGhiDienNuocBUS.TimPG(pg))
+                {
+                    dataSource.Add(item);
+                }
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_DienNuoc_TimPGDN.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_DienNuoc_TimPGDN.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dataGridView_DienNuoc_TimPGDN.DataSource = dataSource;
+            }
+        }
+
+        // Nút tìm theo phòng được bấm
+        private void Button_DienNuoc_TimPGDN_TimTheoPhong_Click(object sender, EventArgs e)
+        {
+            BindingList<PHIEUGHIDIENNUOC> dataSource = new BindingList<PHIEUGHIDIENNUOC>();
+            foreach (var item in PhieuGhiDienNuocBUS.TimPGTheoPhong(ComboBox_DienNuoc_TimPGDN_Phong.SelectedValue.ToString()))
+            {
+                dataSource.Add(item);
+            }
+
+            if (dataSource.Count == 0)
+            {
+                NotificationBox_DienNuoc_TimPGDN.Text = "Hiện không có phiếu ghi nào được ghi cho phòng này!";
+                NotificationBox_DienNuoc_TimPGDN.Visible = true;
+            }
+            else
+            {
+                dataGridView_DienNuoc_TimPGDN.DataSource = dataSource;
+            }
+        }
+
+        // Nút xóa được bấm
+        private void Button_DienNuoc_TimPGDN_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_DienNuoc_TimPGDN.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_TimPGDN.Text = "Chưa có sinh viên nào được chọn để xóa!";
+                NotificationBox_DienNuoc_TimPGDN.Visible = true;
+            }
+            else
+            {
+                PHIEUGHIDIENNUOC selected = dataGridView_DienNuoc_TimPGDN.SelectedRows[0].DataBoundItem as PHIEUGHIDIENNUOC;
+                String result = PhieuGhiDienNuocBUS.XoaPG(selected.MaPhieuGhiDienNuoc);
+                if (result == null)
+                {
+                    NotificationBox_DienNuoc_TimPGDN.Text = "Xóa phiếu ghi thành công!";
+                    NotificationBox_DienNuoc_TimPGDN.Visible = true;
+                    dataGridView_DienNuoc_TimPGDN.DataSource = new BindingList<PHIEUGHIDIENNUOC>();
+
+                }
+                else
+                {
+                    NotificationBox_DienNuoc_TimPGDN.Text = result;
+                    NotificationBox_DienNuoc_TimPGDN.Visible = true;
+                }
+            }
+        }
+
+        // Nút lập hóa đơn được bấm
+        private void Button_DienNuoc_TimPGDN_LapHD_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_DienNuoc_TimPGDN.SelectedRows.Count == 0)
+            {
+                NotificationBox_DienNuoc_TimPGDN.Text = "Chưa có hợp đồng nào được chọn để lập phiếu thu!";
+                NotificationBox_DienNuoc_TimPGDN.Visible = true;
+            }
+            else
+            {
+                PHIEUGHIDIENNUOC selected = dataGridView_DienNuoc_TimPGDN.SelectedRows[0].DataBoundItem as PHIEUGHIDIENNUOC;
+                // code để chuyển dữ liệu sang tabpage thêm 
+                TextBox_DienNuoc_LapHDDN_MaPG.Text = selected.MaPhieuGhiDienNuoc;
+
+                // Hiện tất cả hóa đơn khi chuyển sang tabpage LapPT
+                BindingList<HOADON> dataSource = new BindingList<HOADON>();
+                foreach (var item in HoaDonBUS.TimTatCaHD())
+                {
+                    dataSource.Add(item);
+                }
+                dataGridView_DienNuoc_LapHDDN.DataSource = dataSource;
+                TabControl_Child_DienNuoc.SelectedTab = TabPage_Child_DienNuoc_LapHDDN;
+            }
+        }
+
+        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
+        private void TabPage_Child_DienNuoc_TimPGDN_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_DienNuoc_TimPGDN.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dataGridView_DienNuoc_TimPGDN.DataSource = new BindingList<PHIEUGHIDIENNUOC>();
+
+            Control ctrl = TabPage_Child_DienNuoc_TimPGDN;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+
+        #endregion
+
+        #region Điện nước - Tìm hóa đơn điện nước
+
+        // Nút tìm kiếm được bấm
+        private void Button_DienNuoc_TimHDDN_TimKiem_Click(object sender, EventArgs e)
+        {
+            // Tạo đối tượng sinh viên mới
+            SINHVIENDTO sv = new SINHVIENDTO();
+            // Lấy mã sinh viên từ textbox
+            sv.MaSV = TextBox_SinhVien_TimKiem_MaSV.Text;
+            //Kiểm tra số CMND để lấy hay không
+            int a;
+            if (Int32.TryParse(TextBox_SinhVien_TimKiem_SoCMND.Text, out a) == true)
+            {
+                sv.SoCMND = Int32.Parse(TextBox_SinhVien_TimKiem_SoCMND.Text);
+            }
+            // Lấy số điện thoại từ textbox
+            sv.SoDT = TextBox_SinhVien_TimKiem_SoDT.Text;
+            // Lấy tên sinh viên từ textbox
+            sv.TenSV = TextBox_SinhVien_TimKiem_TenSV.Text;
+
+            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
+            BindingList<SINHVIEN> dataSource = new BindingList<SINHVIEN>();
+
+            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
+            foreach (var item in SinhVienBUS.TimSV(sv))
+            {
+                dataSource.Add(item);
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_SinhVien_TimKiem.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_SinhVien_TimKiem.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dataGridView_SinhVien_TimKiem.DataSource = dataSource;
+            }
+        }
+
+        #endregion
+
+        #region Phòng - Tìm kiếm phòng
+
+        private void iTalk_HeaderLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
+        // Button tìm kiếm
+        private void btn_phong_timkiem_Click_1(object sender, EventArgs e)
+        {
+            // Tạo đối tượng Phòng mới
+            PHONGDTO p = new PHONGDTO();
+            // Lấy mã phòng từ textbox
+            p.MaPhong = TextBox_Phong_Timkiem_maP.Text;
+            // Lấy tên phòng từ txtbox
+            p.TenP = TextBox_Phong_Timkiem_tenP.Text;
+            // Lấy số người ở từ txtbox
+            p.SoNguoiO = Int32.Parse(TextBox_Phong_Timkiem_soN.Text);
+            // Lấy số người ở tối đa từ txtbox
+            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Timkiem_SNTD.Text);
+            // Lấy vị trí phòng từ textbox
+            p.ViTriP = TextBox_Phong_Timkiem_viTri.Text;
+            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
+            BindingList<PHONG> dataSource = new BindingList<PHONG>();
+
+            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
+            foreach (var item in PhongBUS.TimP(p))
+            {
+                dataSource.Add(item);
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_Phong_timkiem.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_SinhVien_TimKiem.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dtg_Phong_Timkiem.DataSource = dataSource;
+            }
+        }
+        // Button sửa
+        private void btn_phong_tk_sua_Click_1(object sender, EventArgs e)
+        {
+            if (dtg_Phong_Timkiem.SelectedRows.Count == 0)
+            {
+                NotificationBox_Phong_timkiem.Text = "Chưa có phòng nào được chọn để sửa!";
+                NotificationBox_Phong_timkiem.Visible = true;
+            }
+            else
+            {
+                PHONG selected = dtg_Phong_Timkiem.SelectedRows[0].DataBoundItem as PHONG;
+                // code để chuyển dữ liệu sang tabpage thêm sửa
+                TextBox_Phong_Them_maP.Text = selected.MaPhong;
+                TextBox_Phong_Them_tenP.Text = selected.TenP;
+                TextBox_Phong_Them_viTri.Text = selected.ViTriP;
+                TextBox_Phong_Them_soN.Text = Convert.ToString(selected.SoNguoiO);
+                TextBox_Phong_Them_SNTD.Text = Convert.ToString(selected.SoNguoiTD);
+
+                // Hiện tất cả sinh viên khi chuyển sang tabpage ThemSua
+                BindingList<PHONG> dataSource = new BindingList<PHONG>();
+                foreach (var item in PhongBUS.TimTatCaP())
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Phong_Themsua.DataSource = dataSource;
+                TabControl_Child_Phong.SelectedTab = TabPage_Child_Phong_ThemSua;
+            }
+        }
+        // Button xóa
+        private void btn_phong_tk_xoa_Click_1(object sender, EventArgs e)
+        {
+            if (dtg_Phong_Timkiem.SelectedRows.Count == 0)
+            {
+                NotificationBox_Phong_timkiem.Text = "Chưa có phòng nào được chọn để xóa!";
+                NotificationBox_Phong_timkiem.Visible = true;
+            }
+            else
+            {
+                PHONG selected = dtg_Phong_Timkiem.SelectedRows[0].DataBoundItem as PHONG;
+                String result = PhongBUS.XoaP(selected.MaPhong);
+                if (result == null)
+                {
+                    NotificationBox_Phong_timkiem.Text = "Xóa phòng thành công!";
+                    NotificationBox_Phong_timkiem.Visible = true;
+                    dtg_Phong_Timkiem.DataSource = new BindingList<PHONG>();
+
+                }
+                else
+                {
+                    NotificationBox_Phong_timkiem.Text = result;
+                    NotificationBox_Phong_timkiem.Visible = true;
+                }
+            }
+        }
+        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
+        private void TabPage_Child_Phong_Timkiem_Leave(object sender, EventArgs e)
+        {
+            // Ẩn hộp thông báo
+            NotificationBox_Phong_timkiem.Visible = false;
+            // Xóa dữ liệu của datagrid
+            dtg_Phong_Timkiem.DataSource = new BindingList<PHONG>();
+
+            Control ctrl = TabPage_Child_Phong_Timkiem;
+            // Xóa tất cả textbox
+            ClearAllText(ctrl);
+        }
+        #endregion
+
+        #region Phòng - Thêm sửa
+        //Button thêm
+        private void btn_phong_them_Click_1(object sender, EventArgs e)
+        {
+            PHONGDTO p = new PHONGDTO();
+            p.MaPhong = TextBox_Phong_Them_maP.Text;
+            p.TenP = TextBox_Phong_Them_tenP.Text;
+            p.ViTriP = TextBox_Phong_Them_viTri.Text;
+            p.SoNguoiO = Int32.Parse(TextBox_Phong_Them_soN.Text);
+            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Them_SNTD.Text);
+            String result = PhongBUS.ThemP(p);
+            if (result == null)
+            {
+                NotificationBox_Phong_themsua.Text = "Thêm mới phòng thành công!";
+                NotificationBox_Phong_themsua.Visible = true;
+
+                BindingList<PHONG> dataSource = new BindingList<PHONG>();
+                foreach (var item in PhongBUS.TimP(p))
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Phong_Themsua.DataSource = dataSource;
+            }
+            else
+            {
+                NotificationBox_Phong_themsua.Text = result;
+                NotificationBox_Phong_themsua.Visible = true;
+            }
+        }
+        // button sửa
+        private void btn_phong_them_sua_Click_1(object sender, EventArgs e)
+        {
+            PHONGDTO p = new PHONGDTO();
+            p.MaPhong = TextBox_Phong_Them_maP.Text;
+            p.TenP = TextBox_Phong_Them_tenP.Text;
+            p.ViTriP = TextBox_Phong_Them_viTri.Text;
+            p.SoNguoiO = Int32.Parse(TextBox_Phong_Them_soN.Text);
+            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Them_SNTD.Text);
+
+            String result = PhongBUS.SuaP(p);
+            if (result == null)
+            {
+                NotificationBox_Phong_themsua.Text = "Sửa phòng thành công!";
+                NotificationBox_Phong_themsua.Visible = true;
+
+                BindingList<PHONG> dataSource = new BindingList<PHONG>();
+                foreach (var item in PhongBUS.TimP(p))
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Phong_Themsua.DataSource = dataSource;
+            }
+            else
+            {
+                NotificationBox_Phong_themsua.Text = result;
+                NotificationBox_Phong_themsua.Visible = true;
+            }
+        }
+        //button xóa
+        private void btn_phong_them_xoa_Click_1(object sender, EventArgs e)
+        {
+            if (dtg_Phong_Themsua.SelectedRows.Count == 0)
+            {
+                NotificationBox_Phong_themsua.Text = "Chưa có phòng nào được chọn để xóa!";
+                NotificationBox_Phong_themsua.Visible = true;
+            }
+            else
+            {
+                PHONG selected = dtg_Phong_Themsua.SelectedRows[0].DataBoundItem as PHONG;
+                String result = PhongBUS.XoaP(selected.MaPhong);
+                if (result == null)
+                {
+                    NotificationBox_Phong_themsua.Text = "Xóa phòng thành công!";
+                    NotificationBox_Phong_themsua.Visible = true;
+                    dtg_Phong_Themsua.DataSource = new BindingList<PHONG>();
+                }
+                else
+                {
+                    NotificationBox_Phong_themsua.Text = result;
+                    NotificationBox_Phong_themsua.Visible = true;
+                }
+            }
+        }
+        // Trả về page trắng khi chuyển tab
+        private void TabPage_Child_Phong_ThemSua_Leave(object sender, EventArgs e)
+        {
+            NotificationBox_Phong_themsua.Visible = false;
+
+            dtg_Phong_Themsua.DataSource = new BindingList<PHONG>();
+
+            Control ctrl = TabPage_Child_Phong_ThemSua;
+
+            ClearAllText(ctrl);
+        }
+        #endregion
+
+        #region Tài sản- Tìm kiếm tài sản
+        // Button tìm kiếm
+        private void iTalk_Button_11_Click_1(object sender, EventArgs e)
+        {
+            TAISANDTO ts = new TAISANDTO();
+            ts.MaTS = TextBox_Taisan_Timkiem_maTS.Text;
+            ts.SoLuong = Int32.Parse(TextBox_Taisan_Timkiem_soLuong.Text);
+            ts.TenTS = TextBox_Taisan_Timkiem_tenTS.Text;
+            ts.TinhTrang = TextBox_Taisan_Timkiem_tinhTrang.Text;
+            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
+            BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
+
+            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
+            foreach (var item in TaiSanBUS.TimTS(ts))
+            {
+                dataSource.Add(item);
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_Taisan_timkiem.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_Taisan_timkiem.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dtg_Taisan_Timkiem.DataSource = dataSource;
+            }
+        }
+        // Button sửa
+        private void iTalk_Button_12_Click_1(object sender, EventArgs e)
+        {
+            if (dtg_Taisan_Timkiem.SelectedRows.Count == 0)
+            {
+                NotificationBox_Taisan_timkiem.Text = "Chưa có tài sản nào được chọn để sửa!";
+                NotificationBox_Taisan_timkiem.Visible = true;
+            }
+            else
+            {
+                TAISAN selected = dtg_Taisan_Timkiem.SelectedRows[0].DataBoundItem as TAISAN;
+                // code để chuyển dữ liệu sang tabpage thêm sửa
+                TextBox_Taisan_Them_maTS.Text = selected.MaTS;
+                TextBox_Taisan_Them_soLuong.Text = selected.SoLuong.ToString();
+                TextBox_Taisan_Them_tenTS.Text = selected.TenTS;
+                TextBox_Taisan_Them_tinhTrang.Text = selected.TinhTrang;
+                // Hiện tất cả tài sản khi chuyển sang tabpage ThemSua
+                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
+                foreach (var item in TaiSanBUS.TimTatCaSV())
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Taisan_ThemSua.DataSource = dataSource;
+                TabControl_Children_TaiSan.SelectedTab = TabPage_Child_Taisan_ThemSua;
+            }
+        }
+        // Button xóa
+        private void iTalk_Button_13_Click_1(object sender, EventArgs e)
+        {
+            if (dtg_Taisan_Timkiem.SelectedRows.Count == 0)
+            {
+                NotificationBox_Taisan_timkiem.Text = "Chưa có tài sản nào được chọn để xóa!";
+                NotificationBox_Taisan_timkiem.Visible = true;
+            }
+            else
+            {
+                TAISAN selected = dtg_Taisan_Timkiem.SelectedRows[0].DataBoundItem as TAISAN;
+                String result = TaiSanBUS.XoaTS(selected.MaTS);
+                if (result == null)
+                {
+                    NotificationBox_Taisan_timkiem.Text = "Xóa tài sản thành công!";
+                    NotificationBox_Taisan_timkiem.Visible = true;
+                    dtg_Taisan_Timkiem.DataSource = new BindingList<TAISAN>();
+
+                }
+                else
+                {
+                    NotificationBox_Taisan_timkiem.Text = result;
+                    NotificationBox_Taisan_timkiem.Visible = true;
+                }
+            }
+        }
+        #endregion
+
+        #region Tài sản- Thêm sửa tài sản
+        //Button thêm
+        private void btntaisan_them_Click(object sender, EventArgs e)
+        {
+            TAISANDTO ts = new TAISANDTO();
+            ts.MaTS = TextBox_Taisan_Them_maTS.Text;
+            ts.TenTS = TextBox_Taisan_Them_tenTS.Text;
+            ts.SoLuong = Int32.Parse(TextBox_Taisan_Them_soLuong.Text);
+            ts.TinhTrang = TextBox_Taisan_Them_tinhTrang.Text;
+            String result = TaiSanBUS.ThemTS(ts);
+            if (result == null)
+            {
+                NotificationBox_Taisan_themsua.Text = "Thêm mới tài sản thành công!";
+                NotificationBox_Taisan_themsua.Visible = true;
+
+                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
+                foreach (var item in TaiSanBUS.TimTS(ts))
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Taisan_ThemSua.DataSource = dataSource;
+            }
+            else
+            {
+                NotificationBox_Taisan_themsua.Text = result;
+                NotificationBox_Taisan_themsua.Visible = true;
+            }
+        }
+        //Button sửa
+        private void btntaisan_them_sua_Click(object sender, EventArgs e)
+        {
+            TAISANDTO ts = new TAISANDTO();
+            ts.MaTS = TextBox_Taisan_Them_maTS.Text;
+            ts.TenTS = TextBox_Taisan_Them_tenTS.Text;
+            ts.SoLuong = Int32.Parse(TextBox_Taisan_Them_soLuong.Text);
+            ts.TinhTrang = TextBox_Taisan_Them_tinhTrang.Text;
+
+            String result = TaiSanBUS.SuaTS(ts);
+            if (result == null)
+            {
+                NotificationBox_Taisan_themsua.Text = "Sửa tài sản thành công!";
+                NotificationBox_Taisan_themsua.Visible = true;
+
+                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
+                foreach (var item in TaiSanBUS.TimTS(ts))
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Taisan_ThemSua.DataSource = dataSource;
+            }
+            else
+            {
+                NotificationBox_Taisan_themsua.Text = result;
+                NotificationBox_Taisan_themsua.Visible = true;
+            }
+        }
+        //Button xóa
+        private void btntaisan_them_xoa_Click(object sender, EventArgs e)
+        {
+            if (dtg_Taisan_ThemSua.SelectedRows.Count == 0)
+            {
+                NotificationBox_Taisan_themsua.Text = "Không có tài sản nào được chọn để xóa";
+                NotificationBox_Taisan_themsua.Visible = true;
+            }
+            else
+            {
+                TAISAN selected = dtg_Taisan_ThemSua.SelectedRows[0].DataBoundItem as TAISAN;
+                String result = TaiSanBUS.XoaTS(selected.MaTS);
+                if (result == null)
+                {
+                    NotificationBox_Taisan_themsua.Text = "Xóa tài sản thành công!";
+                    NotificationBox_Taisan_themsua.Visible = true;
+                    dtg_Taisan_ThemSua.DataSource = new BindingList<TAISAN>();
+
+                }
+                else
+                {
+                    NotificationBox_Taisan_themsua.Text = result;
+                    NotificationBox_Taisan_themsua.Visible = true;
+                }
+            }
+        }
+
+
+
+        #endregion
 
         #region Các hàm phụ
 
@@ -959,8 +1590,9 @@ namespace ProjectKTX
         }
 
         #endregion
+
         //Lỡ tay click :v 
-        #region Các hàm của Lợi
+        #region Các hàm lỡ tay click
 
         private void iTalk_Label8_Click(object sender, EventArgs e)
         {
@@ -1276,385 +1908,14 @@ namespace ProjectKTX
 
 
 
+
+
+
+
+
+
         #endregion
 
-       
-        #region Phòng - Tìm kiếm phòng
-
-        private void iTalk_HeaderLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
-        // Button tìm kiếm
-        private void btn_phong_timkiem_Click_1(object sender, EventArgs e)
-        {
-            // Tạo đối tượng Phòng mới
-            PHONGDTO p = new PHONGDTO();
-            // Lấy mã phòng từ textbox
-            p.MaPhong = TextBox_Phong_Timkiem_maP.Text;
-            // Lấy tên phòng từ txtbox
-            p.TenP = TextBox_Phong_Timkiem_tenP.Text;
-            // Lấy số người ở từ txtbox
-            p.SoNguoiO = Int32.Parse(TextBox_Phong_Timkiem_soN.Text);
-            // Lấy số người ở tối đa từ txtbox
-            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Timkiem_SNTD.Text);
-            // Lấy vị trí phòng từ textbox
-            p.ViTriP = TextBox_Phong_Timkiem_viTri.Text;
-            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
-            BindingList<PHONG> dataSource = new BindingList<PHONG>();
-
-            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
-            foreach (var item in PhongBUS.TimP(p))
-            {
-                dataSource.Add(item);
-            }
-            // Nếu kết quả rỗng
-            if (dataSource.Count == 0)
-            {
-                // Thay đổi text của hộp thông báo
-                NotificationBox_Phong_timkiem.Text = "Không tìm thấy dữ liệu!";
-                // Hiện hộp thông báo
-                NotificationBox_SinhVien_TimKiem.Visible = true;
-            }
-            // Nếu tìm thấy kết quả
-            else
-            {
-                // Hiện kết quả trong datagrid 
-                dtg_Phong_Timkiem.DataSource = dataSource;
-            }
-        }
-        // Button sửa
-        private void btn_phong_tk_sua_Click_1(object sender, EventArgs e)
-        {
-            if (dtg_Phong_Timkiem.SelectedRows.Count == 0)
-            {
-                NotificationBox_Phong_timkiem.Text = "Chưa có phòng nào được chọn để sửa!";
-                NotificationBox_Phong_timkiem.Visible = true;
-            }
-            else
-            {
-                PHONG selected = dtg_Phong_Timkiem.SelectedRows[0].DataBoundItem as PHONG;
-                // code để chuyển dữ liệu sang tabpage thêm sửa
-                TextBox_Phong_Them_maP.Text = selected.MaPhong;
-                TextBox_Phong_Them_tenP.Text = selected.TenP;
-                TextBox_Phong_Them_viTri.Text = selected.ViTriP;
-                TextBox_Phong_Them_soN.Text =Convert.ToString (selected.SoNguoiO);
-                TextBox_Phong_Them_SNTD.Text = Convert.ToString(selected.SoNguoiTD);
-
-                // Hiện tất cả sinh viên khi chuyển sang tabpage ThemSua
-                BindingList<PHONG> dataSource = new BindingList<PHONG>();
-                foreach (var item in PhongBUS.TimTatCaP())
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Phong_Themsua.DataSource = dataSource;
-                TabControl_Child_Phong.SelectedTab = TabPage_Child_Phong_ThemSua;
-            }
-        }
-        // Button xóa
-        private void btn_phong_tk_xoa_Click_1(object sender, EventArgs e)
-        {
-            if (dtg_Phong_Timkiem.SelectedRows.Count == 0)
-            {
-                NotificationBox_Phong_timkiem.Text = "Chưa có phòng nào được chọn để xóa!";
-                NotificationBox_Phong_timkiem.Visible = true;
-            }
-            else
-            {
-                PHONG selected = dtg_Phong_Timkiem.SelectedRows[0].DataBoundItem as PHONG;
-                String result = PhongBUS.XoaP(selected.MaPhong);
-                if (result == null)
-                {
-                    NotificationBox_Phong_timkiem.Text = "Xóa phòng thành công!";
-                    NotificationBox_Phong_timkiem.Visible = true;
-                    dtg_Phong_Timkiem.DataSource = new BindingList<PHONG>();
-
-                }
-                else
-                {
-                    NotificationBox_Phong_timkiem.Text = result;
-                    NotificationBox_Phong_timkiem.Visible = true;
-                }
-            }
-        }
-        // Làm trắng tất cả các textbox, notificationbox và datagrid khi chuyển tab
-        private void TabPage_Child_Phong_Timkiem_Leave(object sender, EventArgs e)
-        {
-            // Ẩn hộp thông báo
-            NotificationBox_Phong_timkiem.Visible = false;
-            // Xóa dữ liệu của datagrid
-            dtg_Phong_Timkiem.DataSource = new BindingList<PHONG>();
-
-            Control ctrl = TabPage_Child_Phong_Timkiem;
-            // Xóa tất cả textbox
-            ClearAllText(ctrl);
-        }
-        #endregion
-
-        #region Phòng-Thêm sửa
-        //Button thêm
-        private void btn_phong_them_Click_1(object sender, EventArgs e)
-        {
-            PHONGDTO p = new PHONGDTO();
-            p.MaPhong = TextBox_Phong_Them_maP.Text;
-            p.TenP = TextBox_Phong_Them_tenP.Text;
-            p.ViTriP = TextBox_Phong_Them_viTri.Text;
-            p.SoNguoiO = Int32.Parse(TextBox_Phong_Them_soN.Text);
-            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Them_SNTD.Text);
-            String result = PhongBUS.ThemP(p);
-            if (result == null)
-            {
-                NotificationBox_Phong_themsua.Text = "Thêm mới phòng thành công!";
-                NotificationBox_Phong_themsua.Visible = true;
-
-                BindingList<PHONG> dataSource = new BindingList<PHONG>();
-                foreach (var item in PhongBUS.TimP(p))
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Phong_Themsua.DataSource = dataSource;
-            }
-            else
-            {
-                NotificationBox_Phong_themsua.Text = result;
-                NotificationBox_Phong_themsua.Visible = true;
-            }
-        }
-        // button sửa
-        private void btn_phong_them_sua_Click_1(object sender, EventArgs e)
-        {
-            PHONGDTO p = new PHONGDTO();
-            p.MaPhong = TextBox_Phong_Them_maP.Text;
-            p.TenP = TextBox_Phong_Them_tenP.Text;
-            p.ViTriP = TextBox_Phong_Them_viTri.Text;
-            p.SoNguoiO = Int32.Parse(TextBox_Phong_Them_soN.Text);
-            p.SoNguoiTD = Int32.Parse(TextBox_Phong_Them_SNTD.Text);
-
-            String result = PhongBUS.SuaP(p);
-            if (result == null)
-            {
-                NotificationBox_Phong_themsua.Text = "Sửa phòng thành công!";
-                NotificationBox_Phong_themsua.Visible = true;
-
-                BindingList<PHONG> dataSource = new BindingList<PHONG>();
-                foreach (var item in PhongBUS.TimP(p))
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Phong_Themsua.DataSource = dataSource;
-            }
-            else
-            {
-                NotificationBox_Phong_themsua.Text = result;
-                NotificationBox_Phong_themsua.Visible = true;
-            }
-        }
-        //button xóa
-        private void btn_phong_them_xoa_Click_1(object sender, EventArgs e)
-        {
-            if (dtg_Phong_Themsua.SelectedRows.Count == 0)
-            {
-                NotificationBox_Phong_themsua.Text = "Chưa có phòng nào được chọn để xóa!";
-                NotificationBox_Phong_themsua.Visible = true;
-            }
-            else
-            {
-                PHONG selected = dtg_Phong_Themsua.SelectedRows[0].DataBoundItem as PHONG;
-                String result = PhongBUS.XoaP(selected.MaPhong);
-                if (result == null)
-                {
-                    NotificationBox_Phong_themsua.Text = "Xóa phòng thành công!";
-                    NotificationBox_Phong_themsua.Visible = true;
-                    dtg_Phong_Themsua.DataSource = new BindingList<PHONG>();
-                }
-                else
-                {
-                    NotificationBox_Phong_themsua.Text = result;
-                    NotificationBox_Phong_themsua.Visible = true;
-                }
-            }
-        }
-        // Trả về page trắng khi chuyển tab
-        private void TabPage_Child_Phong_ThemSua_Leave(object sender, EventArgs e)
-        {
-            NotificationBox_Phong_themsua.Visible = false;
-
-            dtg_Phong_Themsua.DataSource = new BindingList<PHONG>();
-
-            Control ctrl = TabPage_Child_Phong_ThemSua;
-
-            ClearAllText(ctrl);
-        }
-        #endregion
-        #region Tài sản- Tìm kiếm tài sản
-        // Button tìm kiếm
-        private void iTalk_Button_11_Click_1(object sender, EventArgs e)
-        {
-            TAISANDTO ts = new TAISANDTO();
-            ts.MaTS = TextBox_Taisan_Timkiem_maTS.Text;
-            ts.SoLuong =Int32.Parse( TextBox_Taisan_Timkiem_soLuong.Text);
-            ts.TenTS = TextBox_Taisan_Timkiem_tenTS.Text;
-            ts.TinhTrang = TextBox_Taisan_Timkiem_tinhTrang.Text;
-            // Tạo danh sách kết quả mới (BindingList mới làm datasource cho datagrid được)
-            BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
-
-            // Với mỗi kết quả trong tìm kiếm thì add vào danh sách kết quả ở trên
-            foreach (var item in TaiSanBUS.TimTS(ts))
-            {
-                dataSource.Add(item);
-            }
-            // Nếu kết quả rỗng
-            if (dataSource.Count == 0)
-            {
-                // Thay đổi text của hộp thông báo
-                NotificationBox_Taisan_timkiem.Text = "Không tìm thấy dữ liệu!";
-                // Hiện hộp thông báo
-                NotificationBox_Taisan_timkiem.Visible = true;
-            }
-            // Nếu tìm thấy kết quả
-            else
-            {
-                // Hiện kết quả trong datagrid 
-                dtg_Taisan_Timkiem.DataSource = dataSource;
-            }
-        }
-        // Button sửa
-        private void iTalk_Button_12_Click_1(object sender, EventArgs e)
-        {
-            if (dtg_Taisan_Timkiem.SelectedRows.Count == 0)
-            {
-                NotificationBox_Taisan_timkiem.Text = "Chưa có tài sản nào được chọn để sửa!";
-                NotificationBox_Taisan_timkiem.Visible = true;
-            }
-            else
-            {
-                TAISAN selected = dtg_Taisan_Timkiem.SelectedRows[0].DataBoundItem as TAISAN;
-                // code để chuyển dữ liệu sang tabpage thêm sửa
-                TextBox_Taisan_Them_maTS.Text = selected.MaTS;
-                TextBox_Taisan_Them_soLuong.Text = selected.SoLuong.ToString();
-                TextBox_Taisan_Them_tenTS.Text = selected.TenTS;
-                TextBox_Taisan_Them_tinhTrang.Text = selected.TinhTrang;
-                // Hiện tất cả tài sản khi chuyển sang tabpage ThemSua
-                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
-                foreach (var item in TaiSanBUS.TimTatCaSV())
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Taisan_ThemSua.DataSource = dataSource;
-                TabControl_Children_TaiSan.SelectedTab = TabPage_Child_Taisan_ThemSua;
-            }
-        }
-        // Button xóa
-        private void iTalk_Button_13_Click_1(object sender, EventArgs e)
-        {
-            if (dtg_Taisan_Timkiem.SelectedRows.Count == 0)
-            {
-                NotificationBox_Taisan_timkiem.Text = "Chưa có tài sản nào được chọn để xóa!";
-                NotificationBox_Taisan_timkiem.Visible = true;
-            }
-            else
-            {
-                TAISAN selected = dtg_Taisan_Timkiem.SelectedRows[0].DataBoundItem as TAISAN;
-                String result = TaiSanBUS.XoaTS(selected.MaTS);
-                if (result == null)
-                {
-                    NotificationBox_Taisan_timkiem.Text = "Xóa tài sản thành công!";
-                    NotificationBox_Taisan_timkiem.Visible = true;
-                    dtg_Taisan_Timkiem.DataSource = new BindingList<TAISAN>();
-
-                }
-                else
-                {
-                    NotificationBox_Taisan_timkiem.Text = result;
-                    NotificationBox_Taisan_timkiem.Visible = true;
-                }
-            }
-        }
-        #endregion
-        #region Tài sản- Thêm sửa tài sản
-        //Button thêm
-        private void btntaisan_them_Click(object sender, EventArgs e)
-        {
-            TAISANDTO ts = new TAISANDTO();
-            ts.MaTS = TextBox_Taisan_Them_maTS.Text;
-            ts.TenTS = TextBox_Taisan_Them_tenTS.Text;
-            ts.SoLuong = Int32.Parse(TextBox_Taisan_Them_soLuong.Text);
-            ts.TinhTrang = TextBox_Taisan_Them_tinhTrang.Text;
-            String result = TaiSanBUS.ThemTS(ts);
-            if (result == null)
-            {
-                NotificationBox_Taisan_themsua.Text = "Thêm mới tài sản thành công!";
-                NotificationBox_Taisan_themsua.Visible = true;
-
-                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
-                foreach (var item in TaiSanBUS.TimTS(ts))
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Taisan_ThemSua.DataSource = dataSource;
-            }
-            else
-            {
-                NotificationBox_Taisan_themsua.Text = result;
-                NotificationBox_Taisan_themsua.Visible = true;
-            }
-        }
-        //Button sửa
-        private void btntaisan_them_sua_Click(object sender, EventArgs e)
-        {
-            TAISANDTO ts = new TAISANDTO();
-            ts.MaTS = TextBox_Taisan_Them_maTS.Text;
-            ts.TenTS = TextBox_Taisan_Them_tenTS.Text;
-            ts.SoLuong = Int32.Parse(TextBox_Taisan_Them_soLuong.Text);
-            ts.TinhTrang = TextBox_Taisan_Them_tinhTrang.Text;
-
-            String result = TaiSanBUS.SuaTS(ts);
-            if (result == null)
-            {
-                NotificationBox_Taisan_themsua.Text = "Sửa tài sản thành công!";
-                NotificationBox_Taisan_themsua.Visible = true;
-
-                BindingList<TAISAN> dataSource = new BindingList<TAISAN>();
-                foreach (var item in TaiSanBUS.TimTS(ts))
-                {
-                    dataSource.Add(item);
-                }
-                dtg_Taisan_ThemSua.DataSource = dataSource;
-            }
-            else
-            {
-                NotificationBox_Taisan_themsua.Text = result;
-                NotificationBox_Taisan_themsua.Visible = true;
-            }
-        }
-        //Button xóa
-        private void btntaisan_them_xoa_Click(object sender, EventArgs e)
-        {
-            if (dtg_Taisan_ThemSua.SelectedRows.Count == 0)
-            {
-                NotificationBox_Taisan_themsua.Text = "Không có tài sản nào được chọn để xóa";
-                NotificationBox_Taisan_themsua.Visible = true;
-            }
-            else
-            {
-                TAISAN selected = dtg_Taisan_ThemSua.SelectedRows[0].DataBoundItem as TAISAN;
-                String result = TaiSanBUS.XoaTS(selected.MaTS);
-                if (result == null)
-                {
-                    NotificationBox_Taisan_themsua.Text = "Xóa tài sản thành công!";
-                    NotificationBox_Taisan_themsua.Visible = true;
-                    dtg_Taisan_ThemSua.DataSource = new BindingList<TAISAN>();
-
-                }
-                else
-                {
-                    NotificationBox_Taisan_themsua.Text = result;
-                    NotificationBox_Taisan_themsua.Visible = true;
-                }
-            }
-        }
-        #endregion
-
-
+        
     }
 }

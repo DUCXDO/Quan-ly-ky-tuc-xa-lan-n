@@ -166,5 +166,11 @@ namespace BUS
             IEnumerable<PHIEUGHIDIENNUOC> result = _pg.TimPGDN(pg);
             return result;
         }
+
+        public IEnumerable<PHIEUGHIDIENNUOC> TimPGTheoPhong(String maP)
+        {
+            IEnumerable<PHIEUGHIDIENNUOC> result = _pg.TimPGDNTheoMaP(maP);
+            return result;
+        }
     }
 }

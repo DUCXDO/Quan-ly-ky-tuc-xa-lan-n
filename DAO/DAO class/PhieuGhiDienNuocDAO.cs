@@ -13,8 +13,8 @@ namespace DAO
         PHIEUGHIDIENNUOC XoaPGDN(String maPG);
         IEnumerable<PHIEUGHIDIENNUOC> TimTatCaPGDN();
         PHIEUGHIDIENNUOC TimPGDNTheoMaPGDN(String maPG);
-        PHIEUGHIDIENNUOC TimPGDNTheoMaP(String maP);
-        PHIEUGHIDIENNUOC TimPGDNTheoMaS(String maS);
+        IEnumerable<PHIEUGHIDIENNUOC> TimPGDNTheoMaP(String maP);
+        IEnumerable<PHIEUGHIDIENNUOC> TimPGDNTheoMaS(String maS);
         IEnumerable<PHIEUGHIDIENNUOC> TimPGDN(PHIEUGHIDIENNUOCDTO pg);
         IEnumerable<PHIEUGHIDIENNUOC> TimPGDNKhongTheoLoaiPhieuGhi(PHIEUGHIDIENNUOCDTO pg);
     }
@@ -100,16 +100,16 @@ namespace DAO
             PHIEUGHIDIENNUOC findPG = KTXe.PHIEUGHIDIENNUOCs.SingleOrDefault(x => x.MaPhieuGhiDienNuoc == maPG);
             return findPG;
         }
-        public PHIEUGHIDIENNUOC TimPGDNTheoMaP(String maP)
+        public IEnumerable<PHIEUGHIDIENNUOC> TimPGDNTheoMaP(String maP)
         {
             KTXEntities KTXe = new KTXEntities();
-            PHIEUGHIDIENNUOC findPG = KTXe.PHIEUGHIDIENNUOCs.SingleOrDefault(x => x.MaPhong == maP);
+            IEnumerable <PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => x.MaPhong == maP);
             return findPG;
         }
-        public PHIEUGHIDIENNUOC TimPGDNTheoMaS(String maS)
+        public IEnumerable<PHIEUGHIDIENNUOC> TimPGDNTheoMaS(String maS)
         {
             KTXEntities KTXe = new KTXEntities();
-            PHIEUGHIDIENNUOC findPG = KTXe.PHIEUGHIDIENNUOCs.SingleOrDefault(x => x.MaSo == maS);
+            IEnumerable<PHIEUGHIDIENNUOC> findPG = KTXe.PHIEUGHIDIENNUOCs.AsQueryable().Where(x => x.MaSo == maS);
             return findPG;
         }
         public IEnumerable<PHIEUGHIDIENNUOC> TimPGDN(PHIEUGHIDIENNUOCDTO pg)
