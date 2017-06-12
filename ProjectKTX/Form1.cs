@@ -1753,7 +1753,149 @@ namespace ProjectKTX
 
 
         #endregion
+        #region Lập phiếu trang bị
+        // Button Thêm
+        private void Button_LPTB_Them_Click(object sender, EventArgs e)
+        {
+            PHIEUTRANGBIDTO ptb = new PHIEUTRANGBIDTO();
+            ptb.MaPhong = txt_LapPTB_maP.Text;
+            ptb.MaTS = txt_LapPTB_maTS.Text;
+            ptb.SoLuong = Int32.Parse(txt_LapPTB_soLuong.Text);
+            String result = PhieuTrangBiBUS.ThemPTB(ptb);
+            if (result == null)
+            {
+                NotificationBox_Taisan_lapPTB.Text = "Thêm thành công";
+                NotificationBox_Taisan_lapPTB.Visible = true;
+                BindingList<PHIEUTRANGBI> dataSource = new BindingList<PHIEUTRANGBI>();
+                foreach (var item in PhieuTrangBiBUS.TimPTB(ptb))
+                {
+                    dataSource.Add(item);
+                }
+                dtg_Taisan_LapPTB.DataSource = dataSource;
+            }
+            else
+            {
+                NotificationBox_Taisan_lapPTB.Text = result;
+                NotificationBox_Taisan_lapPTB.Visible = true;
+            }
+        }
+        // Button Xóa
+        private void Button_LPTB_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dtg_Taisan_LapPTB.SelectedRows.Count == 0)
+            {
+                NotificationBox_Taisan_lapPTB.Text = "Không có tài sản nào được chọn để xóa";
+                NotificationBox_Taisan_lapPTB.Visible = true;
+            }
+            else
+            {
+                PHIEUTRANGBI delete = dtg_Taisan_LapPTB.SelectedRows[0].DataBoundItem as PHIEUTRANGBI;
+                String result = PhieuTrangBiBUS.XoaPTB(delete.MaTS, delete.MaPhong);
+                if (result == null)
+                {
+                    NotificationBox_Taisan_lapPTB.Text = "Xóa thành công";
+                    NotificationBox_Taisan_lapPTB.Visible = true;
+                    dtg_Taisan_LapPTB.DataSource = new BindingList<PHIEUTRANGBI>();
+                }
+                else
+                {
+                    NotificationBox_Taisan_lapPTB.Text = result;
+                    NotificationBox_Taisan_lapPTB.Visible = true;
+                }
+            }
+        }
+        // Làm trắng tabpage khi chuyển tab! 
+        private void TabPage_Child_Taisan_LapPTB_Leave(object sender, EventArgs e)
+        {
+            NotificationBox_Taisan_lapPTB.Visible = false;
+            dtg_Taisan_LapPTB.DataSource = new BindingList<PHIEUTRANGBI>();
+            Control ctrl = TabPage_Child_Taisan_LapPTB;
+            ClearAllText(ctrl);
+        }
 
+        #endregion
+        #region Tìm phiếu trang bị
+        // Button tìm kiếm
+        private void btn_TimPTB_Timkiem_Click(object sender, EventArgs e)
+        {
+            PHIEUTRANGBIDTO ptb = new PHIEUTRANGBIDTO();
+            ptb.MaPhong = txt_TimPTB_maP.Text;
+            ptb.MaTS = txt_TimPTB_MaTS.Text;
+            ptb.SoLuong = Int32.Parse(txt_TimPTB_soLuong.Text);
+            BindingList<PHIEUTRANGBI> dataSource = new BindingList<PHIEUTRANGBI>();
+            foreach (var item in PhieuTrangBiBUS.TimPTB(ptb))
+            {
+                dataSource.Add(item);
+            }
+            // Nếu kết quả rỗng
+            if (dataSource.Count == 0)
+            {
+                // Thay đổi text của hộp thông báo
+                NotificationBox_Taisan_TimPTB.Text = "Không tìm thấy dữ liệu!";
+                // Hiện hộp thông báo
+                NotificationBox_Taisan_TimPTB.Visible = true;
+            }
+            // Nếu tìm thấy kết quả
+            else
+            {
+                // Hiện kết quả trong datagrid 
+                dtg_Taisan_TimPTB.DataSource = dataSource;
+            }
+        }
+
+        // Button tìm kiếm theo phòng
+        private void btn_TimPTB_TimtheoP_Click(object sender, EventArgs e)
+        {
+            BindingList<PHIEUTRANGBI> dataSource = new BindingList<PHIEUTRANGBI>();
+            foreach (var item in PhieuTrangBiBUS.TimPTBTheoPhong(ComboBox_TimPTB_Phong.SelectedValue.ToString()))
+            {
+                dataSource.Add(item);
+            }
+
+            if (dataSource.Count == 0)
+            {
+                NotificationBox_Taisan_TimPTB.Text = "Không có phiếu trang bị nào được lập ở phòng này!";
+                NotificationBox_Taisan_TimPTB.Visible = true;
+            }
+            else
+            {
+                dtg_Taisan_TimPTB.DataSource = dataSource;
+            }
+        }
+        // Button Xóa
+        private void btn_TimPTB_Xoa_Click(object sender, EventArgs e)
+        {
+            if (dtg_Taisan_TimPTB.SelectedRows.Count == 0)
+            {
+                NotificationBox_Taisan_TimPTB.Text = "Không có tài sản nào được chọn để xóa";
+                NotificationBox_Taisan_TimPTB.Visible = true;
+            }
+            else
+            {
+                PHIEUTRANGBI delete = dtg_Taisan_TimPTB.SelectedRows[0].DataBoundItem as PHIEUTRANGBI;
+                String result = PhieuTrangBiBUS.XoaPTB(delete.MaTS, delete.MaPhong);
+                if (result == null)
+                {
+                    NotificationBox_Taisan_TimPTB.Text = "Xóa thành công! ";
+                    NotificationBox_Taisan_TimPTB.Visible = true;
+                    dtg_Taisan_TimPTB.DataSource = new BindingList<PHIEUTRANGBI>();
+                }
+                else
+                {
+                    NotificationBox_Taisan_TimPTB.Text = result;
+                    NotificationBox_Taisan_TimPTB.Visible = true;
+                }
+            }
+        }
+        //Làm trắng tabpage khi chuyển tab! 
+        private void TabPage_Child_Taisan_TimPTB_Leave(object sender, EventArgs e)
+        {
+            NotificationBox_Taisan_TimPTB.Visible = false;
+            dtg_Taisan_TimPTB.DataSource = new BindingList<PHIEUTRANGBI>();
+            Control ctl = TabPage_Child_Taisan_TimPTB;
+            ClearAllText(ctl);
+        }
+        #endregion
         #region Các hàm phụ
 
         private void Form1_Load(object sender, EventArgs e)
@@ -1774,7 +1916,6 @@ namespace ProjectKTX
         }
 
         #endregion
-
         //Lỡ tay click :v 
         #region Các hàm lỡ tay click
 
@@ -2112,8 +2253,8 @@ namespace ProjectKTX
 
 
 
-        #endregion
 
+        #endregion
 
     }
 }
